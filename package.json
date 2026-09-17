@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && cp dist/index.html dist/404.html",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:convex": "npm run build && npx convex deploy && node upload-to-convex.mjs"
   },
   "dependencies": {
+    "convex": "^1.46.0",
     "ethers": "^6.15.0",
     "framer-motion": "^13.3.0",
     "lucide-react": "^1.46.0",

@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #FAF8F5;
+    --text-primary: #1C1917;
+    --text-secondary: #57534E;
+    --olive-dark: #1E281C;
+    --olive-primary: #384C32;
+    --olive-accent: #556B2F;
+    --olive-light: #EBF1E8;
+    --brown-dark: #261B14;
+    --brown-primary: #5C3E28;
+    --brown-accent: #8C5A3C;
+    --brown-light: #F3EAE3;
+    --border-light: #E7E0D8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #FAF8F5;
+    color: #1C1917;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-cinzel {
+    font-family: 'Cinzel', Georgia, serif;
+    letter-spacing: 0.02em;
+    color: #1C1917;
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 sm:py-28 lg:py-32 relative;
+  }
+
+  /* Sleek Olive & Brown Luxury Card */
+  .card-olive-brown {
+    background: #FFFFFF;
+    border: 1px solid #E6DFD5;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 20px -2px rgba(49, 67, 43, 0.04);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card-olive-brown:hover {
+    border-color: #537048;
+    box-shadow: 0 20px 40px -15px rgba(64, 87, 55, 0.12), 0 0 0 1px rgba(114, 76, 53, 0.1);
+    transform: translateY(-4px);
+  }
+
+  /* Sleek Olive Primary Button */
+  .btn-olive-sleek {
+    @apply relative inline-flex items-center justify-center font-bold text-xs uppercase tracking-wider px-7 py-3.5 rounded-full overflow-hidden transition-all duration-300;
+    background: linear-gradient(135deg, #2D3E28 0%, #3D5337 50%, #4D6646 100%);
+    color: #FFFFFF;
+    border: 1px solid #2D3E28;
+    box-shadow: 0 4px 16px rgba(45, 62, 40, 0.25);
+  }
+
+  .btn-olive-sleek:hover {
+    background: linear-gradient(135deg, #3D5337 0%, #4D6646 50%, #5E7A56 100%);
+    border-color: #3D5337;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(45, 62, 40, 0.35);
+  }
+
+  /* Sleek Brown Primary Button */
+  .btn-brown-sleek {
+    @apply relative inline-flex items-center justify-center font-bold text-xs uppercase tracking-wider px-7 py-3.5 rounded-full overflow-hidden transition-all duration-300;
+    background: linear-gradient(135deg, #4A3323 0%, #5C3E28 50%, #724C35 100%);
+    color: #FFFFFF;
+    border: 1px solid #4A3323;
+    box-shadow: 0 4px 16px rgba(74, 51, 35, 0.25);
+  }
+
+  .btn-brown-sleek:hover {
+    background: linear-gradient(135deg, #5C3E28 0%, #724C35 50%, #8E6144 100%);
+    border-color: #5C3E28;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(74, 51, 35, 0.35);
+  }
+
+  /* Sleek Olive Outline Button */
+  .btn-olive-outline {
+    @apply relative inline-flex items-center justify-center font-bold text-xs uppercase tracking-wider px-7 py-3.5 rounded-full overflow-hidden transition-all duration-300;
+    background: #FFFFFF;
+    border: 1.5px solid #3D5337;
+    color: #3D5337;
+  }
+
+  .btn-olive-outline:hover {
+    background: #3D5337;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(61, 83, 55, 0.2);
+  }
+
+  /* Sleek Brown Outline Button */
+  .btn-brown-outline {
+    @apply relative inline-flex items-center justify-center font-bold text-xs uppercase tracking-wider px-7 py-3.5 rounded-full overflow-hidden transition-all duration-300;
+    background: #FFFFFF;
+    border: 1.5px solid #5C3E28;
+    color: #5C3E28;
+  }
+
+  .btn-brown-outline:hover {
+    background: #5C3E28;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(92, 62, 40, 0.2);
+  }
+
+  /* Text Gradients: Olive & Brown Luxury */
+  .text-olive-gradient {
+    background: linear-gradient(135deg, #2D3E28 0%, #4D6646 50%, #724C35 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-brown-gradient {
+    background: linear-gradient(135deg, #4A3323 0%, #724C35 50%, #A46843 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Architectural Dividers */
+  .olive-brown-divider {
+    @apply relative h-px w-28 mx-auto my-6;
+    background: linear-gradient(90deg, transparent 0%, #4D6646 30%, #724C35 70%, transparent 100%);
+  }
+
+  .olive-brown-divider-left {
+    @apply relative h-px w-28 my-6;
+    background: linear-gradient(90deg, #4D6646 0%, #724C35 60%, transparent 100%);
+  }
+}
+
+/* Subtle Architectural Grid Pattern (Warm Olive/Earthy) */
+.blueprint-grid-warm {
+  background-image: 
+    linear-gradient(to right, rgba(61, 83, 55, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(92, 62, 40, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Custom Scrollbar in Olive & Brown */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #4D6646;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #31432B;
+}

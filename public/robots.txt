@@ -5,5 +5,8 @@ User-agent: *
 Allow: /
 Allow: /images/
 
-# Sitemaps
+# Sitemaps & Machine-Readable Context
 Sitemap: https://www.guptasevergreendevelopers.com/sitemap.xml
+
+# LLM Context File (llmstxt.org standard)
+# https://www.guptasevergreendevelopers.com/llms.txt

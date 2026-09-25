@@ -92,9 +92,11 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
             {/* Authentic Google Drive Logo Emblem Container */}
             <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-[#23301E] border border-[#537048]/60 p-1 flex items-center justify-center shadow-md group-hover:border-[#A87B5C] transition-all">
               <img
-                src="/images/drive_logo_gold.png"
+                src="/images/drive_logo_gold.webp"
                 alt="Gupta's Evergreen Developers Official Logo"
                 className="w-full h-full object-contain filter drop-shadow"
+                width="44"
+                height="44"
               />
             </div>
 

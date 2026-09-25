@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -7,11 +7,13 @@ import ConsultationModal from './components/ConsultationModal';
 import MobileActionDock from './components/MobileActionDock';
 
 import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import ServicesPage from './pages/ServicesPage';
-import PackagesPage from './pages/PackagesPage';
-import ProjectsPage from './pages/ProjectsPage';
-import ContactPage from './pages/ContactPage';
+
+// Lazy load non-homepage routes for mobile performance and faster TTI
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const PackagesPage = lazy(() => import('./pages/PackagesPage'));
+const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
 
 import { Phone, MessageSquare } from 'lucide-react';
 
@@ -56,44 +58,46 @@ export default function App() {
 
         {/* Dynamic Multi-Page Content (Warm Alabaster / Stone Background) */}
         <main className="flex-1 bg-[#FAF8F5]">
-          <Routes>
-            <Route 
-              path="/" 
-              element={
-                <HomePage 
-                  onOpenConsultation={handleOpenConsultation}
-                  onOpenCalculatorConsultation={handleCalculatorConsultation}
-                />
-              } 
-            />
-            <Route 
-              path="/about" 
-              element={<AboutPage onOpenConsultation={handleOpenConsultation} />} 
-            />
-            <Route 
-              path="/services" 
-              element={<ServicesPage onOpenConsultation={handleOpenConsultation} />} 
-            />
-            <Route 
-              path="/packages" 
-              element={
-                <PackagesPage 
-                  onOpenConsultation={handleOpenConsultation}
-                  onOpenCalculatorConsultation={handleCalculatorConsultation}
-                />
-              } 
-            />
-            <Route 
-              path="/projects" 
-              element={<ProjectsPage onOpenConsultation={handleOpenConsultation} />} 
-            />
-            <Route 
-              path="/contact" 
-              element={<ContactPage />} 
-            />
-            {/* Catch-all fallback */}
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
+          <Suspense fallback={<div className="min-h-[60vh] bg-[#FAF8F5]" />}>
+            <Routes>
+              <Route 
+                path="/" 
+                element={
+                  <HomePage 
+                    onOpenConsultation={handleOpenConsultation}
+                    onOpenCalculatorConsultation={handleCalculatorConsultation}
+                  />
+                } 
+              />
+              <Route 
+                path="/about" 
+                element={<AboutPage onOpenConsultation={handleOpenConsultation} />} 
+              />
+              <Route 
+                path="/services" 
+                element={<ServicesPage onOpenConsultation={handleOpenConsultation} />} 
+              />
+              <Route 
+                path="/packages" 
+                element={
+                  <PackagesPage 
+                    onOpenConsultation={handleOpenConsultation}
+                    onOpenCalculatorConsultation={handleCalculatorConsultation}
+                  />
+                } 
+              />
+              <Route 
+                path="/projects" 
+                element={<ProjectsPage onOpenConsultation={handleOpenConsultation} />} 
+              />
+              <Route 
+                path="/contact" 
+                element={<ContactPage />} 
+              />
+              {/* Catch-all fallback */}
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </Suspense>
         </main>
 
         {/* Deep Forest Olive & Walnut Corporate Footer */}

@@ -34,11 +34,20 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
       {/* Hero Section (Rich Forest Olive Architectural Atmosphere) */}
       <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center pt-16 sm:pt-20 pb-16 sm:pb-20 overflow-hidden bg-[#121A10] text-white">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/images/image_03.jpeg"
-            alt="Luxury Architectural Villa in Dehradun by Gupta's Evergreen Developers LLP"
-            className="w-full h-full object-cover object-center filter brightness-[0.38] scale-105 transform transition-all duration-1000"
-          />
+          <picture>
+            <source media="(max-width: 768px)" srcSet="/images/image_03_mobile.webp" type="image/webp" />
+            <source media="(min-width: 769px)" srcSet="/images/image_03.webp" type="image/webp" />
+            <img
+              src="/images/image_03.jpeg"
+              alt="Luxury Architectural Villa in Dehradun by Gupta's Evergreen Developers LLP"
+              className="w-full h-full object-cover object-center filter brightness-[0.38] scale-105 transform transition-all duration-1000"
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
+              width="1920"
+              height="1080"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-[#121A10] via-[#121A10]/75 to-[#121A10]/40" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#121A10] via-[#121A10]/70 to-transparent" />
         </div>
@@ -50,9 +59,11 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-2xl bg-[#182316]/90 border border-[#405737]/60 backdrop-blur-md mb-6 sm:mb-8 shadow-2xl">
               <div className="w-7 h-7 rounded-lg bg-[#2E3F27] p-1 flex items-center justify-center border border-[#537048]/40 flex-shrink-0">
                 <img
-                  src="/images/drive_logo_gold.png"
+                  src="/images/drive_logo_gold.webp"
                   alt="Drive Logo Crest"
                   className="w-full h-full object-contain"
+                  width="28"
+                  height="28"
                 />
               </div>
               <div className="text-left">

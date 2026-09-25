@@ -1,9 +1,22 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "guptasevergreendevelopers.com"
+        }
+      ],
+      "destination": "https://www.guptasevergreendevelopers.com/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/((?!assets/|images/|robots\\.txt|sitemap\\.xml|.*\\..*).*)",
+      "source": "/((?!assets/|images/|robots\\.txt|sitemap\\.xml|llms\\.txt|llms-full\\.txt|.*\\..*).*)",
       "destination": "/index.html"
     }
   ],

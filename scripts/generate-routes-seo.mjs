@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { articles } from '../src/data/articles.ts';
 
 const distDir = path.resolve('dist');
 const indexHtmlPath = path.join(distDir, 'index.html');
@@ -11,7 +12,8 @@ if (!fs.existsSync(indexHtmlPath)) {
 
 const baseHtml = fs.readFileSync(indexHtmlPath, 'utf8');
 
-const routes = [
+// Core Static Application Routes
+const coreRoutes = [
   {
     path: 'about',
     title: "About Gupta's Evergreen | Construction Company in Dehradun",
@@ -47,40 +49,76 @@ const routes = [
     title: "Construction Articles & Guides Dehradun | Gupta's",
     h1: "Construction Articles & Architectural Guides in Dehradun",
     description: "Expert guides on house construction, architects in Dehradun, MDDA approvals, anti-seismic RCC engineering, modular kitchens & luxury hill villas."
-  },
-  {
-    path: 'articles/architects-in-dehradun-city',
-    title: "Architects in Dehradun City: Villa Guide | Gupta's",
-    h1: "How to Pick Architects in Dehradun City for Villas",
-    description: "Complete checklist for selecting licensed architects in Dehradun city. Hill geology, MDDA sanction bye-laws, STAAD Pro seismic design & turnkey integration."
-  },
-  {
-    path: 'articles/construction-company-in-dehradun',
-    title: "Construction Company in Dehradun: 10 Hiring Questions",
-    h1: "10 Questions to Ask a Construction Company in Dehradun",
-    description: "Essential questions to ask any construction company in Dehradun before hiring. Steel grades, concrete cube tests, MDDA approvals, escrow milestones & warranties."
-  },
-  {
-    path: 'articles/interior-designers-in-dehradun',
-    title: "Interior Designers in Dehradun: Hill Home Guide | Gupta's",
-    h1: "How to Choose Interior Designers in Dehradun for Villas",
-    description: "How to choose top interior designers in Dehradun. Moisture-proof materials, BWP marine ply, structural frame alignment, modular cabinetry & luxury styling."
-  },
-  {
-    path: 'articles/modular-kitchen-in-dehradun',
-    title: "Modular Kitchen in Dehradun: Costs & Layouts | Gupta's",
-    h1: "How to Choose a Modular Kitchen in Dehradun",
-    description: "Guide to modular kitchens in Dehradun. Hill-proof materials, Blum soft-close hardware, acrylic vs PU finishes, per-sq.ft rates & turnkey installation."
-  },
-  {
-    path: 'articles/architect-dehradun-mdda-guide',
-    title: "Architect in Dehradun: MDDA Map Approval Guide | Gupta's",
-    h1: "Architect in Dehradun: Guide to MDDA Map Sanctions",
-    description: "Step-by-step guide to MDDA building plan sanctions in Dehradun. Setbacks, FAR rules, height restrictions, earthquake codes & hiring licensed architects."
   }
 ];
 
-for (const route of routes) {
+// Helper to convert Article object to rich semantic HTML
+function renderArticleSemanticHtml(article, canonicalUrl) {
+  let html = `<article>\n`;
+  html += `  <h1>${article.title}</h1>\n`;
+  html += `  <p><strong>Published:</strong> ${article.publishedDate} | <strong>Author:</strong> ${article.author} | <strong>Category:</strong> ${article.category} | <strong>Read Time:</strong> ${article.readTime}</p>\n`;
+  html += `  <p><em>${article.excerpt}</em></p>\n\n`;
+
+  if (article.keyTakeaways && article.keyTakeaways.length > 0) {
+    html += `  <section>\n    <h2>Key Takeaways & Executive Summary</h2>\n    <ul>\n`;
+    for (const point of article.keyTakeaways) {
+      html += `      <li>${point}</li>\n`;
+    }
+    html += `    </ul>\n  </section>\n\n`;
+  }
+
+  for (const s of article.sections) {
+    html += `  <section>\n`;
+    html += `    <h2>${s.heading}</h2>\n`;
+    if (s.subheading) html += `    <h3>${s.subheading}</h3>\n`;
+    for (const p of s.paragraphs) {
+      html += `    <p>${p}</p>\n`;
+    }
+    if (s.checklist) {
+      html += `    <ul>\n`;
+      for (const item of s.checklist) {
+        html += `      <li>${item}</li>\n`;
+      }
+      html += `    </ul>\n`;
+    }
+    if (s.table) {
+      html += `    <table border="1">\n      <thead>\n        <tr>\n`;
+      for (const h of s.table.headers) {
+        html += `          <th>${h}</th>\n`;
+      }
+      html += `        </tr>\n      </thead>\n      <tbody>\n`;
+      for (const row of s.table.rows) {
+        html += `        <tr>\n`;
+        for (const cell of row) {
+          html += `          <td>${cell}</td>\n`;
+        }
+        html += `        </tr>\n`;
+      }
+      html += `      </tbody>\n    </table>\n`;
+    }
+    if (s.callout) {
+      html += `    <blockquote><strong>${s.callout.title}</strong> (${s.callout.badge || 'Verified Note'}): ${s.callout.text}</blockquote>\n`;
+    }
+    if (s.authoritativeLinks) {
+      html += `    <p><strong>Statutory & Regulatory References:</strong></p>\n    <ul>\n`;
+      for (const link of s.authoritativeLinks) {
+        html += `      <li><a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label}</a> (${link.authority})</li>\n`;
+      }
+      html += `    </ul>\n`;
+    }
+    html += `  </section>\n\n`;
+  }
+
+  html += `  <footer>\n`;
+  html += `    <p><strong>Company Reference:</strong> Gupta's Evergreen Developers LLP (LLPIN: ACP-3601, Estd. 2012, ROC Uttarakhand). Operating Headquarters: 105 Rajpur Road, Dehradun 248001. Direct Founder Lines: +91 95483 93798 / +91 76687 66118.</p>\n`;
+  html += `    <p><a href="https://www.guptasevergreendevelopers.com/packages#calculator">Estimate Your House Construction Cost Online</a> | <a href="https://www.guptasevergreendevelopers.com/contact">Schedule a Free 24-Hour On-Site Architectural Evaluation</a></p>\n`;
+  html += `  </footer>\n`;
+  html += `</article>`;
+  return html;
+}
+
+// Generate Core Routes
+for (const route of coreRoutes) {
   const routeDir = path.join(distDir, route.path);
   if (!fs.existsSync(routeDir)) {
     fs.mkdirSync(routeDir, { recursive: true });
@@ -89,49 +127,114 @@ for (const route of routes) {
   const canonicalUrl = `https://www.guptasevergreendevelopers.com/${route.path}`;
 
   let html = baseHtml
-    // Replace <title>
     .replace(/<title>.*?<\/title>/, `<title>${route.title}</title>`)
-    // Replace <h1>
     .replace(/<h1>.*?<\/h1>/, `<h1>${route.h1}</h1>`)
-    // Replace meta description
-    .replace(
-      /<meta\s+name="description"\s+content=".*?"\s*\/?>/,
-      `<meta name="description" content="${route.description}" />`
-    )
-    // Replace canonical link
-    .replace(
-      /<link\s+rel="canonical"\s+href=".*?"\s*\/?>/,
-      `<link rel="canonical" href="${canonicalUrl}" />`
-    )
-    // Replace OpenGraph title, description, url
-    .replace(
-      /<meta\s+property="og:title"\s+content=".*?"\s*\/?>/,
-      `<meta property="og:title" content="${route.title}" />`
-    )
-    .replace(
-      /<meta\s+property="og:description"\s+content=".*?"\s*\/?>/,
-      `<meta property="og:description" content="${route.description}" />`
-    )
-    .replace(
-      /<meta\s+property="og:url"\s+content=".*?"\s*\/?>/,
-      `<meta property="og:url" content="${canonicalUrl}" />`
-    )
-    // Replace Twitter title, description, url
-    .replace(
-      /<meta\s+property="twitter:title"\s+content=".*?"\s*\/?>/,
-      `<meta property="twitter:title" content="${route.title}" />`
-    )
-    .replace(
-      /<meta\s+property="twitter:description"\s+content=".*?"\s*\/?>/,
-      `<meta property="twitter:description" content="${route.description}" />`
-    )
-    .replace(
-      /<meta\s+property="twitter:url"\s+content=".*?"\s*\/?>/,
-      `<meta property="twitter:url" content="${canonicalUrl}" />`
-    );
+    .replace(/<meta\s+name="description"\s+content=".*?"\s*\/?>/, `<meta name="description" content="${route.description}" />`)
+    .replace(/<link\s+rel="canonical"\s+href=".*?"\s*\/?>/, `<link rel="canonical" href="${canonicalUrl}" />`)
+    .replace(/<meta\s+property="og:title"\s+content=".*?"\s*\/?>/, `<meta property="og:title" content="${route.title}" />`)
+    .replace(/<meta\s+property="og:description"\s+content=".*?"\s*\/?>/, `<meta property="og:description" content="${route.description}" />`)
+    .replace(/<meta\s+property="og:url"\s+content=".*?"\s*\/?>/, `<meta property="og:url" content="${canonicalUrl}" />`)
+    .replace(/<meta\s+property="twitter:title"\s+content=".*?"\s*\/?>/, `<meta property="twitter:title" content="${route.title}" />`)
+    .replace(/<meta\s+property="twitter:description"\s+content=".*?"\s*\/?>/, `<meta property="twitter:description" content="${route.description}" />`)
+    .replace(/<meta\s+property="twitter:url"\s+content=".*?"\s*\/?>/, `<meta property="twitter:url" content="${canonicalUrl}" />`);
 
   fs.writeFileSync(path.join(routeDir, 'index.html'), html, 'utf8');
-  console.log(`[generate-routes-seo] Generated dist/${route.path}/index.html with unique title & metadata`);
+  console.log(`[generate-routes-seo] Generated dist/${route.path}/index.html`);
 }
 
-console.log('[generate-routes-seo] Route-specific SEO generation completed successfully.');
+// Generate All Articles (under both /articles/[slug] AND direct /[slug])
+for (const art of articles) {
+  // 1. Path under /articles/[slug]
+  const articleSubPath = `articles/${art.slug}`;
+  const articleSubDir = path.join(distDir, articleSubPath);
+  if (!fs.existsSync(articleSubDir)) {
+    fs.mkdirSync(articleSubDir, { recursive: true });
+  }
+
+  const canonicalSubUrl = `https://www.guptasevergreendevelopers.com/${articleSubPath}`;
+  const semanticContentSub = renderArticleSemanticHtml(art, canonicalSubUrl);
+
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: art.title,
+    description: art.metaDescription,
+    image: `https://www.guptasevergreendevelopers.com${art.coverImage}`,
+    author: {
+      '@type': 'Person',
+      name: art.author,
+      jobTitle: 'Senior Civil Engineer & Designated Partner',
+      worksFor: {
+        '@type': 'Organization',
+        name: "Gupta's Evergreen Developers LLP",
+        url: 'https://www.guptasevergreendevelopers.com'
+      }
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: "Gupta's Evergreen Developers LLP",
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.guptasevergreendevelopers.com/images/drive_logo_full.png'
+      }
+    },
+    datePublished: '2026-09-25',
+    dateModified: '2026-09-25',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': canonicalSubUrl
+    }
+  };
+
+  const schemaScriptTag = `<script type="application/ld+json">${JSON.stringify(articleJsonLd)}</script>`;
+
+  let htmlSub = baseHtml
+    .replace(/<title>.*?<\/title>/, `<title>${art.seoTitle}</title>`)
+    .replace(/<meta\s+name="description"\s+content=".*?"\s*\/?>/, `<meta name="description" content="${art.metaDescription}" />`)
+    .replace(/<link\s+rel="canonical"\s+href=".*?"\s*\/?>/, `<link rel="canonical" href="${canonicalSubUrl}" />\n    ${schemaScriptTag}`)
+    .replace(/<meta\s+property="og:title"\s+content=".*?"\s*\/?>/, `<meta property="og:title" content="${art.seoTitle}" />`)
+    .replace(/<meta\s+property="og:description"\s+content=".*?"\s*\/?>/, `<meta property="og:description" content="${art.metaDescription}" />`)
+    .replace(/<meta\s+property="og:url"\s+content=".*?"\s*\/?>/, `<meta property="og:url" content="${canonicalSubUrl}" />`)
+    .replace(/<meta\s+property="twitter:title"\s+content=".*?"\s*\/?>/, `<meta property="twitter:title" content="${art.seoTitle}" />`)
+    .replace(/<meta\s+property="twitter:description"\s+content=".*?"\s*\/?>/, `<meta property="twitter:description" content="${art.metaDescription}" />`)
+    .replace(/<meta\s+property="twitter:url"\s+content=".*?"\s*\/?>/, `<meta property="twitter:url" content="${canonicalSubUrl}" />`)
+    // Replace the off-screen semantic container with the complete article text for crawlers and LLMs!
+    .replace(
+      /<div style="position: absolute; left: -9999px;.*?<\/div>/s,
+      `<div style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">\n${semanticContentSub}\n    </div>`
+    );
+
+  fs.writeFileSync(path.join(articleSubDir, 'index.html'), htmlSub, 'utf8');
+
+  // 2. Direct Root Path /[slug] (Authoritative Search Landing Page)
+  const directPath = art.slug;
+  const directDir = path.join(distDir, directPath);
+  if (!fs.existsSync(directDir)) {
+    fs.mkdirSync(directDir, { recursive: true });
+  }
+
+  const canonicalDirectUrl = `https://www.guptasevergreendevelopers.com/${directPath}`;
+  const semanticContentDirect = renderArticleSemanticHtml(art, canonicalDirectUrl);
+
+  const directJsonLd = { ...articleJsonLd, mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalDirectUrl } };
+  const directSchemaScript = `<script type="application/ld+json">${JSON.stringify(directJsonLd)}</script>`;
+
+  let htmlDirect = baseHtml
+    .replace(/<title>.*?<\/title>/, `<title>${art.seoTitle}</title>`)
+    .replace(/<meta\s+name="description"\s+content=".*?"\s*\/?>/, `<meta name="description" content="${art.metaDescription}" />`)
+    .replace(/<link\s+rel="canonical"\s+href=".*?"\s*\/?>/, `<link rel="canonical" href="${canonicalDirectUrl}" />\n    ${directSchemaScript}`)
+    .replace(/<meta\s+property="og:title"\s+content=".*?"\s*\/?>/, `<meta property="og:title" content="${art.seoTitle}" />`)
+    .replace(/<meta\s+property="og:description"\s+content=".*?"\s*\/?>/, `<meta property="og:description" content="${art.metaDescription}" />`)
+    .replace(/<meta\s+property="og:url"\s+content=".*?"\s*\/?>/, `<meta property="og:url" content="${canonicalDirectUrl}" />`)
+    .replace(/<meta\s+property="twitter:title"\s+content=".*?"\s*\/?>/, `<meta property="twitter:title" content="${art.seoTitle}" />`)
+    .replace(/<meta\s+property="twitter:description"\s+content=".*?"\s*\/?>/, `<meta property="twitter:description" content="${art.metaDescription}" />`)
+    .replace(/<meta\s+property="twitter:url"\s+content=".*?"\s*\/?>/, `<meta property="twitter:url" content="${canonicalDirectUrl}" />`)
+    .replace(
+      /<div style="position: absolute; left: -9999px;.*?<\/div>/s,
+      `<div style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">\n${semanticContentDirect}\n    </div>`
+    );
+
+  fs.writeFileSync(path.join(directDir, 'index.html'), htmlDirect, 'utf8');
+}
+
+console.log(`[generate-routes-seo] Successfully pre-generated static SEO pages for ${coreRoutes.length + articles.length * 2} routes.`);

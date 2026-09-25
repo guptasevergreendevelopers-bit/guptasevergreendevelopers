@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && cp dist/index.html dist/404.html && node scripts/generate-routes-seo.mjs",
+    "build": "tsc && vite build && cp dist/index.html dist/404.html && node scripts/generate-llms-corpus.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-routes-seo.mjs",
     "preview": "vite preview",
     "deploy:convex": "npm run build && npx convex deploy && node upload-to-convex.mjs"
   },

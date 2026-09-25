@@ -19,21 +19,26 @@ import { usePageSEO } from '../hooks/usePageSEO';
 
 interface ArticleDetailPageProps {
   onOpenConsultation: (topic?: string) => void;
+  explicitSlug?: string;
+  isDirectRoute?: boolean;
 }
 
-export default function ArticleDetailPage({ onOpenConsultation }: ArticleDetailPageProps) {
+export default function ArticleDetailPage({ onOpenConsultation, explicitSlug, isDirectRoute = false }: ArticleDetailPageProps) {
   const { slug } = useParams<{ slug: string }>();
-  const article = slug ? getArticleBySlug(slug) : undefined;
+  const activeSlug = explicitSlug || slug;
+  const article = activeSlug ? getArticleBySlug(activeSlug) : undefined;
 
   if (!article) {
     return <Navigate to="/articles" replace />;
   }
 
+  const canonicalPath = isDirectRoute ? `/${article.slug}` : `/articles/${article.slug}`;
+
   // Set Dynamic Page SEO
   usePageSEO({
     title: article.seoTitle,
     description: article.metaDescription,
-    canonicalPath: `/articles/${article.slug}`,
+    canonicalPath: canonicalPath,
   });
 
   const whatsappUrl = `https://wa.me/919548393798?text=${encodeURIComponent(

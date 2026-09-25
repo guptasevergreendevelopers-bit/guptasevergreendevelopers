@@ -105,4 +105,77 @@
     </image:image>
   </url>
 
+  <!-- Articles and Guides Knowledge Center -->
+  <url>
+    <loc>https://www.guptasevergreendevelopers.com/articles</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Article: Architects in Dehradun City -->
+  <url>
+    <loc>https://www.guptasevergreendevelopers.com/articles/architects-in-dehradun-city</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.guptasevergreendevelopers.com/images/image_07.jpeg</image:loc>
+      <image:title>Architects in Dehradun City - Villa Checklist</image:title>
+      <image:caption>Architectural 3D Elevations and Earthquake Resistant Engineering</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Article: Construction Company in Dehradun -->
+  <url>
+    <loc>https://www.guptasevergreendevelopers.com/articles/construction-company-in-dehradun</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.guptasevergreendevelopers.com/images/image_03.jpeg</image:loc>
+      <image:title>10 Questions to Ask a Construction Company in Dehradun</image:title>
+      <image:caption>Turnkey Builders and Civil Engineering Contracts in Uttarakhand</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Article: Interior Designers in Dehradun -->
+  <url>
+    <loc>https://www.guptasevergreendevelopers.com/articles/interior-designers-in-dehradun</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.guptasevergreendevelopers.com/images/image_11.jpeg</image:loc>
+      <image:title>Interior Designers in Dehradun for Luxury Hill Villas</image:title>
+      <image:caption>Moisture Proof Joinery and Integrated Architectural Styling</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Article: Modular Kitchen in Dehradun -->
+  <url>
+    <loc>https://www.guptasevergreendevelopers.com/articles/modular-kitchen-in-dehradun</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.guptasevergreendevelopers.com/images/image_11.jpeg</image:loc>
+      <image:title>Modular Kitchen in Dehradun Cost and Layout Guide</image:title>
+      <image:caption>German Hardware and BWP Marine Plywood Kitchen Cabinets</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Article: Architect Dehradun MDDA Map Sanctions Guide -->
+  <url>
+    <loc>https://www.guptasevergreendevelopers.com/articles/architect-dehradun-mdda-guide</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.guptasevergreendevelopers.com/images/image_02.jpeg</image:loc>
+      <image:title>Architect in Dehradun MDDA Map Approval Guide</image:title>
+      <image:caption>Building Bye-Laws, Setbacks, FAR, and Municipal Clearances</image:caption>
+    </image:image>
+  </url>
+
 </urlset>

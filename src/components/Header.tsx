@@ -37,6 +37,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
     { name: 'Services', path: '/services' },
     { name: 'Packages & Pricing', path: '/packages' },
     { name: 'Portfolio', path: '/projects' },
+    { name: 'Guides', path: '/articles' },
     { name: 'Contact', path: '/contact' },
   ];
 

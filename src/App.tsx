@@ -14,6 +14,8 @@ const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const PackagesPage = lazy(() => import('./pages/PackagesPage'));
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
+const ArticlesPage = lazy(() => import('./pages/ArticlesPage'));
+const ArticleDetailPage = lazy(() => import('./pages/ArticleDetailPage'));
 
 import { Phone, MessageSquare } from 'lucide-react';
 
@@ -93,6 +95,14 @@ export default function App() {
               <Route 
                 path="/contact" 
                 element={<ContactPage />} 
+              />
+              <Route 
+                path="/articles" 
+                element={<ArticlesPage onOpenConsultation={handleOpenConsultation} />} 
+              />
+              <Route 
+                path="/articles/:slug" 
+                element={<ArticleDetailPage onOpenConsultation={handleOpenConsultation} />} 
               />
               {/* Catch-all fallback */}
               <Route path="*" element={<Navigate to="/" replace />} />

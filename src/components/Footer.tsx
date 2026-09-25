@@ -143,6 +143,11 @@ export default function Footer() {
                   Delivered Portfolio
                 </Link>
               </li>
+              <li>
+                <Link to="/articles" className="hover:text-[#B0C5A6] transition-colors text-[#D5BAA6] font-semibold">
+                  Construction &amp; Architecture Guides
+                </Link>
+              </li>
             </ul>
           </div>
 

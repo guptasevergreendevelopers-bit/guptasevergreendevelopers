@@ -41,6 +41,42 @@ const routes = [
     title: "Contact Best Builders in Dehradun | Gupta's Evergreen",
     h1: "Contact Gupta's Evergreen Developers LLP at 105 Rajpur Road, Dehradun",
     description: "Contact Gupta's Evergreen Developers LLP at 105 Rajpur Road, Dehradun. Call +91 95483 93798 or book a complimentary on-site architectural evaluation for your plot."
+  },
+  {
+    path: 'articles',
+    title: "Construction Guides & Architecture Dehradun | Gupta's",
+    h1: "Construction Guides & Architectural Insights in Dehradun",
+    description: "Expert guides on house construction, architects in Dehradun, MDDA approvals, anti-seismic RCC engineering, modular kitchens & luxury hill villas."
+  },
+  {
+    path: 'articles/architects-in-dehradun-city',
+    title: "Architects in Dehradun City: Villa Guide | Gupta's",
+    h1: "How to Pick Architects in Dehradun City for Villas",
+    description: "Complete checklist for selecting licensed architects in Dehradun city. Hill geology, MDDA sanction bye-laws, STAAD Pro seismic design & turnkey integration."
+  },
+  {
+    path: 'articles/construction-company-in-dehradun',
+    title: "Construction Company in Dehradun: 10 Hiring Questions",
+    h1: "10 Questions to Ask a Construction Company in Dehradun",
+    description: "Essential questions to ask any construction company in Dehradun before hiring. Steel grades, concrete cube tests, MDDA approvals, escrow milestones & warranties."
+  },
+  {
+    path: 'articles/interior-designers-in-dehradun',
+    title: "Interior Designers in Dehradun: Hill Home Guide | Gupta's",
+    h1: "How to Choose Interior Designers in Dehradun for Villas",
+    description: "How to choose top interior designers in Dehradun. Moisture-proof materials, BWP marine ply, structural frame alignment, modular cabinetry & luxury styling."
+  },
+  {
+    path: 'articles/modular-kitchen-in-dehradun',
+    title: "Modular Kitchen in Dehradun: Costs & Layouts | Gupta's",
+    h1: "How to Choose a Modular Kitchen in Dehradun",
+    description: "Guide to modular kitchens in Dehradun. Hill-proof materials, Blum soft-close hardware, acrylic vs PU finishes, per-sq.ft rates & turnkey installation."
+  },
+  {
+    path: 'articles/architect-dehradun-mdda-guide',
+    title: "Architect in Dehradun: MDDA Map Approval Guide | Gupta's",
+    h1: "Architect in Dehradun: Guide to MDDA Map Sanctions",
+    description: "Step-by-step guide to MDDA building plan sanctions in Dehradun. Setbacks, FAR rules, height restrictions, earthquake codes & hiring licensed architects."
   }
 ];
 

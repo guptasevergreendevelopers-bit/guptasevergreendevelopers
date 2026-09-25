@@ -27,12 +27,12 @@ export default function PackagesPage({ onOpenConsultation, onOpenCalculatorConsu
             Transparent Construction Packages & Rates
           </div>
           <h1 className="font-cinzel text-3xl sm:text-5xl font-extrabold text-white">
-            HOUSE CONSTRUCTION PACKAGES <br />
-            <span className="text-[#D5BAA6] border-b-2 border-[#8E6144] pb-1">& COST ESTIMATOR IN DEHRADUN</span>
+            CONSTRUCTION PACKAGES & <br />
+            <span className="text-[#D5BAA6] border-b-2 border-[#8E6144] pb-1">INTERACTIVE ESTIMATOR</span>
           </h1>
           <div className="olive-brown-divider" />
           <p className="text-sm sm:text-base text-neutral-300 max-w-2xl mx-auto leading-relaxed">
-            Transparent ₹1,650 to ₹2,450/sq.ft turnkey construction packages with 0% price escalation. Calculate your house construction cost dynamically based on current Dehradun market rates.
+            Eliminate all ambiguity. View our standard ₹/sq.ft packages or calculate your custom project budget dynamically based on current Dehradun material costs.
           </p>
         </div>
       </section>

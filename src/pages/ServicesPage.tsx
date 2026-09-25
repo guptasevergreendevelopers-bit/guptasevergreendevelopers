@@ -25,7 +25,7 @@ export default function ServicesPage({ onOpenConsultation }: ServicesPageProps) 
     {
       id: 'residential',
       category: 'residential',
-      title: 'Turnkey House & Villa Construction in Dehradun',
+      title: 'Turnkey Residential Villa Construction',
       tagline: 'End-to-End Execution From Plot Digging to 5-Year Handover',
       rate: '₹1,650 – ₹2,450 / sq.ft',
       image: '/images/image_03.jpeg',
@@ -49,7 +49,7 @@ export default function ServicesPage({ onOpenConsultation }: ServicesPageProps) 
     {
       id: 'architecture',
       category: 'architecture',
-      title: 'Architects in Dehradun: 3D Elevations & MDDA Map Sanctions',
+      title: 'Architectural Planning, 3D Elevation & MDDA Sanctions',
       tagline: 'Vastu-Compliant Blueprints & Municipal Approvals',
       rate: 'Custom Architectural Packages',
       image: '/images/image_07.jpeg',
@@ -73,7 +73,7 @@ export default function ServicesPage({ onOpenConsultation }: ServicesPageProps) 
     {
       id: 'commercial',
       category: 'commercial',
-      title: 'Civil Construction Company & Commercial Builders in Dehradun',
+      title: 'Commercial Plazas, Retail Showrooms & Resorts',
       tagline: 'High-Occupancy Structures with Rapid ROI Execution',
       rate: 'Contract & Tender Based',
       image: '/images/image_10.jpeg',
@@ -97,7 +97,7 @@ export default function ServicesPage({ onOpenConsultation }: ServicesPageProps) 
     {
       id: 'structural',
       category: 'structural',
-      title: 'Anti-Seismic Structural Engineering & Foundation Works',
+      title: 'Anti-Seismic Structural RCC & Foundation Works',
       tagline: 'Engineered for Uttarakhand Seismic Zone IV & V Safety',
       rate: 'Civil Labor + Material Contracts',
       image: '/images/image_08.jpeg',
@@ -121,7 +121,7 @@ export default function ServicesPage({ onOpenConsultation }: ServicesPageProps) 
     {
       id: 'interiors',
       category: 'interiors',
-      title: 'Interior Designers in Dehradun & Modular Kitchen Studios',
+      title: 'Interior Architecture & Bespoke Modular Studios',
       tagline: 'German Hardware, Italian Marble & Fluted Glass',
       rate: '₹1,200 – ₹3,500 / sq.ft',
       image: '/images/image_11.jpeg',
@@ -183,8 +183,8 @@ export default function ServicesPage({ onOpenConsultation }: ServicesPageProps) 
             Full Architectural & Civil Engineering Suite
           </div>
           <h1 className="font-cinzel text-3xl sm:text-5xl font-extrabold text-white">
-            CONSTRUCTION SERVICES <br />
-            <span className="text-[#D5BAA6] border-b-2 border-[#8E6144] pb-1">& ARCHITECTURAL DESIGN IN DEHRADUN</span>
+            OUR SPECIALIZED <br />
+            <span className="text-[#D5BAA6] border-b-2 border-[#8E6144] pb-1">CONSTRUCTION SERVICES</span>
           </h1>
           <div className="olive-brown-divider" />
           <p className="text-sm sm:text-base text-neutral-300 max-w-2xl mx-auto leading-relaxed">

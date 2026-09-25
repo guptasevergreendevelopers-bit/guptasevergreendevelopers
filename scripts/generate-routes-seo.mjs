@@ -52,7 +52,7 @@ const coreRoutes = [
   }
 ];
 
-// Helper to convert Article object to rich semantic HTML
+// Helper to convert Article object to rich semantic HTML for crawlers and LLMs
 function renderArticleSemanticHtml(article, canonicalUrl) {
   let html = `<article>\n`;
   html += `  <h1>${article.title}</h1>\n`;
@@ -117,7 +117,7 @@ function renderArticleSemanticHtml(article, canonicalUrl) {
   return html;
 }
 
-// Generate Core Routes
+// 1. Generate Core Routes
 for (const route of coreRoutes) {
   const routeDir = path.join(distDir, route.path);
   if (!fs.existsSync(routeDir)) {
@@ -142,9 +142,16 @@ for (const route of coreRoutes) {
   console.log(`[generate-routes-seo] Generated dist/${route.path}/index.html`);
 }
 
-// Generate All Articles (under both /articles/[slug] AND direct /[slug])
+// 2. Clean up any stale direct directories
 for (const art of articles) {
-  // 1. Path under /articles/[slug]
+  const staleDirectDir = path.join(distDir, art.slug);
+  if (fs.existsSync(staleDirectDir)) {
+    fs.rmSync(staleDirectDir, { recursive: true, force: true });
+  }
+}
+
+// 3. Generate 14 Unique Canonical Articles under /articles/[slug]
+for (const art of articles) {
   const articleSubPath = `articles/${art.slug}`;
   const articleSubDir = path.join(distDir, articleSubPath);
   if (!fs.existsSync(articleSubDir)) {
@@ -198,43 +205,12 @@ for (const art of articles) {
     .replace(/<meta\s+property="twitter:title"\s+content=".*?"\s*\/?>/, `<meta property="twitter:title" content="${art.seoTitle}" />`)
     .replace(/<meta\s+property="twitter:description"\s+content=".*?"\s*\/?>/, `<meta property="twitter:description" content="${art.metaDescription}" />`)
     .replace(/<meta\s+property="twitter:url"\s+content=".*?"\s*\/?>/, `<meta property="twitter:url" content="${canonicalSubUrl}" />`)
-    // Replace the off-screen semantic container with the complete article text for crawlers and LLMs!
     .replace(
       /<div style="position: absolute; left: -9999px;.*?<\/div>/s,
       `<div style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">\n${semanticContentSub}\n    </div>`
     );
 
   fs.writeFileSync(path.join(articleSubDir, 'index.html'), htmlSub, 'utf8');
-
-  // 2. Direct Root Path /[slug] (Authoritative Search Landing Page)
-  const directPath = art.slug;
-  const directDir = path.join(distDir, directPath);
-  if (!fs.existsSync(directDir)) {
-    fs.mkdirSync(directDir, { recursive: true });
-  }
-
-  const canonicalDirectUrl = `https://www.guptasevergreendevelopers.com/${directPath}`;
-  const semanticContentDirect = renderArticleSemanticHtml(art, canonicalDirectUrl);
-
-  const directJsonLd = { ...articleJsonLd, mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalDirectUrl } };
-  const directSchemaScript = `<script type="application/ld+json">${JSON.stringify(directJsonLd)}</script>`;
-
-  let htmlDirect = baseHtml
-    .replace(/<title>.*?<\/title>/, `<title>${art.seoTitle}</title>`)
-    .replace(/<meta\s+name="description"\s+content=".*?"\s*\/?>/, `<meta name="description" content="${art.metaDescription}" />`)
-    .replace(/<link\s+rel="canonical"\s+href=".*?"\s*\/?>/, `<link rel="canonical" href="${canonicalDirectUrl}" />\n    ${directSchemaScript}`)
-    .replace(/<meta\s+property="og:title"\s+content=".*?"\s*\/?>/, `<meta property="og:title" content="${art.seoTitle}" />`)
-    .replace(/<meta\s+property="og:description"\s+content=".*?"\s*\/?>/, `<meta property="og:description" content="${art.metaDescription}" />`)
-    .replace(/<meta\s+property="og:url"\s+content=".*?"\s*\/?>/, `<meta property="og:url" content="${canonicalDirectUrl}" />`)
-    .replace(/<meta\s+property="twitter:title"\s+content=".*?"\s*\/?>/, `<meta property="twitter:title" content="${art.seoTitle}" />`)
-    .replace(/<meta\s+property="twitter:description"\s+content=".*?"\s*\/?>/, `<meta property="twitter:description" content="${art.metaDescription}" />`)
-    .replace(/<meta\s+property="twitter:url"\s+content=".*?"\s*\/?>/, `<meta property="twitter:url" content="${canonicalDirectUrl}" />`)
-    .replace(
-      /<div style="position: absolute; left: -9999px;.*?<\/div>/s,
-      `<div style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">\n${semanticContentDirect}\n    </div>`
-    );
-
-  fs.writeFileSync(path.join(directDir, 'index.html'), htmlDirect, 'utf8');
 }
 
-console.log(`[generate-routes-seo] Successfully pre-generated static SEO pages for ${coreRoutes.length + articles.length * 2} routes.`);
+console.log(`[generate-routes-seo] Successfully pre-generated static SEO pages for ${coreRoutes.length + articles.length} unique canonical routes.`);

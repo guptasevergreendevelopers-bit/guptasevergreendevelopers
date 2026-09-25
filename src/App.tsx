@@ -105,51 +105,18 @@ export default function App() {
                 element={<ArticleDetailPage onOpenConsultation={handleOpenConsultation} />} 
               />
 
-              {/* 11 Dedicated Authoritative Search Landing Pages */}
-              <Route 
-                path="/house-construction-cost-dehradun-2026" 
-                element={<ArticleDetailPage explicitSlug="house-construction-cost-dehradun-2026" isDirectRoute onOpenConsultation={handleOpenConsultation} />} 
-              />
-              <Route 
-                path="/best-construction-companies-dehradun" 
-                element={<ArticleDetailPage explicitSlug="best-construction-companies-dehradun" isDirectRoute onOpenConsultation={handleOpenConsultation} />} 
-              />
-              <Route 
-                path="/house-construction-contractors-dehradun" 
-                element={<ArticleDetailPage explicitSlug="house-construction-contractors-dehradun" isDirectRoute onOpenConsultation={handleOpenConsultation} />} 
-              />
-              <Route 
-                path="/turnkey-house-construction-dehradun" 
-                element={<ArticleDetailPage explicitSlug="turnkey-house-construction-dehradun" isDirectRoute onOpenConsultation={handleOpenConsultation} />} 
-              />
-              <Route 
-                path="/villa-construction-mussoorie" 
-                element={<ArticleDetailPage explicitSlug="villa-construction-mussoorie" isDirectRoute onOpenConsultation={handleOpenConsultation} />} 
-              />
-              <Route 
-                path="/construction-cost-calculator-dehradun" 
-                element={<ArticleDetailPage explicitSlug="construction-cost-calculator-dehradun" isDirectRoute onOpenConsultation={handleOpenConsultation} />} 
-              />
-              <Route 
-                path="/mdda-building-approval-guide-dehradun" 
-                element={<ArticleDetailPage explicitSlug="mdda-building-approval-guide-dehradun" isDirectRoute onOpenConsultation={handleOpenConsultation} />} 
-              />
-              <Route 
-                path="/house-construction-timeline-dehradun" 
-                element={<ArticleDetailPage explicitSlug="house-construction-timeline-dehradun" isDirectRoute onOpenConsultation={handleOpenConsultation} />} 
-              />
-              <Route 
-                path="/construction-materials-and-specifications" 
-                element={<ArticleDetailPage explicitSlug="construction-materials-and-specifications" isDirectRoute onOpenConsultation={handleOpenConsultation} />} 
-              />
-              <Route 
-                path="/completed-projects-dehradun" 
-                element={<ArticleDetailPage explicitSlug="completed-projects-dehradun" isDirectRoute onOpenConsultation={handleOpenConsultation} />} 
-              />
-              <Route 
-                path="/construction-company-comparison-guide-dehradun" 
-                element={<ArticleDetailPage explicitSlug="construction-company-comparison-guide-dehradun" isDirectRoute onOpenConsultation={handleOpenConsultation} />} 
-              />
+              {/* Canonical Redirects from root slugs to /articles/[slug] */}
+              <Route path="/house-construction-cost-dehradun-2026" element={<Navigate to="/articles/house-construction-cost-dehradun-2026" replace />} />
+              <Route path="/best-construction-companies-dehradun" element={<Navigate to="/articles/best-construction-companies-dehradun" replace />} />
+              <Route path="/house-construction-contractors-dehradun" element={<Navigate to="/articles/house-construction-contractors-dehradun" replace />} />
+              <Route path="/turnkey-house-construction-dehradun" element={<Navigate to="/articles/turnkey-house-construction-dehradun" replace />} />
+              <Route path="/villa-construction-mussoorie" element={<Navigate to="/articles/villa-construction-mussoorie" replace />} />
+              <Route path="/construction-cost-calculator-dehradun" element={<Navigate to="/articles/construction-cost-calculator-dehradun" replace />} />
+              <Route path="/mdda-building-approval-guide-dehradun" element={<Navigate to="/articles/mdda-building-approval-guide-dehradun" replace />} />
+              <Route path="/house-construction-timeline-dehradun" element={<Navigate to="/articles/house-construction-timeline-dehradun" replace />} />
+              <Route path="/construction-materials-and-specifications" element={<Navigate to="/articles/construction-materials-and-specifications" replace />} />
+              <Route path="/completed-projects-dehradun" element={<Navigate to="/articles/completed-projects-dehradun" replace />} />
+              <Route path="/construction-company-comparison-guide-dehradun" element={<Navigate to="/articles/construction-company-comparison-guide-dehradun" replace />} />
 
               {/* Catch-all fallback */}
               <Route path="*" element={<Navigate to="/" replace />} />

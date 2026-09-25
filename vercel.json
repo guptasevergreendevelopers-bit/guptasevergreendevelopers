@@ -11,19 +11,20 @@
         }
       ],
       "destination": "https://www.guptasevergreendevelopers.com/:path*",
-      "permanent": true
+      "permanent": true,
+      "statusCode": 301
     },
-    { "source": "/house-construction-cost-dehradun-2026", "destination": "/articles/house-construction-cost-dehradun-2026", "permanent": true },
-    { "source": "/best-construction-companies-dehradun", "destination": "/articles/best-construction-companies-dehradun", "permanent": true },
-    { "source": "/house-construction-contractors-dehradun", "destination": "/articles/house-construction-contractors-dehradun", "permanent": true },
-    { "source": "/turnkey-house-construction-dehradun", "destination": "/articles/turnkey-house-construction-dehradun", "permanent": true },
-    { "source": "/villa-construction-mussoorie", "destination": "/articles/villa-construction-mussoorie", "permanent": true },
-    { "source": "/construction-cost-calculator-dehradun", "destination": "/articles/construction-cost-calculator-dehradun", "permanent": true },
-    { "source": "/mdda-building-approval-guide-dehradun", "destination": "/articles/mdda-building-approval-guide-dehradun", "permanent": true },
-    { "source": "/house-construction-timeline-dehradun", "destination": "/articles/house-construction-timeline-dehradun", "permanent": true },
-    { "source": "/construction-materials-and-specifications", "destination": "/articles/construction-materials-and-specifications", "permanent": true },
-    { "source": "/completed-projects-dehradun", "destination": "/articles/completed-projects-dehradun", "permanent": true },
-    { "source": "/construction-company-comparison-guide-dehradun", "destination": "/articles/construction-company-comparison-guide-dehradun", "permanent": true }
+    { "source": "/house-construction-cost-dehradun-2026", "destination": "/articles/house-construction-cost-dehradun-2026", "permanent": true, "statusCode": 301 },
+    { "source": "/best-construction-companies-dehradun", "destination": "/articles/best-construction-companies-dehradun", "permanent": true, "statusCode": 301 },
+    { "source": "/house-construction-contractors-dehradun", "destination": "/articles/house-construction-contractors-dehradun", "permanent": true, "statusCode": 301 },
+    { "source": "/turnkey-house-construction-dehradun", "destination": "/articles/turnkey-house-construction-dehradun", "permanent": true, "statusCode": 301 },
+    { "source": "/villa-construction-mussoorie", "destination": "/articles/villa-construction-mussoorie", "permanent": true, "statusCode": 301 },
+    { "source": "/construction-cost-calculator-dehradun", "destination": "/articles/construction-cost-calculator-dehradun", "permanent": true, "statusCode": 301 },
+    { "source": "/mdda-building-approval-guide-dehradun", "destination": "/articles/mdda-building-approval-guide-dehradun", "permanent": true, "statusCode": 301 },
+    { "source": "/house-construction-timeline-dehradun", "destination": "/articles/house-construction-timeline-dehradun", "permanent": true, "statusCode": 301 },
+    { "source": "/construction-materials-and-specifications", "destination": "/articles/construction-materials-and-specifications", "permanent": true, "statusCode": 301 },
+    { "source": "/completed-projects-dehradun", "destination": "/articles/completed-projects-dehradun", "permanent": true, "statusCode": 301 },
+    { "source": "/construction-company-comparison-guide-dehradun", "destination": "/articles/construction-company-comparison-guide-dehradun", "permanent": true, "statusCode": 301 }
   ],
   "rewrites": [
     {

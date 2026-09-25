@@ -9,8 +9,8 @@ export default function CitationsAndBacklinks() {
     {
       organization: 'Ministry of Corporate Affairs (MCA)',
       registry: 'ROC Uttarakhand Master Data',
-      identifier: 'LLPIN: ACP-3601',
-      description: 'Official corporate registration verifying active status, statutory filings, and designated partner appointments.',
+      identifier: 'LLPIN: ACP-3601 (Inc. 23 June 2025)',
+      description: 'Official corporate registration under ROC Uttarakhand verifying active LLP status, statutory filings, and designated partners Sunil Kumar Gupta and Vansh Gupta.',
       linkText: 'Verify MCA Master Data',
       url: 'https://www.mca.gov.in',
       authority: 'Govt. of India Regulatory Registry'
@@ -37,7 +37,7 @@ export default function CitationsAndBacklinks() {
       organization: 'Zauba Corp Corporate Directory',
       registry: 'Indian Companies Master Index',
       identifier: 'ROC-Uttarakhand / ACP-3601',
-      description: 'Public corporate record indexing incorporation date, designated partners Sunil Kumar Gupta and Vansh Gupta.',
+      description: 'Public corporate record indexing statutory incorporation date (23 June 2025), designated partners Sunil Kumar Gupta and Vansh Gupta, and operational history from 2012.',
       linkText: 'View Zauba Corp Registry',
       url: 'https://www.zaubacorp.com',
       authority: 'Corporate Due Diligence Directory'

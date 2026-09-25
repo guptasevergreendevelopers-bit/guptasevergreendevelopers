@@ -49,7 +49,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1.5 text-[#B0C5A6] font-medium tracking-wider">
               <Award className="w-3 h-3 text-[#A87B5C] flex-shrink-0" />
-              ESTD. 2012 • 13+ YEARS OF EXCELLENCE • LLPIN: ACP-3601
+              OPERATING SINCE 2012 • LLPIN: ACP-3601 (ROC UTTARAKHAND)
             </span>
             <span className="text-[#31432B]">•</span>
             <span className="flex items-center gap-1.5 text-neutral-400 tracking-wide">

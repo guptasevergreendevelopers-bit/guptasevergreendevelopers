@@ -24,7 +24,7 @@ interface HomePageProps {
 export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultation }: HomePageProps) {
   usePageSEO({
     title: "Gupta's Evergreen Developers LLP | Best Construction Company & Architects in Dehradun",
-    description: "Gupta's Evergreen Developers LLP is a trusted construction company and top architectural practice in Dehradun. Estd. 2012 (LLPIN: ACP-3601). We deliver turnkey house construction, luxury hillside villas, 3D elevations, commercial plazas, and anti-seismic RCC structures across Rajpur Road, Sahastradhara, Mussoorie, Haridwar & Rishikesh.",
+    description: "GUPTA'S EVERGREEN DEVELOPERS LLP (LLPIN: ACP-3601, Inc. 2025, operating trade from 2012) is Dehradun's premier construction company and architectural practice. Turnkey residential villas, 3D elevations, MDDA map approvals, and anti-seismic RCC structures across Rajpur Road, Mussoorie & Haridwar.",
     canonicalPath: "/",
   });
 

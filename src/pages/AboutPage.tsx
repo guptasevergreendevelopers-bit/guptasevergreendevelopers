@@ -21,7 +21,7 @@ interface AboutPageProps {
 export default function AboutPage({ onOpenConsultation }: AboutPageProps) {
   usePageSEO({
     title: "About Gupta's Evergreen | Construction Company in Dehradun",
-    description: "Learn about Gupta's Evergreen Developers LLP (LLPIN: ACP-3601, Estd. 2012), founded by Sunil Kumar Gupta and Vansh Gupta. 13+ years of civil contracting pedigree in Dehradun, Uttarakhand.",
+    description: "Corporate dossier for GUPTA'S EVERGREEN DEVELOPERS LLP (LLPIN: ACP-3601, Inc. 23 June 2025, operating trade from 2012). Founded by Sunil Kumar Gupta & Vansh Gupta in Dehradun.",
     canonicalPath: "/about",
   });
 
@@ -54,18 +54,28 @@ export default function AboutPage({ onOpenConsultation }: AboutPageProps) {
             <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#31432B]/10 border border-[#31432B]/20 text-[#31432B] text-xs font-bold uppercase tracking-wider">
                 <BadgeCheck className="w-4 h-4 text-[#5C3D2B]" />
-                Statutory LLP Incorporation
+                Statutory Corporate Profile &amp; History
               </div>
               <h2 className="font-cinzel text-2xl sm:text-4xl font-extrabold text-[#1C1917]">
                 A Decade of Pedigree Meets <br />
                 <span className="text-olive-gradient">Corporate Accountability</span>
               </h2>
               <p className="text-sm text-neutral-700 leading-relaxed">
-                For over a decade, <strong>Gupta's Evergreen Developers</strong> has operated as an esteemed construction institution in Dehradun, completing more than 500 bespoke villas, multi-family residences, and commercial developments across Uttarakhand.
+                Since 2012, founder <strong>Sunil Kumar Gupta</strong> and his civil engineering teams have delivered over 500 bespoke villas, structural RCC frames, and commercial developments across Dehradun and the Himalayan foothills.
               </p>
               <p className="text-sm text-neutral-700 leading-relaxed">
-                In June 2025, our founders formalized this legacy into a dedicated Limited Liability Partnership—<strong>GUPTA'S EVERGREEN DEVELOPERS LLP (LLPIN: ACP-3601)</strong>, registered with the Registrar of Companies (ROC Uttarakhand). This transition provides institutional protection to our clients: legally enforceable 5-year warranties, milestone-based escrow payouts, and structured compliance with state building codes.
+                On <strong>23 June 2025</strong>, our founders formalized this long-standing trade legacy into a corporate Limited Liability Partnership—<strong>GUPTA'S EVERGREEN DEVELOPERS LLP (LLPIN: ACP-3601)</strong>, registered with the Registrar of Companies (ROC Uttarakhand), Ministry of Corporate Affairs, Government of India. This corporate structure provides our clients with legally enforceable 5-year warranties, milestone-based escrow payouts, and structured compliance under Indian building codes.
               </p>
+
+              {/* Transparent Company History Callout */}
+              <div className="p-4 rounded-xl bg-[#FAF8F5] border-l-4 border-[#5C3D2B] text-xs text-neutral-700 space-y-1.5 shadow-sm">
+                <div className="font-bold text-[#1C1917] uppercase tracking-wider text-[11px]">
+                  Transparent History Disclosure: Operating Trade (2012) vs. Legal LLP (2025)
+                </div>
+                <p className="text-[11.5px] leading-relaxed text-neutral-600">
+                  In strict adherence to factual integrity: public statutory records verify the legal LLP entity was incorporated on <strong>23 June 2025</strong>. References to "Operating since 2012" represent the continuous 13+ years of civil contracting, geotechnical supervision, and residential construction practice of our founding partners prior to corporate formalization.
+                </p>
+              </div>
 
               {/* Legal Info Table */}
               <div className="card-olive-brown p-5 space-y-3 text-xs bg-[#FAF8F5] border-[#E6DFD5]">
@@ -78,16 +88,24 @@ export default function AboutPage({ onOpenConsultation }: AboutPageProps) {
                   <strong className="text-[#3D5337] font-mono font-bold">ACP-3601</strong>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-[#E6DFD5]">
+                  <span className="text-neutral-500 font-medium">Incorporation Date:</span>
+                  <strong className="text-[#1C1917]">23 June 2025</strong>
+                </div>
+                <div className="flex justify-between py-1.5 border-b border-[#E6DFD5]">
                   <span className="text-neutral-500 font-medium">Incorporation Registrar:</span>
                   <strong className="text-[#1C1917]">ROC Uttarakhand (MCA, Govt. of India)</strong>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-[#E6DFD5]">
-                  <span className="text-neutral-500 font-medium">Operational History:</span>
-                  <strong className="text-[#1C1917]">Established 2012 (13+ Years Active Service)</strong>
+                  <span className="text-neutral-500 font-medium">Founder Operating History:</span>
+                  <strong className="text-[#1C1917]">Operating Trade Since 2012 (13+ Years Service)</strong>
+                </div>
+                <div className="flex justify-between py-1.5 border-b border-[#E6DFD5]">
+                  <span className="text-neutral-500 font-medium">Designated Partners:</span>
+                  <strong className="text-[#1C1917]">Sunil Kumar Gupta &amp; Vansh Gupta</strong>
                 </div>
                 <div className="flex justify-between py-1.5">
                   <span className="text-neutral-500 font-medium">Client Rating:</span>
-                  <strong className="text-[#5C3D2B] font-bold">5.0 ★ Across 120 Google & 159 Justdial Reviews</strong>
+                  <strong className="text-[#5C3D2B] font-bold">5.0 ★ Across 120 Google &amp; 159 Justdial Reviews</strong>
                 </div>
               </div>
             </div>

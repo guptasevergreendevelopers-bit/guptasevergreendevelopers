@@ -18,7 +18,7 @@ const coreRoutes = [
     path: 'about',
     title: "About Gupta's Evergreen | Construction Company in Dehradun",
     h1: "About Gupta's Evergreen Developers - Leading Construction Company in Dehradun",
-    description: "Learn about Gupta's Evergreen Developers LLP (LLPIN: ACP-3601, Estd. 2012), founded by Sunil Kumar Gupta and Vansh Gupta. 13+ years of civil contracting pedigree in Dehradun, Uttarakhand."
+    description: "Corporate dossier for GUPTA'S EVERGREEN DEVELOPERS LLP (LLPIN: ACP-3601, Inc. 23 June 2025, operating trade from 2012). Founded by Sunil Kumar Gupta & Vansh Gupta in Dehradun."
   },
   {
     path: 'services',
@@ -110,7 +110,7 @@ function renderArticleSemanticHtml(article, canonicalUrl) {
   }
 
   html += `  <footer>\n`;
-  html += `    <p><strong>Company Reference:</strong> Gupta's Evergreen Developers LLP (LLPIN: ACP-3601, Estd. 2012, ROC Uttarakhand). Operating Headquarters: 105 Rajpur Road, Dehradun 248001. Direct Founder Lines: +91 95483 93798 / +91 76687 66118.</p>\n`;
+  html += `    <p><strong>Company Reference:</strong> GUPTA'S EVERGREEN DEVELOPERS LLP (LLPIN: ACP-3601, Inc. 23 June 2025, operating trade dating to 2012, ROC Uttarakhand). Operating Headquarters: 105 Rajpur Road, Dehradun 248001. Direct Founder Lines: +91 95483 93798 / +91 76687 66118.</p>\n`;
   html += `    <p><a href="https://www.guptasevergreendevelopers.com/packages#calculator">Estimate Your House Construction Cost Online</a> | <a href="https://www.guptasevergreendevelopers.com/contact">Schedule a Free 24-Hour On-Site Architectural Evaluation</a></p>\n`;
   html += `  </footer>\n`;
   html += `</article>`;

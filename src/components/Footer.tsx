@@ -42,14 +42,14 @@ export default function Footer() {
             </Link>
 
             <p className="text-xs text-neutral-300 leading-relaxed max-w-sm">
-              Established in 2012, <strong>Gupta's Evergreen Developers LLP</strong> is one of Dehradun's best construction companies and architectural engineering practices. Specializing in luxury turnkey residential villas, commercial complexes, and anti-seismic RCC structures with a 5-year project warranty.
+              With construction pedigree dating to 2012, <strong>GUPTA'S EVERGREEN DEVELOPERS LLP</strong> (LLPIN: ACP-3601, Inc. 23 June 2025, ROC Uttarakhand) is Dehradun's premier turnkey construction company and licensed architectural engineering practice. Specializing in luxury residential villas, commercial complexes, and anti-seismic RCC structures with a 5-year project warranty.
             </p>
 
             <div className="space-y-2 text-xs pt-1">
               <div className="flex items-start gap-2 text-neutral-300">
                 <ShieldCheck className="w-4 h-4 text-[#A87B5C] flex-shrink-0 mt-0.5" />
                 <span>
-                  <strong>LLPIN: ACP-3601</strong> • Registered with ROC Uttarakhand (MCA)
+                  <strong>LLPIN: ACP-3601</strong> (Inc. 23 June 2025, ROC Uttarakhand) • Operating Trade from 2012
                 </span>
               </div>
               <div className="flex items-start gap-2 text-neutral-300">
@@ -199,7 +199,7 @@ export default function Footer() {
       <div className="border-t border-[#31432B]/50 bg-[#0C120B] py-6 px-4">
         <div className="container-custom flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-400">
           <div>
-            &copy; 2012 – {new Date().getFullYear()} <strong>GUPTA'S EVERGREEN DEVELOPERS LLP</strong>. All rights reserved.
+            &copy; {new Date().getFullYear()} <strong>GUPTA'S EVERGREEN DEVELOPERS LLP</strong> (LLPIN: ACP-3601, Inc. 2025). Founder operating history dating to 2012. All rights reserved.
           </div>
 
           <div className="flex items-center gap-4 flex-wrap justify-center text-neutral-400">

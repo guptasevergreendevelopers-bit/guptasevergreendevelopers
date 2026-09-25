@@ -49,7 +49,7 @@ export default function ContactPage() {
           </div>
           <h1 className="font-cinzel text-3xl sm:text-5xl font-extrabold text-white">
             CONTACT GUPTA'S EVERGREEN <br />
-            <span className="text-[#D5BAA6] border-b-2 border-[#8E6144] pb-1">DEVELOPERS LLP</span>
+            <span className="text-[#D5BAA6] border-b-2 border-[#8E6144] pb-1">DEVELOPERS LLP IN DEHRADUN</span>
           </h1>
           <div className="olive-brown-divider" />
           <p className="text-sm sm:text-base text-neutral-300 max-w-2xl mx-auto leading-relaxed">

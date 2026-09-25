@@ -204,7 +204,7 @@ export default function Footer() {
             <span>•</span>
             <span>5 Years Project Warranty</span>
             <span>•</span>
-            <span>guptasevergreendevelopersllp.com</span>
+            <span>guptasevergreendevelopers.com</span>
           </div>
         </div>
       </div>

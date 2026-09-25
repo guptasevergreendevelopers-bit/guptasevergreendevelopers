@@ -58,15 +58,15 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
               </div>
             </div>
 
-            {/* Main Responsive Headline */}
+            {/* Main Responsive Headline with Top SEO Keywords */}
             <h1 className="font-cinzel text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.18] sm:leading-[1.14] mb-5 sm:mb-6">
-              DEHRADUN'S PREMIER <br className="hidden sm:block" />
-              <span className="text-[#D5BAA6] border-b-2 border-[#8E6144] pb-0.5 sm:pb-1">TURNKEY BUILDERS & ARCHITECTS</span>
+              BEST CONSTRUCTION COMPANY <br className="hidden sm:block" />
+              <span className="text-[#D5BAA6] border-b-2 border-[#8E6144] pb-0.5 sm:pb-1">& TOP BUILDERS IN DEHRADUN</span>
             </h1>
 
-            {/* Subheading */}
+            {/* Subheading with Local Intent Keywords */}
             <p className="text-xs sm:text-base lg:text-lg text-neutral-300 font-normal leading-relaxed max-w-3xl mb-8 sm:mb-10">
-              For over 13 years, we have brought architectural precision, earthquake-resistant civil engineering, and bespoke luxury finishes to residences, hill villas, and commercial plazas across Dehradun, Mussoorie, Haridwar, and Rishikesh.
+              For over 13 years, Gupta's Evergreen Developers LLP has been Dehradun's premier turnkey construction company, certified civil contractor, and licensed architectural practice. We deliver earthquake-resistant house construction, luxury hill villas, 3D architectural elevations, and commercial plazas across Rajpur Road, Sahastradhara, Mussoorie, Haridwar, and Rishikesh.
             </p>
 
             {/* CTAs (Olive & Brown Buttons) */}
@@ -219,22 +219,22 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
-                title: 'Turnkey Residential Villas',
+                title: 'Turnkey House Construction in Dehradun',
                 rate: 'From ₹1,650 – ₹2,450/sq.ft',
                 image: '/images/image_03.jpeg',
-                desc: 'End-to-end luxury residence execution from soil core testing and architectural plans to foundation, RCC frame, and luxury finishing.'
+                desc: 'End-to-end luxury residence and villa construction from soil core testing and architectural plans to foundation, anti-seismic RCC frame, and luxury finishing.'
               },
               {
-                title: 'Architectural 3D Elevations & MDDA',
+                title: 'Architects in Dehradun & MDDA Map Approvals',
                 rate: 'Vastu-Compliant Blueprints',
                 image: '/images/image_07.jpeg',
-                desc: 'Photorealistic 3D day/night visualization, structural STAAD analysis, and full assistance with Mussoorie Dehradun Development Authority map sanctions.'
+                desc: 'Photorealistic 3D day/night visualizations, structural STAAD analysis, and full sanctioning support with the Mussoorie Dehradun Development Authority (MDDA).'
               },
               {
-                title: 'Commercial & Civil Infrastructure',
+                title: 'Civil Construction Company & Commercial Builders',
                 rate: 'Plazas, Offices & Public Works',
                 image: '/images/image_10.jpeg',
-                desc: 'High-traffic retail showrooms, corporate offices, hill resorts in Mussoorie, and verified government civil infrastructure contracts.'
+                desc: 'High-traffic retail showrooms, corporate offices, hill resorts in Mussoorie, and verified government civil infrastructure contracts across Dehradun.'
               }
             ].map((s, idx) => (
               <div key={idx} className="card-olive-brown overflow-hidden flex flex-col justify-between group bg-white">

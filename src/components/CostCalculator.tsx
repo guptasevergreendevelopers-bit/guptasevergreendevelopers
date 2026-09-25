@@ -97,14 +97,14 @@ export default function CostCalculator({ onOpenConsultation }: CostCalculatorPro
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#31432B]/10 border border-[#31432B]/20 text-[#31432B] text-xs font-bold uppercase tracking-widest mb-4 shadow-sm">
             <Calculator className="w-3.5 h-3.5 text-[#5C3D2B]" />
-            Dehradun & Uttarakhand Cost Estimator
+            Dehradun & Uttarakhand Construction Cost Estimator
           </div>
           <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1C1917] mb-4">
-            CALCULATE YOUR <span className="text-olive-gradient">CONSTRUCTION BUDGET</span>
+            DEHRADUN HOUSE <span className="text-olive-gradient">CONSTRUCTION COST CALCULATOR</span>
           </h2>
           <div className="olive-brown-divider" />
           <p className="text-sm sm:text-base text-neutral-600">
-            Based on current market rates across Dehradun, Mussoorie, and Haridwar. Transparent milestone-based execution with zero hidden surcharges.
+            Real-time market rate estimation for house construction in Dehradun, Rajpur Road, Sahastradhara, Mussoorie, and Haridwar. Transparent milestone-based billing with zero cost escalation clauses.
           </p>
         </div>
 
@@ -150,6 +150,25 @@ export default function CostCalculator({ onOpenConsultation }: CostCalculatorPro
                 <span>2,500 sq.ft (Villa)</span>
                 <span>6,000 sq.ft (Estate)</span>
                 <span>10,000+ sq.ft</span>
+              </div>
+
+              {/* Popular Area Presets for SEO & Quick Selection */}
+              <div className="mt-3 pt-3 border-t border-[#E6DFD5] flex items-center gap-2 flex-wrap">
+                <span className="text-[11px] font-bold text-[#5C3D2B] uppercase tracking-wider">Popular Sizes:</span>
+                {[900, 1000, 1200, 1500, 2000, 2500, 3500].map((preset) => (
+                  <button
+                    key={preset}
+                    type="button"
+                    onClick={() => setArea(preset)}
+                    className={`px-2.5 py-1 rounded-md text-xs font-semibold transition-all ${
+                      area === preset
+                        ? 'bg-[#31432B] text-white shadow-sm'
+                        : 'bg-[#FAF8F5] text-neutral-700 hover:bg-[#E6ECE2] border border-[#D5BAA6]'
+                    }`}
+                  >
+                    {preset} sq.ft
+                  </button>
+                ))}
               </div>
             </div>
 
@@ -394,6 +413,79 @@ export default function CostCalculator({ onOpenConsultation }: CostCalculatorPro
             </p>
           </div>
 
+        </div>
+
+        {/* SEO Reference Table: House Construction Cost per Square Foot in Dehradun */}
+        <div className="mt-14 card-olive-brown p-6 sm:p-8 bg-white overflow-hidden shadow-sm">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-4 pb-4 border-b border-[#E6DFD5]">
+            <div>
+              <h3 className="font-cinzel text-lg sm:text-xl font-bold text-[#1C1917]">
+                House Construction Cost in Dehradun (2026 Price Guide)
+              </h3>
+              <p className="text-xs text-neutral-600 mt-0.5">
+                Benchmark turnkey construction costs across Rajpur Road, Sahastradhara, GMS Road, and Mussoorie foothills.
+              </p>
+            </div>
+            <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#31432B]/10 text-[#31432B] uppercase tracking-wider">
+              Updated September 2026
+            </span>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr className="bg-[#FAF8F5] border-b border-[#D5BAA6] text-[#31432B]">
+                  <th className="py-3 px-4 font-bold uppercase tracking-wider">Plot / Built-Up Area</th>
+                  <th className="py-3 px-4 font-bold uppercase tracking-wider">Basic (₹1,650/sq.ft)</th>
+                  <th className="py-3 px-4 font-bold uppercase tracking-wider">Premium Standard (₹1,950/sq.ft)</th>
+                  <th className="py-3 px-4 font-bold uppercase tracking-wider">Luxury Turnkey (₹2,450/sq.ft)</th>
+                  <th className="py-3 px-4 font-bold uppercase tracking-wider">Estimated Delivery</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[#E6DFD5] text-neutral-800">
+                <tr className="hover:bg-[#FAF8F5]/80 transition-colors">
+                  <td className="py-3.5 px-4 font-bold text-[#1C1917]">900 Sq.Ft (Compact 2BHK)</td>
+                  <td className="py-3.5 px-4">₹ 14.85 Lakhs</td>
+                  <td className="py-3.5 px-4 font-semibold text-[#31432B]">₹ 17.55 Lakhs</td>
+                  <td className="py-3.5 px-4">₹ 22.05 Lakhs</td>
+                  <td className="py-3.5 px-4 text-neutral-600">4 – 5 Months</td>
+                </tr>
+                <tr className="hover:bg-[#FAF8F5]/80 transition-colors bg-[#FAF8F5]/40">
+                  <td className="py-3.5 px-4 font-bold text-[#1C1917]">1,000 Sq.Ft (Standard 3BHK)</td>
+                  <td className="py-3.5 px-4">₹ 16.50 Lakhs</td>
+                  <td className="py-3.5 px-4 font-semibold text-[#31432B]">₹ 19.50 Lakhs</td>
+                  <td className="py-3.5 px-4">₹ 24.50 Lakhs</td>
+                  <td className="py-3.5 px-4 text-neutral-600">5 – 6 Months</td>
+                </tr>
+                <tr className="hover:bg-[#FAF8F5]/80 transition-colors">
+                  <td className="py-3.5 px-4 font-bold text-[#1C1917]">1,500 Sq.Ft (Spacious Duplex)</td>
+                  <td className="py-3.5 px-4">₹ 24.75 Lakhs</td>
+                  <td className="py-3.5 px-4 font-semibold text-[#31432B]">₹ 29.25 Lakhs</td>
+                  <td className="py-3.5 px-4">₹ 36.75 Lakhs</td>
+                  <td className="py-3.5 px-4 text-neutral-600">6 – 7 Months</td>
+                </tr>
+                <tr className="hover:bg-[#FAF8F5]/80 transition-colors bg-[#FAF8F5]/40">
+                  <td className="py-3.5 px-4 font-bold text-[#1C1917]">2,000 Sq.Ft (4BHK Luxury Home)</td>
+                  <td className="py-3.5 px-4">₹ 33.00 Lakhs</td>
+                  <td className="py-3.5 px-4 font-semibold text-[#31432B]">₹ 39.00 Lakhs</td>
+                  <td className="py-3.5 px-4">₹ 49.00 Lakhs</td>
+                  <td className="py-3.5 px-4 text-neutral-600">7 – 9 Months</td>
+                </tr>
+                <tr className="hover:bg-[#FAF8F5]/80 transition-colors">
+                  <td className="py-3.5 px-4 font-bold text-[#1C1917]">2,500 Sq.Ft (Luxury Hill Villa)</td>
+                  <td className="py-3.5 px-4">₹ 41.25 Lakhs</td>
+                  <td className="py-3.5 px-4 font-semibold text-[#31432B]">₹ 48.75 Lakhs</td>
+                  <td className="py-3.5 px-4">₹ 61.25 Lakhs</td>
+                  <td className="py-3.5 px-4 text-neutral-600">9 – 11 Months</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-4 pt-3 border-t border-[#E6DFD5] flex flex-wrap items-center justify-between text-[11px] text-neutral-500 gap-2">
+            <span>* All rates include architectural 2D/3D layouts, structural engineering, MDDA sanction submission, and 5-year project warranty.</span>
+            <span className="font-semibold text-[#5C3D2B]">Zero escalation guaranteed upon agreement.</span>
+          </div>
         </div>
 
       </div>

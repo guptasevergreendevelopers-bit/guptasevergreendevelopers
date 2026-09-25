@@ -1,5 +1,5 @@
 # Robots.txt for Gupta's Evergreen Developers LLP
-# Website: https://guptasevergreendevelopersllp.com
+# Website: https://www.guptasevergreendevelopers.com
 
 User-agent: *
 Allow: /
@@ -11,7 +11,7 @@ Allow: /contact
 Allow: /images/
 
 # Sitemaps
-Sitemap: https://guptasevergreendevelopersllp.com/sitemap.xml
+Sitemap: https://www.guptasevergreendevelopers.com/sitemap.xml
 
 # Crawl-delay for optimal indexing
 Crawl-delay: 1

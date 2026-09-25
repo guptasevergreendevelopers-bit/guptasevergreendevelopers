@@ -13,7 +13,7 @@ interface ProjectsPageProps {
 
 export default function ProjectsPage({ onOpenConsultation }: ProjectsPageProps) {
   usePageSEO({
-    title: "Completed & Ongoing Construction Projects in Dehradun | Gupta's Evergreen",
+    title: "Construction Projects in Dehradun | Gupta's Evergreen",
     description: "Explore our portfolio of 500+ luxury villas, commercial retail plazas, hillside duplexes, and anti-seismic RCC slab castings across Dehradun and Mussoorie.",
     canonicalPath: "/projects",
   });

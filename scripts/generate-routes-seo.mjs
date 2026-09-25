@@ -14,27 +14,27 @@ const baseHtml = fs.readFileSync(indexHtmlPath, 'utf8');
 const routes = [
   {
     path: 'about',
-    title: "About Us | Gupta's Evergreen Developers LLP - Established 2012 Dehradun",
+    title: "Dehradun Construction Company | Gupta's Evergreen Developers",
     description: "Learn about Gupta's Evergreen Developers LLP (LLPIN: ACP-3601, Estd. 2012), founded by Sunil Kumar Gupta and Vansh Gupta. 13+ years of civil contracting pedigree in Dehradun, Uttarakhand."
   },
   {
     path: 'services',
-    title: "Construction Services & Architectural Design in Dehradun | Gupta's Evergreen",
+    title: "Construction Services in Dehradun | Gupta's Evergreen",
     description: "Specialized turnkey residential construction, architectural 3D elevations, MDDA map sanctions, commercial plazas, anti-seismic RCC structures, and modular interiors in Dehradun."
   },
   {
     path: 'packages',
-    title: "House Construction Packages & Rates in Dehradun | Gupta's Evergreen",
+    title: "Dehradun Home Build Rates & Packages | Gupta's Evergreen",
     description: "Transparent ₹1,650 to ₹2,450/sq.ft turnkey house construction packages in Dehradun. Calculate your construction cost and milestone payments with zero price escalation."
   },
   {
     path: 'projects',
-    title: "Completed & Ongoing Construction Projects in Dehradun | Gupta's Evergreen",
+    title: "Construction Projects in Dehradun | Gupta's Evergreen",
     description: "Explore our portfolio of 500+ luxury villas, commercial retail plazas, hillside duplexes, and anti-seismic RCC slab castings across Dehradun and Mussoorie."
   },
   {
     path: 'contact',
-    title: "Contact Best Builders & Architects in Dehradun | 105 Rajpur Road",
+    title: "Contact Best Builders in Dehradun | Gupta's Evergreen",
     description: "Contact Gupta's Evergreen Developers LLP at 105 Rajpur Road, Dehradun. Call +91 95483 93798 or book a complimentary on-site architectural evaluation for your plot."
   }
 ];

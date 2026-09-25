@@ -21,7 +21,7 @@ interface ServicesPageProps {
 
 export default function ServicesPage({ onOpenConsultation }: ServicesPageProps) {
   usePageSEO({
-    title: "Construction Services & Architectural Design in Dehradun | Gupta's Evergreen",
+    title: "Construction Services in Dehradun | Gupta's Evergreen",
     description: "Specialized turnkey residential construction, architectural 3D elevations, MDDA map sanctions, commercial plazas, anti-seismic RCC structures, and modular interiors in Dehradun.",
     canonicalPath: "/services",
   });

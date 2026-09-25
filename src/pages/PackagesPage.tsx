@@ -18,7 +18,7 @@ interface PackagesPageProps {
 
 export default function PackagesPage({ onOpenConsultation, onOpenCalculatorConsultation }: PackagesPageProps) {
   usePageSEO({
-    title: "House Construction Packages & Rates in Dehradun | Gupta's Evergreen",
+    title: "Dehradun Home Build Rates & Packages | Gupta's Evergreen",
     description: "Transparent ₹1,650 to ₹2,450/sq.ft turnkey house construction packages in Dehradun. Calculate your construction cost and milestone payments with zero price escalation.",
     canonicalPath: "/packages",
   });

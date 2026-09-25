@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import CostCalculator from '../components/CostCalculator';
 import Packages from '../components/Packages';
+import { usePageSEO } from '../hooks/usePageSEO';
 
 interface PackagesPageProps {
   onOpenConsultation: (pkgTitle?: string) => void;
@@ -16,6 +17,12 @@ interface PackagesPageProps {
 }
 
 export default function PackagesPage({ onOpenConsultation, onOpenCalculatorConsultation }: PackagesPageProps) {
+  usePageSEO({
+    title: "House Construction Packages & Rates in Dehradun | Gupta's Evergreen",
+    description: "Transparent ₹1,650 to ₹2,450/sq.ft turnkey house construction packages in Dehradun. Calculate your construction cost and milestone payments with zero price escalation.",
+    canonicalPath: "/packages",
+  });
+
   return (
     <div className="bg-[#FAF8F5] text-neutral-900 space-y-0">
       

@@ -12,12 +12,19 @@ import {
 } from 'lucide-react';
 import Comparison from '../components/Comparison';
 import CitationsAndBacklinks from '../components/CitationsAndBacklinks';
+import { usePageSEO } from '../hooks/usePageSEO';
 
 interface AboutPageProps {
   onOpenConsultation: (topic?: string) => void;
 }
 
 export default function AboutPage({ onOpenConsultation }: AboutPageProps) {
+  usePageSEO({
+    title: "About Us | Gupta's Evergreen Developers LLP - Established 2012 Dehradun",
+    description: "Learn about Gupta's Evergreen Developers LLP (LLPIN: ACP-3601, Estd. 2012), founded by Sunil Kumar Gupta and Vansh Gupta. 13+ years of civil contracting pedigree in Dehradun, Uttarakhand.",
+    canonicalPath: "/about",
+  });
+
   return (
     <div className="bg-[#FAF8F5] text-neutral-900 space-y-0">
       

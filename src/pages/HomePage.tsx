@@ -14,6 +14,7 @@ import CostCalculator from '../components/CostCalculator';
 import Comparison from '../components/Comparison';
 import Testimonials from '../components/Testimonials';
 import CitationsAndBacklinks from '../components/CitationsAndBacklinks';
+import { usePageSEO } from '../hooks/usePageSEO';
 
 interface HomePageProps {
   onOpenConsultation: (pkgOrProject?: string) => void;
@@ -21,6 +22,12 @@ interface HomePageProps {
 }
 
 export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultation }: HomePageProps) {
+  usePageSEO({
+    title: "Gupta's Evergreen Developers LLP | Best Construction Company & Architects in Dehradun",
+    description: "Gupta's Evergreen Developers LLP is a trusted construction company and top architectural practice in Dehradun. Estd. 2012 (LLPIN: ACP-3601). We deliver turnkey house construction, luxury hillside villas, 3D elevations, commercial plazas, and anti-seismic RCC structures across Rajpur Road, Sahastradhara, Mussoorie, Haridwar & Rishikesh.",
+    canonicalPath: "/",
+  });
+
   return (
     <div className="bg-[#FAF8F5] text-neutral-900 space-y-0">
       

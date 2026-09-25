@@ -6,8 +6,15 @@ import {
   HelpCircle
 } from 'lucide-react';
 import Contact from '../components/Contact';
+import { usePageSEO } from '../hooks/usePageSEO';
 
 export default function ContactPage() {
+  usePageSEO({
+    title: "Contact Best Builders & Architects in Dehradun | 105 Rajpur Road",
+    description: "Contact Gupta's Evergreen Developers LLP at 105 Rajpur Road, Dehradun. Call +91 95483 93798 or book a complimentary on-site architectural evaluation for your plot.",
+    canonicalPath: "/contact",
+  });
+
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const faqs = [

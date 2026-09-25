@@ -5,12 +5,19 @@ import {
   ShieldCheck
 } from 'lucide-react';
 import Projects from '../components/Projects';
+import { usePageSEO } from '../hooks/usePageSEO';
 
 interface ProjectsPageProps {
   onOpenConsultation: (projectName?: string) => void;
 }
 
 export default function ProjectsPage({ onOpenConsultation }: ProjectsPageProps) {
+  usePageSEO({
+    title: "Completed & Ongoing Construction Projects in Dehradun | Gupta's Evergreen",
+    description: "Explore our portfolio of 500+ luxury villas, commercial retail plazas, hillside duplexes, and anti-seismic RCC slab castings across Dehradun and Mussoorie.",
+    canonicalPath: "/projects",
+  });
+
   return (
     <div className="bg-[#FAF8F5] text-neutral-900 space-y-0">
       

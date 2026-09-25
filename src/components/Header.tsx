@@ -76,13 +76,13 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
 
       {/* Main Sticky Navbar (Rich Forest Olive with Warm Walnut Accents) */}
       <header
-        className={`sticky top-0 left-0 right-0 z-40 transition-all duration-300 bg-[#162114] text-white ${
+        className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#162114] text-white border-b ${
           scrolled
-            ? 'shadow-2xl shadow-black/50 border-b border-[#405737]/50 h-16 sm:h-[72px] backdrop-blur-md'
-            : 'border-b border-[#31432B]/50 h-[72px] sm:h-20'
-        } flex items-center`}
+            ? 'shadow-2xl shadow-black/50 border-[#405737]/50 backdrop-blur-md'
+            : 'border-[#31432B]/50'
+        }`}
       >
-        <div className="container-custom w-full flex items-center justify-between gap-4">
+        <div className="container-custom w-full flex items-center justify-between gap-4 h-16 sm:h-[72px] lg:h-20">
           
           {/* Left: Brand Logo from Google Drive */}
           <Link 
@@ -154,7 +154,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
           <div className="flex items-center gap-2 lg:hidden">
             <a
               href="tel:+919548393798"
-              className="p-2 rounded-lg bg-[#2E3F27] text-[#D5BAA6] border border-[#537048]/40"
+              className="p-2.5 rounded-xl bg-[#2E3F27] text-[#D5BAA6] border border-[#537048]/40 hover:bg-[#3D5337] transition-colors"
               aria-label="Call Now"
             >
               <Phone className="w-4 h-4" />
@@ -162,10 +162,10 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 rounded-lg bg-[#2E3F27] text-white hover:text-neutral-300 transition-colors border border-[#537048]/40"
+              className="p-2.5 rounded-xl bg-[#2E3F27] text-white hover:text-[#D5BAA6] hover:bg-[#3D5337] transition-colors border border-[#537048]/40"
               aria-label={mobileOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
             >
-              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileOpen ? <X className="w-5 h-5 text-[#D5BAA6]" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
 
@@ -173,17 +173,17 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
 
         {/* Mobile Navigation Drawer */}
         {mobileOpen && (
-          <div className="lg:hidden bg-[#121A10] border-b border-[#31432B] px-5 py-5 mt-2 shadow-2xl animate-fade-in-up">
-            <div className="flex flex-col gap-1.5">
+          <div className="lg:hidden bg-[#121A10] border-t border-[#31432B] px-5 py-6 shadow-2xl max-h-[calc(100vh-4.5rem)] overflow-y-auto animate-fade-in-up">
+            <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <NavLink
                   key={link.path}
                   to={link.path}
                   onClick={() => setMobileOpen(false)}
                   className={({ isActive }) =>
-                    `py-2.5 px-3.5 rounded-lg text-xs uppercase tracking-[0.15em] font-medium transition-all ${
+                    `py-3 px-4 rounded-xl text-xs uppercase tracking-[0.14em] font-semibold transition-all ${
                       isActive
-                        ? 'bg-[#2E3F27] text-white border border-[#537048]'
+                        ? 'bg-[#2E3F27] text-white border border-[#537048] shadow-sm'
                         : 'text-neutral-300 hover:text-white hover:bg-white/[0.04]'
                     }`
                   }
@@ -192,24 +192,25 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
                 </NavLink>
               ))}
 
-              <div className="pt-3 mt-1 border-t border-[#31432B] flex flex-col gap-2.5">
+              <div className="pt-4 mt-2 border-t border-[#31432B] flex flex-col gap-3">
                 <button
+                  type="button"
                   onClick={() => {
                     setMobileOpen(false);
                     onOpenConsultation?.();
                   }}
-                  className="w-full py-3 text-center text-xs font-bold uppercase tracking-wider bg-[#5C3D2B] text-white hover:bg-[#724C35] rounded-full flex items-center justify-center gap-1.5 transition-all shadow-md"
+                  className="w-full py-3.5 text-center text-xs font-bold uppercase tracking-wider bg-[#5C3D2B] text-white hover:bg-[#724C35] rounded-xl flex items-center justify-center gap-2 transition-all shadow-md border border-[#8E6144]/40"
                 >
-                  <CalendarCheck className="w-4 h-4" />
+                  <CalendarCheck className="w-4 h-4 text-[#D5BAA6]" />
                   <span>Book Free Site Consultation</span>
                 </button>
 
                 <a
                   href="tel:+919548393798"
-                  className="flex items-center justify-center gap-2 py-2.5 rounded-full bg-[#2E3F27] border border-[#537048]/40 text-xs font-semibold text-neutral-200 uppercase tracking-wider"
+                  className="flex items-center justify-center gap-2 py-3 rounded-xl bg-[#2E3F27] border border-[#537048]/40 text-xs font-bold text-neutral-200 uppercase tracking-wider hover:text-white transition-colors"
                 >
-                  <Phone className="w-3.5 h-3.5 text-[#A87B5C]" />
-                  Call: +91 95483 93798
+                  <Phone className="w-4 h-4 text-[#A87B5C]" />
+                  Call Hotline: +91 95483 93798
                 </a>
               </div>
             </div>

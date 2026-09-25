@@ -21,7 +21,7 @@ interface ArticlesPageProps {
 
 export default function ArticlesPage({ onOpenConsultation }: ArticlesPageProps) {
   usePageSEO({
-    title: "Construction Guides & Architecture Dehradun | Gupta's", // 56 chars
+    title: "Construction Articles & Guides Dehradun | Gupta's",
     description: "Expert guides on house construction, architects in Dehradun, MDDA approvals, anti-seismic RCC engineering, modular kitchens & luxury hill villas.",
     canonicalPath: "/articles",
   });

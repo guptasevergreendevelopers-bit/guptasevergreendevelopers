@@ -44,8 +44,8 @@ const routes = [
   },
   {
     path: 'articles',
-    title: "Construction Guides & Architecture Dehradun | Gupta's",
-    h1: "Construction Guides & Architectural Insights in Dehradun",
+    title: "Construction Articles & Guides Dehradun | Gupta's",
+    h1: "Construction Articles & Architectural Guides in Dehradun",
     description: "Expert guides on house construction, architects in Dehradun, MDDA approvals, anti-seismic RCC engineering, modular kitchens & luxury hill villas."
   },
   {

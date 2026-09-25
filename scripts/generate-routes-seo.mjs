@@ -14,27 +14,32 @@ const baseHtml = fs.readFileSync(indexHtmlPath, 'utf8');
 const routes = [
   {
     path: 'about',
-    title: "Dehradun Construction Company | Gupta's Evergreen Developers",
+    title: "About Gupta's Evergreen | Construction Company in Dehradun",
+    h1: "About Gupta's Evergreen Developers - Leading Construction Company in Dehradun",
     description: "Learn about Gupta's Evergreen Developers LLP (LLPIN: ACP-3601, Estd. 2012), founded by Sunil Kumar Gupta and Vansh Gupta. 13+ years of civil contracting pedigree in Dehradun, Uttarakhand."
   },
   {
     path: 'services',
     title: "Construction Services in Dehradun | Gupta's Evergreen",
+    h1: "Turnkey Construction Services & Architectural Design in Dehradun",
     description: "Specialized turnkey residential construction, architectural 3D elevations, MDDA map sanctions, commercial plazas, anti-seismic RCC structures, and modular interiors in Dehradun."
   },
   {
     path: 'packages',
     title: "Dehradun Home Build Rates & Packages | Gupta's Evergreen",
+    h1: "House Construction Packages & Per Sq.Ft Build Rates in Dehradun",
     description: "Transparent ₹1,650 to ₹2,450/sq.ft turnkey house construction packages in Dehradun. Calculate your construction cost and milestone payments with zero price escalation."
   },
   {
     path: 'projects',
     title: "Construction Projects in Dehradun | Gupta's Evergreen",
+    h1: "Completed Landmark Construction Projects in Dehradun & Mussoorie",
     description: "Explore our portfolio of 500+ luxury villas, commercial retail plazas, hillside duplexes, and anti-seismic RCC slab castings across Dehradun and Mussoorie."
   },
   {
     path: 'contact',
     title: "Contact Best Builders in Dehradun | Gupta's Evergreen",
+    h1: "Contact Gupta's Evergreen Developers LLP at 105 Rajpur Road, Dehradun",
     description: "Contact Gupta's Evergreen Developers LLP at 105 Rajpur Road, Dehradun. Call +91 95483 93798 or book a complimentary on-site architectural evaluation for your plot."
   }
 ];
@@ -50,6 +55,8 @@ for (const route of routes) {
   let html = baseHtml
     // Replace <title>
     .replace(/<title>.*?<\/title>/, `<title>${route.title}</title>`)
+    // Replace <h1>
+    .replace(/<h1>.*?<\/h1>/, `<h1>${route.h1}</h1>`)
     // Replace meta description
     .replace(
       /<meta\s+name="description"\s+content=".*?"\s*\/?>/,

@@ -33,10 +33,10 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
+    { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Packages & Pricing', path: '/packages' },
-    { name: 'Portfolio', path: '/projects' },
+    { name: 'Packages', path: '/packages' },
+    { name: 'Projects', path: '/projects' },
     { name: 'Guides', path: '/articles' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -78,11 +78,11 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
       <header
         className={`sticky top-0 left-0 right-0 z-40 transition-all duration-300 bg-[#162114] text-white ${
           scrolled
-            ? 'shadow-2xl shadow-black/50 border-b border-[#405737]/50 py-2.5 backdrop-blur-md'
-            : 'border-b border-[#31432B]/50 py-3'
-        }`}
+            ? 'shadow-2xl shadow-black/50 border-b border-[#405737]/50 h-16 sm:h-[72px] backdrop-blur-md'
+            : 'border-b border-[#31432B]/50 h-[72px] sm:h-20'
+        } flex items-center`}
       >
-        <div className="container-custom flex items-center justify-between">
+        <div className="container-custom w-full flex items-center justify-between gap-4">
           
           {/* Left: Brand Logo from Google Drive */}
           <Link 
@@ -91,7 +91,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
             aria-label="Gupta's Evergreen Developers LLP Home"
           >
             {/* Authentic Google Drive Logo Emblem Container */}
-            <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-[#23301E] border border-[#537048]/60 p-1 flex items-center justify-center shadow-md group-hover:border-[#A87B5C] transition-all">
+            <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-xl bg-[#23301E] border border-[#537048]/60 p-1 flex items-center justify-center shadow-md group-hover:border-[#A87B5C] transition-all flex-shrink-0">
               <img
                 src="/images/drive_logo_gold.webp"
                 alt="Gupta's Evergreen Developers Official Logo"
@@ -103,25 +103,25 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
 
             {/* Brand Typography */}
             <div className="flex flex-col justify-center">
-              <span className="font-cinzel text-sm sm:text-base lg:text-[17px] font-bold tracking-[0.06em] text-white group-hover:text-[#B0C5A6] transition-colors leading-tight">
+              <span className="font-cinzel text-sm sm:text-base lg:text-[17px] font-bold tracking-[0.06em] text-white group-hover:text-[#B0C5A6] transition-colors leading-tight whitespace-nowrap">
                 GUPTA'S EVERGREEN
               </span>
-              <span className="text-[8px] sm:text-[8.5px] tracking-[0.24em] uppercase text-[#D5BAA6] font-medium leading-tight mt-0.5">
+              <span className="text-[8px] sm:text-[8.5px] tracking-[0.24em] uppercase text-[#D5BAA6] font-medium leading-none mt-1">
                 Developers LLP • Dehradun
               </span>
             </div>
           </Link>
 
-          {/* Center: Smaller, Refined Luxury Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+          {/* Center: Perfectly Aligned Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 flex-shrink-0">
             {navLinks.map((link) => (
               <NavLink
                 key={link.path}
                 to={link.path}
                 className={({ isActive }) =>
-                  `px-3 py-1.5 rounded-md text-[11px] xl:text-[11.5px] uppercase tracking-[0.15em] font-medium transition-all duration-200 relative ${
+                  `h-9 px-3 xl:px-3.5 inline-flex items-center justify-center rounded-lg text-xs uppercase tracking-[0.12em] font-medium transition-all duration-200 relative whitespace-nowrap leading-none ${
                     isActive
-                      ? 'text-white bg-[#2E3F27] border border-[#537048] shadow-sm font-semibold'
+                      ? 'text-white bg-[#2E3F27] border border-[#537048] shadow-sm font-bold'
                       : 'text-neutral-300 hover:text-white hover:bg-white/[0.06]'
                   }`
                 }
@@ -132,20 +132,20 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
           </nav>
 
           {/* Right: Quick Action Buttons (Olive & Brown Palette) */}
-          <div className="hidden md:flex items-center gap-2.5 flex-shrink-0">
+          <div className="hidden lg:flex items-center gap-2.5 flex-shrink-0">
             <Link
               to="/packages#calculator"
-              className="hidden xl:inline-flex items-center gap-1.5 text-[10.5px] uppercase tracking-[0.14em] text-[#D5BAA6] hover:text-white px-3 py-1.5 rounded-full bg-white/[0.05] border border-[#8E6144]/40 hover:border-[#8E6144] transition-all font-medium"
+              className="hidden xl:inline-flex items-center gap-1.5 h-9 px-3.5 rounded-lg text-xs uppercase tracking-[0.12em] text-[#D5BAA6] hover:text-white bg-white/[0.05] border border-[#8E6144]/40 hover:border-[#8E6144] transition-all font-medium whitespace-nowrap leading-none"
             >
-              <Calculator className="w-3 h-3 text-[#A87B5C]" />
+              <Calculator className="w-3.5 h-3.5 text-[#A87B5C]" />
               Estimator
             </Link>
 
             <button
               onClick={onOpenConsultation}
-              className="relative inline-flex items-center justify-center font-bold text-[10.5px] uppercase tracking-[0.14em] px-4 py-2 rounded-full bg-[#5C3D2B] hover:bg-[#724C35] text-white transition-all shadow-md gap-1.5 border border-[#8E6144]/40"
+              className="h-9 px-4 inline-flex items-center justify-center font-bold text-xs uppercase tracking-[0.12em] rounded-lg bg-[#5C3D2B] hover:bg-[#724C35] text-white transition-all shadow-md gap-1.5 border border-[#8E6144]/40 whitespace-nowrap leading-none"
             >
-              <CalendarCheck className="w-3 h-3 text-[#D5BAA6]" />
+              <CalendarCheck className="w-3.5 h-3.5 text-[#D5BAA6]" />
               <span>Book Site Visit</span>
             </button>
           </div>

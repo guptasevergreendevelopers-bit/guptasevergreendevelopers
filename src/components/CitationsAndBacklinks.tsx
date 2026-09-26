@@ -68,6 +68,15 @@ export default function CitationsAndBacklinks() {
       linkText: 'BIS Civil Standards',
       url: 'https://www.bis.gov.in',
       authority: 'National Engineering Standards'
+    },
+    {
+      organization: 'Medium Publication Feature',
+      registry: 'Engineering & Construction Whitepaper',
+      identifier: 'Home Builder’s Blueprint (2026)',
+      description: 'Technical publication breaking down Dehradun turnkey construction costs, MDDA building bye-laws, and Seismic Zone IV engineering guidelines.',
+      linkText: 'Read Feature on Medium',
+      url: 'https://medium.com/@aromalgiyer/the-ultimate-home-builders-blueprint-navigating-construction-costs-mdda-regulations-and-hill-962085b3e62b?sharedUserId=aromalgiyer',
+      authority: 'Verified Editorial Feature'
     }
   ];
 

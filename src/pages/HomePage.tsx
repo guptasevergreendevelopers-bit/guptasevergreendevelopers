@@ -8,7 +8,8 @@ import {
   ArrowRight, 
   Calculator, 
   CheckCircle2, 
-  PhoneCall
+  PhoneCall,
+  ExternalLink
 } from 'lucide-react';
 import CostCalculator from '../components/CostCalculator';
 import Comparison from '../components/Comparison';
@@ -122,6 +123,49 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
             </div>
 
           </div>
+        </div>
+      </section>
+
+      {/* Featured Media / As Seen On Medium Banner */}
+      <section className="bg-[#182316] border-y border-[#31432B]/60 py-3.5 sm:py-4 relative z-20">
+        <div className="container-custom flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <span className="text-[10.5px] sm:text-[11px] uppercase tracking-widest text-[#B0C5A6] font-bold flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#D5BAA6] animate-pulse" />
+              As Seen On
+            </span>
+            <a
+              href="https://medium.com/@aromalgiyer/the-ultimate-home-builders-blueprint-navigating-construction-costs-mdda-regulations-and-hill-962085b3e62b?sharedUserId=aromalgiyer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/[0.08] hover:bg-white/[0.16] border border-[#537048]/50 hover:border-[#D5BAA6] transition-all group shadow-sm"
+              aria-label="Read Gupta's Evergreen Developers feature on Medium"
+            >
+              {/* Official Medium Logo */}
+              <svg 
+                className="w-5 h-5 fill-white group-hover:fill-[#D5BAA6] transition-colors flex-shrink-0" 
+                viewBox="0 0 24 24" 
+                aria-hidden="true"
+              >
+                <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
+              </svg>
+              <span className="font-bold text-white tracking-wide text-xs group-hover:text-[#D5BAA6] transition-colors">
+                Medium
+              </span>
+            </a>
+          </div>
+
+          <a
+            href="https://medium.com/@aromalgiyer/the-ultimate-home-builders-blueprint-navigating-construction-costs-mdda-regulations-and-hill-962085b3e62b?sharedUserId=aromalgiyer"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-300 hover:text-white text-xs flex items-center gap-2 transition-colors group text-center md:text-right"
+          >
+            <span className="text-[#D5BAA6] group-hover:underline line-clamp-1 font-medium">
+              "The Ultimate Home Builder’s Blueprint: Navigating Construction Costs, MDDA Regulations, and Hill Engineering in Dehradun"
+            </span>
+            <ExternalLink className="w-3.5 h-3.5 text-[#D5BAA6] flex-shrink-0" />
+          </a>
         </div>
       </section>
 

@@ -77,6 +77,15 @@ export default function CitationsAndBacklinks() {
       linkText: 'Read Feature on Medium',
       url: 'https://medium.com/@aromalgiyer/the-ultimate-home-builders-blueprint-navigating-construction-costs-mdda-regulations-and-hill-962085b3e62b?sharedUserId=aromalgiyer',
       authority: 'Verified Editorial Feature'
+    },
+    {
+      organization: 'Pinterest Architectural Showcase',
+      registry: 'Verified Design & Elevations Pinboard',
+      identifier: '@guptasevergreen Official Pins',
+      description: 'Official architectural portfolio pins, 3D elevation renders, luxury hill villa blueprints, and live site material palettes across Uttarakhand.',
+      linkText: 'Explore on Pinterest',
+      url: 'https://pin.it/gRJEAMxYw',
+      authority: 'Visual Architecture Network'
     }
   ];
 

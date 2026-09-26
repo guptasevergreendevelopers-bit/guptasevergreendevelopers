@@ -383,15 +383,15 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
             <div className="flex flex-col sm:flex-row gap-3.5 justify-center pt-2 sm:pt-4">
               <button
                 onClick={() => onOpenConsultation('Footer Banner Consultation')}
-                className="btn-brown-sleek text-xs px-7 py-3.5"
+                className="btn-brown-sleek text-xs px-7 py-3.5 shadow-xl"
               >
                 Book Complimentary Site Inspection
               </button>
               <a
                 href="tel:+919548393798"
-                className="btn-olive-outline text-xs px-7 py-3.5 flex items-center justify-center gap-2 border-white/60 text-white hover:bg-white hover:text-[#2D3E28] font-bold"
+                className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider px-7 py-3.5 rounded-full border-2 border-[#D5BAA6]/70 bg-transparent hover:bg-white text-white hover:text-[#141C12] transition-all duration-300 shadow-lg group"
               >
-                <PhoneCall className="w-4 h-4 text-[#D5BAA6]" />
+                <PhoneCall className="w-4 h-4 text-[#D5BAA6] group-hover:text-[#141C12] transition-colors" />
                 <span>Call +91 95483 93798</span>
               </a>
             </div>

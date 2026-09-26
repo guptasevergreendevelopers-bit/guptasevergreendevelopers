@@ -10,7 +10,8 @@ import {
   HardHat,
   Camera,
   Lock,
-  Filter
+  Filter,
+  Phone
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { projects, Project } from '../data/projects';
@@ -245,8 +246,9 @@ export default function Projects({ onOpenConsultation }: ProjectsProps) {
               </button>
               <a
                 href="tel:+919548393798"
-                className="btn-olive-outline text-xs px-8 py-3.5 border-white/60 text-white hover:bg-white hover:text-[#2D3E28] font-bold flex items-center justify-center gap-2 transition-all"
+                className="inline-flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-wider px-8 py-3.5 rounded-full border-2 border-[#D5BAA6]/70 bg-transparent hover:bg-white text-white hover:text-[#141C12] transition-all duration-300 shadow-lg group"
               >
+                <Phone className="w-4 h-4 text-[#D5BAA6] group-hover:text-[#141C12] transition-colors" />
                 <span>Call +91 95483 93798</span>
               </a>
             </div>

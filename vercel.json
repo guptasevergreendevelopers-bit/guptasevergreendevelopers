@@ -3,14 +3,25 @@
   "outputDirectory": "dist",
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/((?!robots\\.txt|sitemap\\.xml|favicon\\.ico|llms\\.txt|llms-full\\.txt).*)",
       "has": [
         {
           "type": "host",
           "value": "guptasevergreendevelopers.com"
         }
       ],
-      "destination": "https://www.guptasevergreendevelopers.com/:path*",
+      "destination": "https://www.guptasevergreendevelopers.com/$1",
+      "statusCode": 301
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "guptasevergreendevelopers.com"
+        }
+      ],
+      "destination": "https://www.guptasevergreendevelopers.com/",
       "statusCode": 301
     },
     { "source": "/house-construction-cost-dehradun-2026", "destination": "/articles/house-construction-cost-dehradun-2026", "statusCode": 301 },
@@ -27,7 +38,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!assets/|images/|robots\\.txt|sitemap\\.xml|llms\\.txt|llms-full\\.txt|.*\\..*).*)",
+      "source": "/((?!assets/|images/|robots\\.txt|sitemap\\.xml|llms\\.txt|llms-full\\.txt|favicon\\.ico|.*\\..*).*)",
       "destination": "/index.html"
     }
   ],
@@ -38,6 +49,23 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(robots\\.txt|sitemap\\.xml|llms\\.txt|llms-full\\.txt|favicon\\.ico)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "all"
         }
       ]
     }

@@ -89,7 +89,7 @@ export const projects: Project[] = [
     completionInfo: 'Completed December 2025; formally handed over to the homeowner with zero defects, MDDA completion certificate documentation, and 5-year comprehensive civil & 10-year structural stability warranty certificates.',
     clientType: 'private',
     confidentialityNote: 'Client personal name and exact plot number withheld in adherence to client privacy guidelines. Architectural layout, technical specifications, and site photographs published with permission.',
-    seoTitle: "The Summit Villa Rajpur Road | Luxury Construction Project Dehradun",
+    seoTitle: "The Summit Villa Rajpur Road | Dehradun Project",
     metaDescription: "Case study of The Summit Villa on Rajpur Road, Dehradun. 6,800 sq.ft luxury 3-level villa completed in 2025 by Gupta's Evergreen Developers LLP with Seismic Zone IV RCC framing."
   },
   {
@@ -138,7 +138,7 @@ export const projects: Project[] = [
     completionInfo: 'Delivered October 2024; accompanied by complete structural stability documentation and 5-year project warranty.',
     clientType: 'private',
     confidentialityNote: 'Homeowner identity confidential under residential contracting terms. Engineering specifications and exterior photographs authorized for publication.',
-    seoTitle: "Greenwood Horizon Duplex | Contemporary Residence Mussoorie Foothills",
+    seoTitle: "Greenwood Horizon Duplex | Mussoorie Foothills",
     metaDescription: "Case study of Greenwood Horizon Duplex in the Mussoorie Foothills, Dehradun. 4,500 sq.ft contemporary home built with anti-seismic RCC frame by Gupta's Evergreen Developers LLP."
   },
   {
@@ -187,7 +187,7 @@ export const projects: Project[] = [
     completionInfo: 'Active construction phase in progress (2026); foundation, structural columns, and ground-floor slab completed. Structural compression test logs signed off.',
     clientType: 'private',
     confidentialityNote: 'Active construction project. Client details confidential during execution. Site photography verified by on-site project engineer.',
-    seoTitle: "Active RCC Slab & Anti-Seismic Casting | Live Site Sahastradhara Dehradun",
+    seoTitle: "Active RCC Slab Casting | Sahastradhara Dehradun",
     metaDescription: "Live civil engineering evidence: 8,200 sq.ft anti-seismic RCC slab casting in Sahastradhara Valley, Dehradun by Gupta's Evergreen Developers LLP. M25 concrete & Fe550 rebar grid."
   },
   {
@@ -235,7 +235,7 @@ export const projects: Project[] = [
     completionInfo: 'Civil super-structure 75% complete (expected Q4 2026). Handover to commercial leaseholders upon fire NOC and lift installation sign-off.',
     clientType: 'commercial',
     confidentialityNote: 'Commercial developer entity confidential until retail tenant leasing launch. Framework and engineering photographs authorized.',
-    seoTitle: "Rajpur Road Commercial Plaza Framework | Commercial Project Dehradun",
+    seoTitle: "Rajpur Commercial Framework | Dehradun Project",
     metaDescription: "Construction case study of 14,000 sq.ft commercial plaza framework on Rajpur Road, Dehradun by Gupta's Evergreen Developers LLP. MDDA compliant commercial infrastructure."
   },
   {
@@ -379,7 +379,7 @@ export const projects: Project[] = [
     completionInfo: 'Delivered October 2024; thermal insulation and weather-tightness certified through winter 2024-2025.',
     clientType: 'private',
     confidentialityNote: 'Private hillside property. Specifications and photography authorized for architectural portfolio.',
-    seoTitle: "Himalayan Ridge Master Attic Suite | Mussoorie Hilltop Construction",
+    seoTitle: "Himalayan Ridge Master Attic Suite | Mussoorie",
     metaDescription: "Case study: 650 sq.ft timber-paneled penthouse attic suite in Mussoorie by Gupta's Evergreen Developers LLP. Thermal roof insulation and panoramic gable glass."
   },
   {
@@ -427,7 +427,7 @@ export const projects: Project[] = [
     completionInfo: 'In finishing phase (early 2026) — woodwork, lighting integration, and final marble polish nearing handover.',
     clientType: 'private',
     confidentialityNote: 'Private residence in Vasant Vihar. Details published with client authorization.',
-    seoTitle: "Grand Classical Living Salon | Vasant Vihar Dehradun Interior Project",
+    seoTitle: "Grand Classical Living Salon | Vasant Vihar",
     metaDescription: "Case study of 1,200 sq.ft neoclassical living salon in Vasant Vihar, Dehradun by Gupta's Evergreen Developers LLP. Italian marble flooring and handcrafted wainscoting."
   },
   {

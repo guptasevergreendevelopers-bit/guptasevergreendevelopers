@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { articles } from '../src/data/articles.ts';
+import { projects } from '../src/data/projects.ts';
 
 const publicDir = path.resolve('public');
 const distDir = path.resolve('dist');
@@ -87,13 +88,32 @@ for (const a of articles) {
   const loc = `https://www.guptasevergreendevelopers.com/articles/${a.slug}`;
   xml += `  <url>\n`;
   xml += `    <loc>${loc}</loc>\n`;
-  xml += `    <lastmod>${a.publishedDate.includes('2026') ? '2026-09-25' : '2026-09-25'}</lastmod>\n`;
+  xml += `    <lastmod>2026-09-25</lastmod>\n`;
   if (a.coverImage) {
     const localImagePath = path.join(publicDir, a.coverImage);
     if (fs.existsSync(localImagePath)) {
       xml += `    <image:image>\n`;
       xml += `      <image:loc>https://www.guptasevergreendevelopers.com${a.coverImage}</image:loc>\n`;
       xml += `      <image:title>${escapeXml(a.title)}</image:title>\n`;
+      xml += `    </image:image>\n`;
+    }
+  }
+  xml += `  </url>\n\n`;
+}
+
+// 3. 10 Real Project Evidence Pages under /projects/[slug]
+for (const proj of projects) {
+  const loc = `https://www.guptasevergreendevelopers.com/projects/${proj.slug}`;
+  xml += `  <url>\n`;
+  xml += `    <loc>${loc}</loc>\n`;
+  xml += `    <lastmod>2026-09-25</lastmod>\n`;
+  const imgUrl = proj.images[0]?.url;
+  if (imgUrl) {
+    const localImagePath = path.join(publicDir, imgUrl);
+    if (fs.existsSync(localImagePath)) {
+      xml += `    <image:image>\n`;
+      xml += `      <image:loc>https://www.guptasevergreendevelopers.com${imgUrl}</image:loc>\n`;
+      xml += `      <image:title>${escapeXml(proj.name)}</image:title>\n`;
       xml += `    </image:image>\n`;
     }
   }
@@ -113,4 +133,4 @@ fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), xml, 'utf8');
 if (fs.existsSync(distDir)) {
   fs.writeFileSync(path.join(distDir, 'sitemap.xml'), xml, 'utf8');
 }
-console.log(`[generate-sitemap] Successfully generated valid XML sitemap with ${corePages.length + articles.length} canonical URLs.`);
+console.log(`[generate-sitemap] Successfully generated valid XML sitemap with ${corePages.length + articles.length + projects.length} canonical URLs.`);

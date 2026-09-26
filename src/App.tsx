@@ -13,6 +13,7 @@ const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const PackagesPage = lazy(() => import('./pages/PackagesPage'));
 const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
+const ProjectDetailPage = lazy(() => import('./pages/ProjectDetailPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const ArticlesPage = lazy(() => import('./pages/ArticlesPage'));
 const ArticleDetailPage = lazy(() => import('./pages/ArticleDetailPage'));
@@ -91,6 +92,10 @@ export default function App() {
               <Route 
                 path="/projects" 
                 element={<ProjectsPage onOpenConsultation={handleOpenConsultation} />} 
+              />
+              <Route 
+                path="/projects/:slug" 
+                element={<ProjectDetailPage onOpenConsultation={handleOpenConsultation} />} 
               />
               <Route 
                 path="/contact" 

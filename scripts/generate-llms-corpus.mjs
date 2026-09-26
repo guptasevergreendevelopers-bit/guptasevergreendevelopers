@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { articles } from '../src/data/articles.ts';
+import { projects } from '../src/data/projects.ts';
 
 const publicDir = path.resolve('public');
 const distDir = path.resolve('dist');
@@ -45,22 +46,30 @@ const baseOverview = `# Gupta's Evergreen Developers LLP — Master AI Knowledge
 
 ---
 
-## 5. Verified Real-World Projects & Identifiable Landmarks
-1. **The Summit Villa (108 Rajpur Road, Dehradun):** 6,800 sq.ft contemporary 3-level villa; Seismic Zone IV ductile frame with Fe550 steel; completed 2025.
-2. **Greenwood Horizon Duplex (Mussoorie Foothills, Dehradun):** 4,500 sq.ft contemporary residence; Vastu-compliant layout; completed 2024.
-3. **Active RCC Slab & Anti-Seismic Casting (Sahastradhara Valley, Dehradun):** 8,200 sq.ft floor plate; M25 concrete casting with 7-day and 28-day compression cube lab testing; active 2026.
-4. **Rajpur Commercial Complex Framework (Rajpur Road Corridor):** 14,000 sq.ft multi-level commercial complex; MDDA commercial floor height clearance; under construction.
-5. **Bespoke Modern Culinary Studio (Chander Nagar Estate, Dehradun):** 420 sq.ft modular kitchen; Hafele/Blum hardware, Italian marble backsplash; completed 2025.
-6. **Dark Slate Master Bathroom Suite (Hathibarkala Residence, Dehradun):** 180 sq.ft spa suite; Dr. Fixit 2-coat tanking waterproofing system; completed 2025.
-7. **Himalayan Ridge Master Attic Suite (Mussoorie Hilltop):** 650 sq.ft timber-lined penthouse; thermal insulation roof sandwich panels; completed 2024.
-8. **Grand Classical Living Salon (Vasant Vihar, Dehradun):** 1,200 sq.ft classical salon; Italian imported marble flooring; finishing phase 2026.
-
----
-
-## 6. Comprehensive Technical & Authoritative Engineering Guides
+## 5. Verified Real-World Projects & Identifiable Landmarks Evidence Hub
 `;
 
 let fullCorpus = baseOverview;
+
+for (let i = 0; i < projects.length; i++) {
+  const p = projects[i];
+  fullCorpus += `\n### Project ${i + 1}: ${p.name}\n`;
+  fullCorpus += `- **Location:** ${p.location}\n`;
+  fullCorpus += `- **Status:** ${p.status.toUpperCase()} | **Year:** ${p.year} | **Built-Up Area:** ${p.builtUpArea} | **Category:** ${p.categoryLabel}\n`;
+  fullCorpus += `- **Evidence Type:** ${p.visualLabel} (${p.isRender ? 'Architectural 3D Render' : 'Confirmed Real Photograph'})\n`;
+  fullCorpus += `- **Canonical Case Study URL:** https://www.guptasevergreendevelopers.com/projects/${p.slug}\n`;
+  fullCorpus += `- **Executive Summary:** ${p.description}\n`;
+  fullCorpus += `- **Scope of Work:** ${p.scopeOfWork}\n`;
+  fullCorpus += `- **Architectural Scope:** ${p.architecturalScope}\n`;
+  fullCorpus += `- **Structural & Seismic Scope:** ${p.structuralScope}\n`;
+  fullCorpus += `- **Interior Architecture Scope:** ${p.interiorScope}\n`;
+  fullCorpus += `- **Construction Methodology:** ${p.constructionMethods.join('; ')}\n`;
+  fullCorpus += `- **Materials & Primary Brands:** ${p.materialsSpecifications.join('; ')}\n`;
+  fullCorpus += `- **Completion & Warranty:** ${p.completionInfo}\n`;
+  fullCorpus += `- **Publishing & Privacy Disclosure:** ${p.confidentialityNote}\n`;
+}
+
+fullCorpus += `\n---\n\n## 6. Comprehensive Technical & Authoritative Engineering Guides\n`;
 
 for (let i = 0; i < articles.length; i++) {
   const a = articles[i];
@@ -103,15 +112,24 @@ for (let i = 0; i < articles.length; i++) {
     if (s.authoritativeLinks) {
       fullCorpus += `**Statutory & Code References:**\n`;
       for (const link of s.authoritativeLinks) {
-        fullCorpus += `- [${link.label}](${link.url}) — ${link.authority}\n`;
+        fullCorpus += `- [${link.label}](${link.url}) (${link.authority})\n`;
       }
       fullCorpus += `\n`;
     }
   }
-  fullCorpus += `---\n`;
 }
 
-// Write to public/llms-full.txt
+fullCorpus += `
+---
+
+## 7. Operational Contact & Direct Consultation Channels
+- **Corporate Operating Studio:** 105 Rajpur Road, Dehradun, Uttarakhand – 248001
+- **Statutory Registered Office:** 83/266 Chander Nagar, Dehradun – 248001
+- **Primary Founder Hotlines:** +91 95483 93798 / +91 76687 66118
+- **Online Cost Estimator:** https://www.guptasevergreendevelopers.com/packages#calculator
+- **Official Inquiries:** guptasevergreendevelopers@gmail.com
+`;
+
 fs.writeFileSync(path.join(publicDir, 'llms-full.txt'), fullCorpus, 'utf8');
 if (fs.existsSync(distDir)) {
   fs.writeFileSync(path.join(distDir, 'llms-full.txt'), fullCorpus, 'utf8');

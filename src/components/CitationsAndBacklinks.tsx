@@ -27,10 +27,10 @@ export default function CitationsAndBacklinks() {
     {
       organization: 'Justdial Business Directory',
       registry: 'Dehradun Verified Civil Contractors',
-      identifier: '5.0 ★ Across 159+ Ratings',
-      description: 'Premier verified listing in Dehradun building contractors, architects, and turnkey residential developers.',
+      identifier: '5.0 ★ Across 249+ Ratings',
+      description: 'Premier verified listing in Dehradun building contractors, architects, and turnkey residential developers at 105 Rajpur Road.',
       linkText: 'Check Justdial Credentials',
-      url: 'https://www.justdial.com/Dehradun',
+      url: 'https://www.justdial.com/Dehradun/Guptas-Evergreen-Developers-LLP',
       authority: 'National Business Directory'
     },
     {
@@ -39,7 +39,7 @@ export default function CitationsAndBacklinks() {
       identifier: 'ROC-Uttarakhand / ACP-3601',
       description: 'Public corporate record indexing statutory incorporation date (23 June 2025), designated partners Sunil Kumar Gupta and Vansh Gupta, and operational history from 2012.',
       linkText: 'View Zauba Corp Registry',
-      url: 'https://www.zaubacorp.com',
+      url: 'https://www.zaubacorp.com/company/GUPTA-S-EVERGREEN-DEVELOPERS-LLP/ACP-3601',
       authority: 'Corporate Due Diligence Directory'
     },
     {
@@ -50,6 +50,15 @@ export default function CitationsAndBacklinks() {
       linkText: 'MDDA Sanction Guidelines',
       url: 'https://mddaonline.in',
       authority: 'State Urban Planning Authority'
+    },
+    {
+      organization: 'Uttarakhand RERA (UK-RERA)',
+      registry: 'Real Estate Regulatory Authority',
+      identifier: 'Uttarakhand RERA Registration',
+      description: 'Statutory real estate project registration and promoter compliance under the Real Estate (Regulation and Development) Act, 2016 for Uttarakhand.',
+      linkText: 'UK-RERA Portal',
+      url: 'https://rera.uk.gov.in',
+      authority: 'State Real Estate Regulator'
     },
     {
       organization: 'Bureau of Indian Standards (BIS)',

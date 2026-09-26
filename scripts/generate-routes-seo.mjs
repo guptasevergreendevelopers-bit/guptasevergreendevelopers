@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { articles } from '../src/data/articles.ts';
+import { projects } from '../src/data/projects.ts';
 
 const distDir = path.resolve('dist');
 const indexHtmlPath = path.join(distDir, 'index.html');
@@ -34,9 +35,9 @@ const coreRoutes = [
   },
   {
     path: 'projects',
-    title: "Construction Projects in Dehradun | Gupta's Evergreen",
-    h1: "Completed Landmark Construction Projects in Dehradun & Mussoorie",
-    description: "Explore our portfolio of 500+ luxury villas, commercial retail plazas, hillside duplexes, and anti-seismic RCC slab castings across Dehradun and Mussoorie."
+    title: "Construction Projects Evidence Hub Dehradun | Gupta's Evergreen",
+    h1: "Verified Construction Landmarks & Active Sites in Dehradun & Mussoorie",
+    description: "Official construction evidence hub of Gupta's Evergreen Developers LLP. Verified photography of completed luxury villas, anti-seismic RCC slab castings, commercial frameworks, and modular interiors."
   },
   {
     path: 'contact',
@@ -117,6 +118,49 @@ function renderArticleSemanticHtml(article, canonicalUrl) {
   return html;
 }
 
+// Helper to convert Project object to rich semantic HTML for crawlers and LLMs
+function renderProjectSemanticHtml(project, canonicalUrl) {
+  let html = `<article>\n`;
+  html += `  <h1>${project.name}</h1>\n`;
+  html += `  <p><strong>Location:</strong> ${project.location} | <strong>Status:</strong> ${project.status.toUpperCase()} | <strong>Classification:</strong> ${project.categoryLabel} | <strong>Year:</strong> ${project.year} | <strong>Built-Up Area:</strong> ${project.builtUpArea}</p>\n`;
+  html += `  <p><strong>Visual Evidence Type:</strong> ${project.visualLabel} (${project.isRender ? 'Architectural 3D Render' : 'Confirmed Real Photograph'})</p>\n`;
+  html += `  <p><em>${project.description}</em></p>\n\n`;
+
+  html += `  <section>\n    <h2>Key Engineering Highlights</h2>\n    <ul>\n`;
+  for (const h of project.highlights) {
+    html += `      <li>${h}</li>\n`;
+  }
+  html += `    </ul>\n  </section>\n\n`;
+
+  html += `  <section>\n    <h2>Overall Scope of Work</h2>\n    <p>${project.scopeOfWork}</p>\n  </section>\n\n`;
+  html += `  <section>\n    <h2>Architectural Planning Scope</h2>\n    <p>${project.architecturalScope}</p>\n  </section>\n\n`;
+  html += `  <section>\n    <h2>Structural Engineering & Seismic Safety</h2>\n    <p>${project.structuralScope}</p>\n  </section>\n\n`;
+  html += `  <section>\n    <h2>Interior Architecture & Finishes</h2>\n    <p>${project.interiorScope}</p>\n  </section>\n\n`;
+
+  html += `  <section>\n    <h2>Construction Methodology & Quality Control</h2>\n    <ul>\n`;
+  for (const m of project.constructionMethods) {
+    html += `      <li>${m}</li>\n`;
+  }
+  html += `    </ul>\n  </section>\n\n`;
+
+  html += `  <section>\n    <h2>Specified Materials & Primary Brands</h2>\n    <ul>\n`;
+  for (const mat of project.materialsSpecifications) {
+    html += `      <li>${mat}</li>\n`;
+  }
+  html += `    </ul>\n  </section>\n\n`;
+
+  html += `  <section>\n    <h2>Completion, Warranties & Handover</h2>\n    <p>${project.completionInfo}</p>\n  </section>\n\n`;
+
+  html += `  <section>\n    <h2>Client Privacy & Publishing Disclosure</h2>\n    <p>${project.confidentialityNote}</p>\n  </section>\n\n`;
+
+  html += `  <footer>\n`;
+  html += `    <p><strong>Executed By:</strong> GUPTA'S EVERGREEN DEVELOPERS LLP (LLPIN: ACP-3601, operating trade dating to 2012, ROC Uttarakhand). Headquarters: 105 Rajpur Road, Dehradun. Contact: +91 95483 93798.</p>\n`;
+  html += `    <p><a href="https://www.guptasevergreendevelopers.com/projects">View All Construction Evidence Projects</a> | <a href="https://www.guptasevergreendevelopers.com/contact">Book In-Person Site Inspection Tour</a></p>\n`;
+  html += `  </footer>\n`;
+  html += `</article>`;
+  return html;
+}
+
 // 1. Generate Core Routes
 for (const route of coreRoutes) {
   const routeDir = path.join(distDir, route.path);
@@ -137,6 +181,32 @@ for (const route of coreRoutes) {
     .replace(/<meta\s+property="twitter:title"\s+content=".*?"\s*\/?>/, `<meta property="twitter:title" content="${route.title}" />`)
     .replace(/<meta\s+property="twitter:description"\s+content=".*?"\s*\/?>/, `<meta property="twitter:description" content="${route.description}" />`)
     .replace(/<meta\s+property="twitter:url"\s+content=".*?"\s*\/?>/, `<meta property="twitter:url" content="${canonicalUrl}" />`);
+
+  // For /projects route, inject Breadcrumb and ItemList schemas
+  if (route.path === 'projects') {
+    const projectItemsJsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: "Gupta's Evergreen Developers Real Projects Portfolio",
+      itemListElement: projects.map((p, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: p.name,
+        item: `https://www.guptasevergreendevelopers.com/projects/${p.slug}`,
+        description: p.description
+      }))
+    };
+    const projectsBreadcrumbJsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.guptasevergreendevelopers.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://www.guptasevergreendevelopers.com/projects' }
+      ]
+    };
+    const projectsScriptTag = `<script type="application/ld+json">${JSON.stringify(projectsBreadcrumbJsonLd)}</script>\n    <script type="application/ld+json">${JSON.stringify(projectItemsJsonLd)}</script>`;
+    html = html.replace(/<link\s+rel="canonical"\s+href=".*?"\s*\/?>/, `<link rel="canonical" href="${canonicalUrl}" />\n    ${projectsScriptTag}`);
+  }
 
   fs.writeFileSync(path.join(routeDir, 'index.html'), html, 'utf8');
   console.log(`[generate-routes-seo] Generated dist/${route.path}/index.html`);
@@ -193,7 +263,32 @@ for (const art of articles) {
     }
   };
 
-  const schemaScriptTag = `<script type="application/ld+json">${JSON.stringify(articleJsonLd)}</script>`;
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.guptasevergreendevelopers.com/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Guides & Articles',
+        item: 'https://www.guptasevergreendevelopers.com/articles'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: art.title,
+        item: canonicalSubUrl
+      }
+    ]
+  };
+
+  const schemaScriptTag = `<script type="application/ld+json">${JSON.stringify(articleJsonLd)}</script>\n    <script type="application/ld+json">${JSON.stringify(breadcrumbJsonLd)}</script>`;
 
   let htmlSub = baseHtml
     .replace(/<title>.*?<\/title>/, `<title>${art.seoTitle}</title>`)
@@ -213,4 +308,90 @@ for (const art of articles) {
   fs.writeFileSync(path.join(articleSubDir, 'index.html'), htmlSub, 'utf8');
 }
 
-console.log(`[generate-routes-seo] Successfully pre-generated static SEO pages for ${coreRoutes.length + articles.length} unique canonical routes.`);
+// 4. Generate 10 Real Project Evidence Pages under /projects/[slug]
+for (const proj of projects) {
+  const projectSubPath = `projects/${proj.slug}`;
+  const projectSubDir = path.join(distDir, projectSubPath);
+  if (!fs.existsSync(projectSubDir)) {
+    fs.mkdirSync(projectSubDir, { recursive: true });
+  }
+
+  const canonicalProjUrl = `https://www.guptasevergreendevelopers.com/${projectSubPath}`;
+  const semanticContentProj = renderProjectSemanticHtml(proj, canonicalProjUrl);
+
+  const projectJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: proj.name,
+    description: proj.description,
+    url: canonicalProjUrl,
+    publisher: {
+      '@type': 'Organization',
+      name: "Gupta's Evergreen Developers LLP",
+      url: 'https://www.guptasevergreendevelopers.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.guptasevergreendevelopers.com/images/drive_logo_full.png'
+      }
+    },
+    mainEntity: {
+      '@type': 'Place',
+      name: proj.name,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: proj.location,
+        addressLocality: 'Dehradun',
+        addressRegion: 'Uttarakhand',
+        addressCountry: 'IN'
+      },
+      image: `https://www.guptasevergreendevelopers.com${proj.images[0]?.url || '/images/image_03.jpeg'}`,
+      description: proj.description
+    }
+  };
+
+  const projectBreadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.guptasevergreendevelopers.com/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Projects Portfolio',
+        item: 'https://www.guptasevergreendevelopers.com/projects'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: proj.name,
+        item: canonicalProjUrl
+      }
+    ]
+  };
+
+  const projectSchemaScriptTag = `<script type="application/ld+json">${JSON.stringify(projectJsonLd)}</script>\n    <script type="application/ld+json">${JSON.stringify(projectBreadcrumbJsonLd)}</script>`;
+
+  let htmlProj = baseHtml
+    .replace(/<title>.*?<\/title>/, `<title>${proj.seoTitle}</title>`)
+    .replace(/<meta\s+name="description"\s+content=".*?"\s*\/?>/, `<meta name="description" content="${proj.metaDescription}" />`)
+    .replace(/<link\s+rel="canonical"\s+href=".*?"\s*\/?>/, `<link rel="canonical" href="${canonicalProjUrl}" />\n    ${projectSchemaScriptTag}`)
+    .replace(/<meta\s+property="og:title"\s+content=".*?"\s*\/?>/, `<meta property="og:title" content="${proj.seoTitle}" />`)
+    .replace(/<meta\s+property="og:description"\s+content=".*?"\s*\/?>/, `<meta property="og:description" content="${proj.metaDescription}" />`)
+    .replace(/<meta\s+property="og:url"\s+content=".*?"\s*\/?>/, `<meta property="og:url" content="${canonicalProjUrl}" />`)
+    .replace(/<meta\s+property="twitter:title"\s+content=".*?"\s*\/?>/, `<meta property="twitter:title" content="${proj.seoTitle}" />`)
+    .replace(/<meta\s+property="twitter:description"\s+content=".*?"\s*\/?>/, `<meta property="twitter:description" content="${proj.metaDescription}" />`)
+    .replace(/<meta\s+property="twitter:url"\s+content=".*?"\s*\/?>/, `<meta property="twitter:url" content="${canonicalProjUrl}" />`)
+    .replace(
+      /<div style="position: absolute; left: -9999px;.*?<\/div>/s,
+      `<div style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">\n${semanticContentProj}\n    </div>`
+    );
+
+  fs.writeFileSync(path.join(projectSubDir, 'index.html'), htmlProj, 'utf8');
+}
+
+console.log(`[generate-routes-seo] Successfully pre-generated static SEO pages for ${coreRoutes.length + articles.length + projects.length} unique canonical routes (${coreRoutes.length} core, ${articles.length} articles, ${projects.length} real projects).`);

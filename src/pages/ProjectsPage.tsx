@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import Projects from '../components/Projects';
 import { usePageSEO } from '../hooks/usePageSEO';
+import { projects } from '../data/projects';
 
 interface ProjectsPageProps {
   onOpenConsultation: (projectName?: string) => void;
@@ -14,13 +15,54 @@ interface ProjectsPageProps {
 export default function ProjectsPage({ onOpenConsultation }: ProjectsPageProps) {
   usePageSEO({
     title: "Construction Projects in Dehradun | Gupta's Evergreen",
-    description: "Explore our portfolio of 500+ luxury villas, commercial retail plazas, hillside duplexes, and anti-seismic RCC slab castings across Dehradun and Mussoorie.",
+    description: "Explore our portfolio of luxury villas, commercial retail plazas, hillside duplexes, and anti-seismic RCC slab castings across Dehradun and Mussoorie.",
     canonicalPath: "/projects",
   });
+
+  // Generate structured data for the projects page
+  const projectItems = projects.map((project, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: project.name,
+    item: `https://www.guptasevergreendevelopers.com/projects/${project.slug}`,
+    description: project.description,
+    image: project.images[0]?.url ? `https://www.guptasevergreendevelopers.com${project.images[0].url}` : undefined,
+  }));
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://www.guptasevergreendevelopers.com/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Projects',
+        item: 'https://www.guptasevergreendevelopers.com/projects'
+      }
+    ]
+  };
+
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: projectItems
+  };
 
   return (
     <div className="bg-[#FAF8F5] text-neutral-900 space-y-0">
       
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([breadcrumbJsonLd, itemListJsonLd]) }}
+      />
+
       {/* Page Header (Forest Olive Night) */}
       <section className="relative py-24 bg-[#141C12] text-white border-b border-[#31432B]/60">
         <div className="container-custom relative z-10 text-center max-w-4xl mx-auto space-y-4">
@@ -34,7 +76,7 @@ export default function ProjectsPage({ onOpenConsultation }: ProjectsPageProps) 
           </h1>
           <div className="olive-brown-divider" />
           <p className="text-sm sm:text-base text-neutral-300 max-w-2xl mx-auto leading-relaxed">
-            Real photographic evidence of our projects: luxury contemporary villas, anti-seismic RCC slab castings, commercial retail frameworks, and luxury modular kitchens.
+            Real photographic evidence of our projects: luxury contemporary villas, anti-seismic RCC slab castings, commercial retail frameworks, and luxury modular interiors.
           </p>
         </div>
       </section>

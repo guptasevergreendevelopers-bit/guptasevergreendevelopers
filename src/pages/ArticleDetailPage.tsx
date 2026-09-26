@@ -286,7 +286,7 @@ export default function ArticleDetailPage({ onOpenConsultation, explicitSlug, is
                           key={lIdx}
                           href={link.url}
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel="noopener noreferrer nofollow"
                           className="inline-flex items-center gap-1.5 text-xs text-[#5C3D2B] hover:text-[#31432B] font-medium underline underline-offset-2 transition-colors mr-4"
                         >
                           {link.label}

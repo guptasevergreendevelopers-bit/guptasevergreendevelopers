@@ -185,6 +185,8 @@ export default function Footer() {
 
             <button
               onClick={scrollToTop}
+              type="button"
+              aria-label="Back to top of page"
               className="inline-flex items-center gap-1.5 text-[11px] text-white hover:text-[#B0C5A6] uppercase font-bold tracking-wider py-1.5 px-3 rounded-full bg-[#23301E] border border-[#537048]/50 hover:border-[#537048] transition-all"
             >
               <ArrowUp className="w-3.5 h-3.5 text-[#A87B5C]" />

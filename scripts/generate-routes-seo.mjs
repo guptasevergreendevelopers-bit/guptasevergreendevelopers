@@ -103,7 +103,7 @@ function renderArticleSemanticHtml(article, canonicalUrl) {
     if (s.authoritativeLinks) {
       html += `    <p><strong>Statutory & Regulatory References:</strong></p>\n    <ul>\n`;
       for (const link of s.authoritativeLinks) {
-        html += `      <li><a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label}</a> (${link.authority})</li>\n`;
+        html += `      <li><a href="${link.url}" target="_blank" rel="noopener noreferrer nofollow">${link.label}</a> (${link.authority})</li>\n`;
       }
       html += `    </ul>\n`;
     }

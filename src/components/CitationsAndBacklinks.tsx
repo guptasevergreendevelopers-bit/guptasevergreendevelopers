@@ -134,7 +134,7 @@ export default function CitationsAndBacklinks() {
               <a
                 href={c.url}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-[#31432B] hover:text-[#5C3D2B] pt-2 border-t border-[#FAF8F5] transition-colors"
               >
                 <span>{c.linkText}</span>

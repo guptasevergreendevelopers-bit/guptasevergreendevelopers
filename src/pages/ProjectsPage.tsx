@@ -64,13 +64,9 @@ export default function ProjectsPage({ onOpenConsultation }: ProjectsPageProps) 
       />
 
       {/* Page Header (Forest Olive Night) */}
-      <section className="relative py-24 bg-[#141C12] text-white border-b border-[#31432B]/60">
-        <div className="container-custom relative z-10 text-center max-w-4xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#2E3F27] border border-[#537048]/40 text-[#D5BAA6] text-xs font-bold uppercase tracking-widest">
-            <Building2 className="w-3.5 h-3.5 text-[#A87B5C]" />
-            Demonstrated Excellence in Uttarakhand
-          </div>
-          <h1 className="font-cinzel text-3xl sm:text-5xl font-extrabold text-white">
+      <section className="relative py-8 sm:py-14 lg:py-18 bg-[#141C12] text-white border-b border-[#31432B]/60">
+        <div className="container-custom relative z-10 text-center max-w-4xl mx-auto space-y-3 sm:space-y-4">
+          <h1 className="font-cinzel text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white">
             COMPLETED & ONGOING <br />
             <span className="text-[#D5BAA6] border-b-2 border-[#8E6144] pb-1">CONSTRUCTION LANDMARKS</span>
           </h1>

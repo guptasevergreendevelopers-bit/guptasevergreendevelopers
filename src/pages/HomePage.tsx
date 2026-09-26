@@ -32,7 +32,7 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
     <div className="bg-[#FAF8F5] text-neutral-900 space-y-0">
       
       {/* Hero Section (Rich Forest Olive Architectural Atmosphere) */}
-      <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center pt-16 sm:pt-20 pb-16 sm:pb-20 overflow-hidden bg-[#121A10] text-white">
+      <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center pt-6 sm:pt-12 lg:pt-16 pb-12 sm:pb-16 overflow-hidden bg-[#121A10] text-white">
         <div className="absolute inset-0 z-0">
           <picture>
             <source media="(max-width: 768px)" srcSet="/images/image_03_mobile.webp" type="image/webp" />
@@ -52,32 +52,11 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
           <div className="absolute inset-0 bg-gradient-to-r from-[#121A10] via-[#121A10]/70 to-transparent" />
         </div>
 
-        <div className="container-custom relative z-10 py-6 sm:py-10">
+        <div className="container-custom relative z-10 py-3 sm:py-6">
           <div className="max-w-4xl mx-auto text-center lg:text-left">
             
-            {/* Google Drive Logo Emblem Badge */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-2xl bg-[#182316]/90 border border-[#405737]/60 backdrop-blur-md mb-6 sm:mb-8 shadow-2xl">
-              <div className="w-7 h-7 rounded-lg bg-[#2E3F27] p-1 flex items-center justify-center border border-[#537048]/40 flex-shrink-0">
-                <img
-                  src="/images/drive_logo_gold.webp"
-                  alt="Drive Logo Crest"
-                  className="w-full h-full object-contain"
-                  width="28"
-                  height="28"
-                />
-              </div>
-              <div className="text-left">
-                <span className="text-[9.5px] sm:text-[10px] uppercase tracking-widest text-[#D5BAA6] font-bold block">
-                  ESTD. 2012 • ROC UTTARAKHAND • LLPIN: ACP-3601
-                </span>
-                <span className="text-[10px] sm:text-[11px] text-[#B0C5A6] font-medium">
-                  Gupta's Evergreen Developers LLP • 105 Rajpur Road
-                </span>
-              </div>
-            </div>
-
             {/* Main Responsive Headline */}
-            <h1 className="font-cinzel text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.18] sm:leading-[1.14] mb-5 sm:mb-6">
+            <h1 className="font-cinzel text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.18] sm:leading-[1.14] mb-4 sm:mb-6">
               DEHRADUN'S PREMIER <br className="hidden sm:block" />
               <span className="text-[#D5BAA6] border-b-2 border-[#8E6144] pb-0.5 sm:pb-1">TURNKEY BUILDERS & ARCHITECTS</span>
             </h1>

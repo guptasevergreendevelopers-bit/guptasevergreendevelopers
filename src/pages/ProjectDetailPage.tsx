@@ -136,7 +136,7 @@ export default function ProjectDetailPage({ onOpenConsultation }: ProjectDetailP
       />
 
       {/* Top Breadcrumb Bar */}
-      <div className="bg-[#121A10] border-b border-[#31432B]/50 py-3 text-xs text-neutral-400">
+      <div className="bg-[#121A10] border-b border-[#31432B]/50 py-2 text-xs text-neutral-400">
         <div className="container-custom flex items-center gap-2 overflow-x-auto whitespace-nowrap scrollbar-none">
           <Link to="/" className="hover:text-white transition-colors">Home</Link>
           <ChevronRight className="w-3.5 h-3.5 text-neutral-600 flex-shrink-0" />
@@ -147,7 +147,7 @@ export default function ProjectDetailPage({ onOpenConsultation }: ProjectDetailP
       </div>
 
       {/* Project Hero Header */}
-      <header className="py-12 sm:py-16 bg-white border-b border-[#E6DFD5]">
+      <header className="py-6 sm:py-12 bg-white border-b border-[#E6DFD5]">
         <div className="container-custom max-w-4xl space-y-6">
           
           {/* Top Status & Verification Badges */}

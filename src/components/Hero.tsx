@@ -43,17 +43,6 @@ export default function Hero({ onOpenConsultation, onNavigate }: HeroProps) {
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center lg:text-left">
           
-          {/* Top Verification Pill */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.05] border border-[#C5A059]/40 backdrop-blur-md mb-8">
-            <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C5A059] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C5A059]"></span>
-            </span>
-            <span className="text-xs uppercase tracking-widest text-[#E8D3A2] font-semibold">
-              ESTD. 2012 • Dehradun's Premier Turnkey Builders • LLPIN: ACP-3601
-            </span>
-          </div>
-
           {/* Majestic Main Headline */}
           <h1 className="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.15] mb-6">
             BUILDING ARCHITECTURAL <br className="hidden sm:block" />

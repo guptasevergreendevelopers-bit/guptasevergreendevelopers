@@ -195,6 +195,8 @@ function renderProjectSemanticHtml(project, canonicalUrl) {
 
   html += `  <section>\n    <h2>Client Privacy & Publishing Disclosure</h2>\n    <p>${project.confidentialityNote}</p>\n  </section>\n\n`;
 
+  html += `  <section>\n    <h2>Verified Portfolio & Architectural Updates</h2>\n    <p>View 3D elevations and boards on <a href="https://pin.it/gRJEAMxYw" target="_blank" rel="noopener noreferrer nofollow">Pinterest</a> or follow corporate updates on <a href="https://www.linkedin.com/company/gupta-s-evergreen-developers-llp" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a>.</p>\n  </section>\n\n`;
+
   html += `  <footer>\n`;
   html += `    <p><strong>Executed By:</strong> GUPTA'S EVERGREEN DEVELOPERS LLP (LLPIN: ACP-3601, operating trade dating to 2012, ROC Uttarakhand). Headquarters: 105 Rajpur Road, Dehradun. Contact: +91 95483 93798.</p>\n`;
   html += `    <p><a href="https://guptasevergreendevelopers.com/projects">View All Construction Evidence Projects</a> | <a href="https://guptasevergreendevelopers.com/contact">Book In-Person Site Inspection Tour</a></p>\n`;

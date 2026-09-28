@@ -283,7 +283,7 @@ export const projects: Project[] = [
     completionInfo: 'Completed and commissioned November 2025 with 10-year kitchen hardware and craftsmanship warranty.',
     clientType: 'private',
     confidentialityNote: 'Private home interior. Client identity protected. Cabinetry layouts and completed photography published with owner consent.',
-    seoTitle: "Bespoke Modern Modular Kitchen Dehradun | Chander Nagar Project",
+    seoTitle: "Bespoke Modern Modular Kitchen | Chander Nagar",
     metaDescription: "Case study: 420 sq.ft ultra-luxury modular kitchen in Chander Nagar, Dehradun executed by Gupta's Evergreen Developers LLP. German Hafele hardware & Italian marble."
   },
   {
@@ -331,7 +331,7 @@ export const projects: Project[] = [
     completionInfo: 'Handed over September 2025 with 5-year leak-free warranty.',
     clientType: 'private',
     confidentialityNote: 'Private residence bathroom. Specifications and completed imagery published with consent.',
-    seoTitle: "Dark Slate Master Bathroom Spa Suite | Hathibarkala Dehradun",
+    seoTitle: "Dark Slate Master Bathroom Suite | Hathibarkala",
     metaDescription: "Completed 180 sq.ft spa master bathroom renovation in Hathibarkala, Dehradun by Gupta's Evergreen Developers LLP. Dr. Fixit tanking waterproofing & dark slate slabs."
   },
   {
@@ -475,7 +475,7 @@ export const projects: Project[] = [
     completionInfo: 'Completed August 2025; load deflection tested and certified.',
     clientType: 'private',
     confidentialityNote: 'Feature staircase inside private Rajpur Road villa. Client privacy preserved; craftsmanship photographs published.',
-    seoTitle: "Spiral Sovereign Marble Staircase | Rajpur Road Villa Dehradun",
+    seoTitle: "Spiral Sovereign Marble Staircase | Rajpur Road",
     metaDescription: "Architectural engineering case study: 3-story cantilevered white marble helical staircase with forged iron balustrades in Dehradun by Gupta's Evergreen Developers LLP."
   },
   {
@@ -523,7 +523,7 @@ export const projects: Project[] = [
     completionInfo: 'Completed June 2024; weathered two full monsoon cycles without seepage or water ponding.',
     clientType: 'private',
     confidentialityNote: 'Private hillside property. Technical engineering and scenic terrace photography published with permission.',
-    seoTitle: "Scenic Mountain Cantilevered Terrace Deck | Mussoorie Project",
+    seoTitle: "Scenic Mountain Cantilevered Terrace | Mussoorie",
     metaDescription: "Case study: 900 sq.ft cantilevered mountain viewing deck in Mussoorie by Gupta's Evergreen Developers LLP. Fosroc waterproofing and anti-shear slope engineering."
   }
 ];

@@ -29,7 +29,7 @@ const coreRoutes = [
   },
   {
     path: 'packages',
-    title: "Construction Packages & Rates in Dehradun | Gupta's Evergreen",
+    title: "Construction Packages in Dehradun | Gupta's Evergreen",
     h1: "House Construction Packages & Rates in Dehradun",
     description: "Transparent ₹1,650 to ₹2,450/sq.ft turnkey house construction packages in Dehradun. Calculate your construction cost with zero price escalation."
   },
@@ -258,7 +258,7 @@ for (const route of coreRoutes) {
   }
 
   if (route.path === 'projects') {
-    const projectsSemantic = `<section><h2>Visual Portfolio & Updates</h2><p>View 3D elevations on <a href="https://pin.it/gRJEAMxYw" target="_blank" rel="noopener noreferrer nofollow">Pinterest</a> and follow on <a href="https://www.linkedin.com/company/gupta-s-evergreen-developers-llp" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a>.</p></section>`;
+    const projectsSemantic = `<article><h1>${route.h1}</h1><p>${route.description}</p><section><h2>Visual Portfolio &amp; Updates</h2><p>View 3D elevations on <a href="https://pin.it/gRJEAMxYw" target="_blank" rel="noopener noreferrer nofollow">Pinterest</a> and follow on <a href="https://www.linkedin.com/company/gupta-s-evergreen-developers-llp" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a>.</p></section></article>`;
     html = html.replace(/<div style="position: absolute; left: -9999px;.*?<\/div>/s, `<div style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">\n${projectsSemantic}\n    </div>`);
   }
 

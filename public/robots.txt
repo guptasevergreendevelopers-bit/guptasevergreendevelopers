@@ -1,11 +1,11 @@
 # Robots.txt for Gupta's Evergreen Developers LLP
-# Canonical Website: https://www.guptasevergreendevelopers.com/
+# Canonical Website: https://guptasevergreendevelopers.com/
 
 User-agent: *
 Allow: /
 
 # Canonical XML Sitemap
-Sitemap: https://www.guptasevergreendevelopers.com/sitemap.xml
+Sitemap: https://guptasevergreendevelopers.com/sitemap.xml
 
 # LLM Context File (llmstxt.org standard)
-# https://www.guptasevergreendevelopers.com/llms.txt
+# https://guptasevergreendevelopers.com/llms.txt

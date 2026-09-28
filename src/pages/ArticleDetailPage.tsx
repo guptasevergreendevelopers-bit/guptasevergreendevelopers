@@ -55,7 +55,7 @@ export default function ArticleDetailPage({ onOpenConsultation, explicitSlug, is
     '@type': 'Article',
     headline: article.title,
     description: article.metaDescription,
-    image: `https://www.guptasevergreendevelopers.com${article.coverImage}`,
+    image: `https://guptasevergreendevelopers.com${article.coverImage}`,
     author: {
       '@type': 'Person',
       name: article.author,
@@ -63,7 +63,7 @@ export default function ArticleDetailPage({ onOpenConsultation, explicitSlug, is
       worksFor: {
         '@type': 'Organization',
         name: "Gupta's Evergreen Developers LLP",
-        url: 'https://www.guptasevergreendevelopers.com',
+        url: 'https://guptasevergreendevelopers.com',
       },
     },
     publisher: {
@@ -71,14 +71,14 @@ export default function ArticleDetailPage({ onOpenConsultation, explicitSlug, is
       name: "Gupta's Evergreen Developers LLP",
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.guptasevergreendevelopers.com/images/drive_logo_full.png',
+        url: 'https://guptasevergreendevelopers.com/images/drive_logo_full.png',
       },
     },
     datePublished: '2026-09-25',
     dateModified: '2026-09-25',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://www.guptasevergreendevelopers.com/articles/${article.slug}`,
+      '@id': `https://guptasevergreendevelopers.com/articles/${article.slug}`,
     },
   };
 

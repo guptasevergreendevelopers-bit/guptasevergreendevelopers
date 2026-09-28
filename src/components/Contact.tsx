@@ -71,38 +71,18 @@ export default function Contact() {
                 </div>
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-[#5C3D2B] block mb-1">
-                    Operating Corporate Office
+                    Verified Customer-Facing Office
                   </span>
                   <h4 className="font-cinzel text-base font-bold text-[#1C1917] mb-2">
-                    Rajpur Road Executive Office
+                    Dehradun Office &amp; Consultation Studio
                   </h4>
-                  <p className="text-xs text-neutral-700 leading-relaxed">
-                    105 Rajpur Road, Near Parsvnath Eleganza, Hathibarkala Salwala, Dehradun, Uttarakhand – 248001
+                  <p className="text-xs text-neutral-700 leading-relaxed font-medium">
+                    105 Rajpur Road, near Parsvnath Eleganza, Hathibarkala Salwala, Dehradun, Uttarakhand – 248001
                   </p>
                   <p className="text-[11px] text-neutral-500 mt-2">
-                    (Landmark: Opp. RTO Office / Hathibarkala Commercial Enclave)
+                    (Landmark: Opposite RTO Office / Hathibarkala Commercial Enclave)
                   </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Registered Statutory Office Card */}
-            <div className="card-olive-brown p-6 bg-white border-[#E6DFD5]">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[#D5BAA6] flex items-center justify-center text-[#5C3D2B] flex-shrink-0 mt-1">
-                  <ShieldCheck className="w-6 h-6 text-[#5C3D2B]" />
-                </div>
-                <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-500 block mb-1">
-                    Statutory Registered Office
-                  </span>
-                  <h4 className="font-cinzel text-base font-bold text-[#1C1917] mb-1">
-                    Chander Nagar Headquarters
-                  </h4>
-                  <p className="text-xs text-neutral-700 leading-relaxed">
-                    83/266, Chander Nagar, Dehradun, Uttarakhand – 248001
-                  </p>
-                  <div className="text-[11px] text-[#3D5337] mt-1 font-mono font-bold">
+                  <div className="mt-3 pt-2 border-t border-[#FAF8F5] text-xs text-neutral-600 font-mono">
                     LLPIN: ACP-3601 (ROC Uttarakhand)
                   </div>
                 </div>

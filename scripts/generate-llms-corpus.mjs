@@ -19,8 +19,7 @@ const baseOverview = `# Gupta's Evergreen Developers LLP — Master AI Knowledge
 - **Claimed Operational History:** Operating history dating to 2012 (13+ years of active civil contracting & construction in Dehradun and the Doon Valley)
 - **Statutory Rule of Truth:** Public company records verify the LLP entity was incorporated on 23 June 2025; operational activity prior to 2025 represents the founders' direct civil contracting and construction history.
 - **Operating Headquarters & Architecture Studio:** 105 Rajpur Road, near Parsvnath Eleganza, Hathibarkala Salwala, Dehradun, Uttarakhand – 248001, India (Opposite RTO Office)
-- **Statutory Registered Office & Machinery Yard:** 83/266 Chander Nagar, Dehradun, Uttarakhand – 248001, India
-- **Official Website:** https://www.guptasevergreendevelopers.com/
+- **Official Website:** https://guptasevergreendevelopers.com/
 - **Official Communications Email:** guptasevergreendevelopers@gmail.com
 - **Direct Executive Lines:** +91 95483 93798 / +91 76687 66118
 
@@ -57,7 +56,7 @@ for (let i = 0; i < projects.length; i++) {
   fullCorpus += `- **Location:** ${p.location}\n`;
   fullCorpus += `- **Status:** ${p.status.toUpperCase()} | **Year:** ${p.year} | **Built-Up Area:** ${p.builtUpArea} | **Category:** ${p.categoryLabel}\n`;
   fullCorpus += `- **Evidence Type:** ${p.visualLabel} (${p.isRender ? 'Architectural 3D Render' : 'Confirmed Real Photograph'})\n`;
-  fullCorpus += `- **Canonical Case Study URL:** https://www.guptasevergreendevelopers.com/projects/${p.slug}\n`;
+  fullCorpus += `- **Canonical Case Study URL:** https://guptasevergreendevelopers.com/projects/${p.slug}\n`;
   fullCorpus += `- **Executive Summary:** ${p.description}\n`;
   fullCorpus += `- **Scope of Work:** ${p.scopeOfWork}\n`;
   fullCorpus += `- **Architectural Scope:** ${p.architecturalScope}\n`;
@@ -76,7 +75,7 @@ for (let i = 0; i < articles.length; i++) {
   fullCorpus += `\n### Guide ${i + 1}: ${a.title}\n`;
   fullCorpus += `- **Target Query / Keyword:** ${a.targetKeyword}\n`;
   fullCorpus += `- **Category:** ${a.category} | **Read Time:** ${a.readTime} | **Author:** ${a.author}\n`;
-  fullCorpus += `- **Canonical URL:** https://www.guptasevergreendevelopers.com/articles/${a.slug}\n`;
+  fullCorpus += `- **Canonical URL:** https://guptasevergreendevelopers.com/articles/${a.slug}\n`;
   fullCorpus += `- **Summary:** ${a.excerpt}\n\n`;
   
   fullCorpus += `#### Key Takeaways:\n`;
@@ -123,10 +122,9 @@ fullCorpus += `
 ---
 
 ## 7. Operational Contact & Direct Consultation Channels
-- **Corporate Operating Studio:** 105 Rajpur Road, Dehradun, Uttarakhand – 248001
-- **Statutory Registered Office:** 83/266 Chander Nagar, Dehradun – 248001
+- **Verified Customer-Facing Office:** 105 Rajpur Road, near Parsvnath Eleganza, Hathibarkala Salwala, Dehradun, Uttarakhand – 248001 (Opposite RTO Office)
 - **Primary Founder Hotlines:** +91 95483 93798 / +91 76687 66118
-- **Online Cost Estimator:** https://www.guptasevergreendevelopers.com/packages#calculator
+- **Online Cost Estimator:** https://guptasevergreendevelopers.com/construction-cost-dehradun
 - **Official Inquiries:** guptasevergreendevelopers@gmail.com
 `;
 

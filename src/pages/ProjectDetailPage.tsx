@@ -73,14 +73,14 @@ export default function ProjectDetailPage({ onOpenConsultation }: ProjectDetailP
     '@type': 'WebPage',
     name: project.name,
     description: project.description,
-    url: `https://www.guptasevergreendevelopers.com/projects/${project.slug}`,
+    url: `https://guptasevergreendevelopers.com/projects/${project.slug}`,
     publisher: {
       '@type': 'Organization',
       name: "Gupta's Evergreen Developers LLP",
-      url: 'https://www.guptasevergreendevelopers.com',
+      url: 'https://guptasevergreendevelopers.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.guptasevergreendevelopers.com/images/drive_logo_full.png',
+        url: 'https://guptasevergreendevelopers.com/images/drive_logo_full.png',
       },
     },
     mainEntity: {
@@ -93,7 +93,7 @@ export default function ProjectDetailPage({ onOpenConsultation }: ProjectDetailP
         addressRegion: 'Uttarakhand',
         addressCountry: 'IN',
       },
-      image: `https://www.guptasevergreendevelopers.com${project.images[0]?.url || '/images/image_03.jpeg'}`,
+      image: `https://guptasevergreendevelopers.com${project.images[0]?.url || '/images/image_03.jpeg'}`,
       description: project.description,
     },
   };
@@ -106,19 +106,19 @@ export default function ProjectDetailPage({ onOpenConsultation }: ProjectDetailP
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://www.guptasevergreendevelopers.com/',
+        item: 'https://guptasevergreendevelopers.com/',
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Projects Portfolio',
-        item: 'https://www.guptasevergreendevelopers.com/projects',
+        item: 'https://guptasevergreendevelopers.com/projects',
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: project.name,
-        item: `https://www.guptasevergreendevelopers.com/projects/${project.slug}`,
+        item: `https://guptasevergreendevelopers.com/projects/${project.slug}`,
       },
     ],
   };

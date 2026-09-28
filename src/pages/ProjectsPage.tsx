@@ -25,9 +25,9 @@ export default function ProjectsPage({ onOpenConsultation }: ProjectsPageProps) 
     '@type': 'ListItem',
     position: index + 1,
     name: project.name,
-    item: `https://www.guptasevergreendevelopers.com/projects/${project.slug}`,
+    item: `https://guptasevergreendevelopers.com/projects/${project.slug}`,
     description: project.description,
-    image: project.images[0]?.url ? `https://www.guptasevergreendevelopers.com${project.images[0].url}` : undefined,
+    image: project.images[0]?.url ? `https://guptasevergreendevelopers.com${project.images[0].url}` : undefined,
   }));
 
   const breadcrumbJsonLd = {
@@ -38,13 +38,13 @@ export default function ProjectsPage({ onOpenConsultation }: ProjectsPageProps) 
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://www.guptasevergreendevelopers.com/'
+        item: 'https://guptasevergreendevelopers.com/'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Projects',
-        item: 'https://www.guptasevergreendevelopers.com/projects'
+        item: 'https://guptasevergreendevelopers.com/projects'
       }
     ]
   };

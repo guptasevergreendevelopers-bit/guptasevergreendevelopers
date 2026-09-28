@@ -16,7 +16,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#121A10] border-t border-[#31432B]/60 text-neutral-400 text-xs relative">
+    <footer className="premium-footer bg-[#121A10] border-t border-[#31432B]/60 text-neutral-400 text-xs relative">
       {/* Upper Main Footer Grid */}
       <div className="container-custom py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
@@ -55,13 +55,7 @@ export default function Footer() {
               <div className="flex items-start gap-2 text-neutral-300">
                 <MapPin className="w-4 h-4 text-[#A87B5C] flex-shrink-0 mt-0.5" />
                 <span>
-                  <strong>Corporate Operating Office:</strong> 105 Rajpur Road, Dehradun (Near Parsvnath Eleganza)
-                </span>
-              </div>
-              <div className="flex items-start gap-2 text-neutral-300">
-                <Building2 className="w-4 h-4 text-[#A87B5C] flex-shrink-0 mt-0.5" />
-                <span>
-                  <strong>Statutory Registered Office:</strong> 83/266, Chander Nagar, Dehradun – 248001
+                  <strong>Office Address:</strong> 105 Rajpur Road, near Parsvnath Eleganza, Hathibarkala Salwala, Dehradun, Uttarakhand – 248001 (Opposite RTO Office)
                 </span>
               </div>
             </div>

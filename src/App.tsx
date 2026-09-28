@@ -17,6 +17,13 @@ const ProjectDetailPage = lazy(() => import('./pages/ProjectDetailPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const ArticlesPage = lazy(() => import('./pages/ArticlesPage'));
 const ArticleDetailPage = lazy(() => import('./pages/ArticleDetailPage'));
+const HomeConstructionPage = lazy(() => import('./pages/HomeConstructionPage'));
+const TurnkeyConstructionPage = lazy(() => import('./pages/TurnkeyConstructionPage'));
+const BuildersDevelopersPage = lazy(() => import('./pages/BuildersDevelopersPage'));
+const ConstructionCostPage = lazy(() => import('./pages/ConstructionCostPage'));
+const VillaConstructionPage = lazy(() => import('./pages/VillaConstructionPage'));
+const CommercialConstructionPage = lazy(() => import('./pages/CommercialConstructionPage'));
+const HomeRenovationPage = lazy(() => import('./pages/HomeRenovationPage'));
 
 import { Phone, MessageSquare } from 'lucide-react';
 
@@ -54,7 +61,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-[#FAF8F5] text-neutral-900 flex flex-col font-sans selection:bg-[#3D5337] selection:text-white pb-14 lg:pb-0">
+      <div className="premium-site min-h-screen bg-[#FAF8F5] text-neutral-900 flex flex-col font-sans selection:bg-[#3D5337] selection:text-white pb-14 lg:pb-0">
         
         {/* Forest Olive & Walnut Luxury Navbar */}
         <Header onOpenConsultation={() => handleOpenConsultation()} />
@@ -109,6 +116,15 @@ export default function App() {
                 path="/articles/:slug" 
                 element={<ArticleDetailPage onOpenConsultation={handleOpenConsultation} />} 
               />
+
+              {/* Dedicated High-Intent Service Landing Pages */}
+              <Route path="/home-construction-dehradun" element={<HomeConstructionPage onOpenConsultation={handleOpenConsultation} />} />
+              <Route path="/turnkey-construction-dehradun" element={<TurnkeyConstructionPage onOpenConsultation={handleOpenConsultation} />} />
+              <Route path="/builders-developers-dehradun" element={<BuildersDevelopersPage onOpenConsultation={handleOpenConsultation} />} />
+              <Route path="/construction-cost-dehradun" element={<ConstructionCostPage onOpenConsultation={handleOpenConsultation} onOpenCalculatorConsultation={handleCalculatorConsultation} />} />
+              <Route path="/villa-construction-dehradun" element={<VillaConstructionPage onOpenConsultation={handleOpenConsultation} />} />
+              <Route path="/commercial-construction-dehradun" element={<CommercialConstructionPage onOpenConsultation={handleOpenConsultation} />} />
+              <Route path="/home-renovation-dehradun" element={<HomeRenovationPage onOpenConsultation={handleOpenConsultation} />} />
 
               {/* Canonical Redirects from root slugs to /articles/[slug] */}
               <Route path="/house-construction-cost-dehradun-2026" element={<Navigate to="/articles/house-construction-cost-dehradun-2026" replace />} />

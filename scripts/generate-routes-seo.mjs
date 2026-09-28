@@ -50,6 +50,48 @@ const coreRoutes = [
     title: "Construction Articles & Guides Dehradun | Gupta's",
     h1: "Construction Articles & Architectural Guides in Dehradun",
     description: "Expert guides on house construction, architects in Dehradun, MDDA approvals, anti-seismic RCC engineering, modular kitchens & luxury hill villas."
+  },
+  {
+    path: 'home-construction-dehradun',
+    title: "Home Construction Company in Dehradun | Custom House Builders",
+    h1: "Home Construction Company in Dehradun",
+    description: "Planning to build a home in Dehradun? Gupta's Evergreen Developers provides comprehensive residential construction, anti-seismic RCC engineering, and transparent pricing across the Doon Valley."
+  },
+  {
+    path: 'turnkey-construction-dehradun',
+    title: "Turnkey Construction in Dehradun | Design-Build Contractors",
+    h1: "Turnkey Construction in Dehradun",
+    description: "Looking for complete turnkey construction in Dehradun? Gupta's Evergreen Developers manages architectural planning, MDDA approvals, structural casting, and turnkey handover under one contract."
+  },
+  {
+    path: 'builders-developers-dehradun',
+    title: "Builders and Developers in Dehradun | Licensed Civil Contractors",
+    h1: "Builders and Developers in Dehradun",
+    description: "Looking for reliable builders and developers in Dehradun? Gupta's Evergreen Developers provides licensed civil contracting, residential development, and MDDA compliance across Uttarakhand."
+  },
+  {
+    path: 'construction-cost-dehradun',
+    title: "House Construction Cost in Dehradun (2026 Rates) | Price Calculator",
+    h1: "House Construction Cost in Dehradun",
+    description: "Transparent 2026 house construction cost per sq ft in Dehradun. Explore packages from ₹1,650 to ₹2,450/sq ft with locked BOQ pricing, material specifications, and instant cost calculator."
+  },
+  {
+    path: 'villa-construction-dehradun',
+    title: "Luxury Villa Construction in Dehradun & Mussoorie | Custom Builders",
+    h1: "Luxury Villa Construction in Dehradun",
+    description: "Bespoke luxury villa construction in Dehradun and the Mussoorie foothills. Featuring earthquake-resistant ductile frames, panoramic glass elevations, and premium hill-estate finishes."
+  },
+  {
+    path: 'commercial-construction-dehradun',
+    title: "Commercial Construction Company in Dehradun | Retail & Office Plazas",
+    h1: "Commercial Construction Company in Dehradun",
+    description: "Experienced commercial builders in Dehradun. Delivering multi-level commercial complexes, retail showrooms, and office frameworks with MDDA compliance and high-capacity RCC infrastructure."
+  },
+  {
+    path: 'home-renovation-dehradun',
+    title: "Home Renovation in Dehradun | Remodeling & Structural Additions",
+    h1: "Home Renovation in Dehradun",
+    description: "Professional home renovation and remodeling services in Dehradun. Floor additions, structural strengthening, waterproof bathroom redesigns, and modular kitchen modernizations."
   }
 ];
 
@@ -112,7 +154,7 @@ function renderArticleSemanticHtml(article, canonicalUrl) {
 
   html += `  <footer>\n`;
   html += `    <p><strong>Company Reference:</strong> GUPTA'S EVERGREEN DEVELOPERS LLP (LLPIN: ACP-3601, Inc. 23 June 2025, operating trade dating to 2012, ROC Uttarakhand). Operating Headquarters: 105 Rajpur Road, Dehradun 248001. Direct Founder Lines: +91 95483 93798 / +91 76687 66118.</p>\n`;
-  html += `    <p><a href="https://www.guptasevergreendevelopers.com/packages#calculator">Estimate Your House Construction Cost Online</a> | <a href="https://www.guptasevergreendevelopers.com/contact">Schedule a Free 24-Hour On-Site Architectural Evaluation</a></p>\n`;
+  html += `    <p><a href="https://guptasevergreendevelopers.com/packages#calculator">Estimate Your House Construction Cost Online</a> | <a href="https://guptasevergreendevelopers.com/contact">Schedule a Free 24-Hour On-Site Architectural Evaluation</a></p>\n`;
   html += `  </footer>\n`;
   html += `</article>`;
   return html;
@@ -155,7 +197,7 @@ function renderProjectSemanticHtml(project, canonicalUrl) {
 
   html += `  <footer>\n`;
   html += `    <p><strong>Executed By:</strong> GUPTA'S EVERGREEN DEVELOPERS LLP (LLPIN: ACP-3601, operating trade dating to 2012, ROC Uttarakhand). Headquarters: 105 Rajpur Road, Dehradun. Contact: +91 95483 93798.</p>\n`;
-  html += `    <p><a href="https://www.guptasevergreendevelopers.com/projects">View All Construction Evidence Projects</a> | <a href="https://www.guptasevergreendevelopers.com/contact">Book In-Person Site Inspection Tour</a></p>\n`;
+  html += `    <p><a href="https://guptasevergreendevelopers.com/projects">View All Construction Evidence Projects</a> | <a href="https://guptasevergreendevelopers.com/contact">Book In-Person Site Inspection Tour</a></p>\n`;
   html += `  </footer>\n`;
   html += `</article>`;
   return html;
@@ -168,7 +210,7 @@ for (const route of coreRoutes) {
     fs.mkdirSync(routeDir, { recursive: true });
   }
 
-  const canonicalUrl = `https://www.guptasevergreendevelopers.com/${route.path}`;
+  const canonicalUrl = `https://guptasevergreendevelopers.com/${route.path}`;
 
   let html = baseHtml
     .replace(/<title>.*?<\/title>/, `<title>${route.title}</title>`)
@@ -192,7 +234,7 @@ for (const route of coreRoutes) {
         '@type': 'ListItem',
         position: idx + 1,
         name: p.name,
-        item: `https://www.guptasevergreendevelopers.com/projects/${p.slug}`,
+        item: `https://guptasevergreendevelopers.com/projects/${p.slug}`,
         description: p.description
       }))
     };
@@ -200,8 +242,8 @@ for (const route of coreRoutes) {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.guptasevergreendevelopers.com/' },
-        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://www.guptasevergreendevelopers.com/projects' }
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://guptasevergreendevelopers.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Projects', item: 'https://guptasevergreendevelopers.com/projects' }
       ]
     };
     const projectsScriptTag = `<script type="application/ld+json">${JSON.stringify(projectsBreadcrumbJsonLd)}</script>\n    <script type="application/ld+json">${JSON.stringify(projectItemsJsonLd)}</script>`;
@@ -228,7 +270,7 @@ for (const art of articles) {
     fs.mkdirSync(articleSubDir, { recursive: true });
   }
 
-  const canonicalSubUrl = `https://www.guptasevergreendevelopers.com/${articleSubPath}`;
+  const canonicalSubUrl = `https://guptasevergreendevelopers.com/${articleSubPath}`;
   const semanticContentSub = renderArticleSemanticHtml(art, canonicalSubUrl);
 
   const articleJsonLd = {
@@ -236,7 +278,7 @@ for (const art of articles) {
     '@type': 'Article',
     headline: art.title,
     description: art.metaDescription,
-    image: `https://www.guptasevergreendevelopers.com${art.coverImage}`,
+    image: `https://guptasevergreendevelopers.com${art.coverImage}`,
     author: {
       '@type': 'Person',
       name: art.author,
@@ -244,7 +286,7 @@ for (const art of articles) {
       worksFor: {
         '@type': 'Organization',
         name: "Gupta's Evergreen Developers LLP",
-        url: 'https://www.guptasevergreendevelopers.com'
+        url: 'https://guptasevergreendevelopers.com'
       }
     },
     publisher: {
@@ -252,7 +294,7 @@ for (const art of articles) {
       name: "Gupta's Evergreen Developers LLP",
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.guptasevergreendevelopers.com/images/drive_logo_full.png'
+        url: 'https://guptasevergreendevelopers.com/images/drive_logo_full.png'
       }
     },
     datePublished: '2026-09-25',
@@ -271,13 +313,13 @@ for (const art of articles) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://www.guptasevergreendevelopers.com/'
+        item: 'https://guptasevergreendevelopers.com/'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Guides & Articles',
-        item: 'https://www.guptasevergreendevelopers.com/articles'
+        item: 'https://guptasevergreendevelopers.com/articles'
       },
       {
         '@type': 'ListItem',
@@ -316,7 +358,7 @@ for (const proj of projects) {
     fs.mkdirSync(projectSubDir, { recursive: true });
   }
 
-  const canonicalProjUrl = `https://www.guptasevergreendevelopers.com/${projectSubPath}`;
+  const canonicalProjUrl = `https://guptasevergreendevelopers.com/${projectSubPath}`;
   const semanticContentProj = renderProjectSemanticHtml(proj, canonicalProjUrl);
 
   const projectJsonLd = {
@@ -328,10 +370,10 @@ for (const proj of projects) {
     publisher: {
       '@type': 'Organization',
       name: "Gupta's Evergreen Developers LLP",
-      url: 'https://www.guptasevergreendevelopers.com',
+      url: 'https://guptasevergreendevelopers.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.guptasevergreendevelopers.com/images/drive_logo_full.png'
+        url: 'https://guptasevergreendevelopers.com/images/drive_logo_full.png'
       }
     },
     mainEntity: {
@@ -344,7 +386,7 @@ for (const proj of projects) {
         addressRegion: 'Uttarakhand',
         addressCountry: 'IN'
       },
-      image: `https://www.guptasevergreendevelopers.com${proj.images[0]?.url || '/images/image_03.jpeg'}`,
+      image: `https://guptasevergreendevelopers.com${proj.images[0]?.url || '/images/image_03.jpeg'}`,
       description: proj.description
     }
   };
@@ -357,13 +399,13 @@ for (const proj of projects) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://www.guptasevergreendevelopers.com/'
+        item: 'https://guptasevergreendevelopers.com/'
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'Projects Portfolio',
-        item: 'https://www.guptasevergreendevelopers.com/projects'
+        item: 'https://guptasevergreendevelopers.com/projects'
       },
       {
         '@type': 'ListItem',

@@ -196,58 +196,40 @@ export default function AboutPage({ onOpenConsultation }: AboutPageProps) {
         </div>
       </section>
 
-      {/* Offices and Locations Distinction (White Background) */}
+      {/* Office Location Section (White Background) */}
       <section className="py-20 bg-white">
         <div className="container-custom">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#31432B]/10 border border-[#31432B]/20 text-[#31432B] text-xs font-bold uppercase tracking-wider mb-3">
               <MapPin className="w-3.5 h-3.5 text-[#5C3D2B]" />
-              Dual Dehradun Establishments
+              Verified Dehradun Office
             </div>
             <h2 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-[#1C1917] mb-4">
-              OUR DEHRADUN <span className="text-olive-gradient">ADDRESSES</span>
+              OUR DEHRADUN <span className="text-olive-gradient">OFFICE</span>
             </h2>
             <div className="olive-brown-divider" />
             <p className="text-sm text-neutral-600">
-              In strict accordance with corporate governance transparency, we clearly delineate our operating customer office from our statutory registered office.
+              Visit our customer consultation studio at 105 Rajpur Road to review architectural blueprints, material specifications, and turnkey construction agreements.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Operating Office */}
-            <div className="card-olive-brown p-8 bg-white border-[#D5BAA6]">
+          <div className="max-w-2xl mx-auto">
+            <div className="card-olive-brown p-8 bg-white border-[#D5BAA6] shadow-md text-center sm:text-left">
               <span className="text-xs uppercase tracking-widest text-[#5C3D2B] font-bold block mb-2">
-                1. Customer-Facing & Operating Office
+                Customer-Facing Office &amp; Design Studio
               </span>
               <h3 className="font-cinzel text-xl font-bold text-[#1C1917] mb-3">
-                105 Rajpur Road Executive Suites
+                105 Rajpur Road Consultation Suites
               </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed mb-4">
-                105 Rajpur Road, Near Parsvnath Eleganza, Hathibarkala Salwala, Dehradun, Uttarakhand – 248001 (Opposite RTO Office).
+              <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed mb-4 font-medium">
+                105 Rajpur Road, near Parsvnath Eleganza, Hathibarkala Salwala, Dehradun, Uttarakhand – 248001 (Opposite RTO Office).
               </p>
-              <div className="text-xs text-neutral-500 space-y-1 pt-3 border-t border-[#FAF8F5]">
-                <div>• Architecture & 3D Design Consultations</div>
-                <div>• Material Samples & Italian Tile Display Studio</div>
-                <div>• Client Conference & Agreement Execution</div>
-              </div>
-            </div>
-
-            {/* Registered Office */}
-            <div className="card-olive-brown p-8 bg-white border-[#E6DFD5]">
-              <span className="text-xs uppercase tracking-widest text-neutral-500 font-bold block mb-2">
-                2. Statutory Registered LLP Office
-              </span>
-              <h3 className="font-cinzel text-xl font-bold text-[#1C1917] mb-3">
-                Chander Nagar Registered Headquarters
-              </h3>
-              <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed mb-4">
-                83/266, Chander Nagar, Dehradun, Uttarakhand – 248001.
-              </p>
-              <div className="text-xs text-neutral-500 space-y-1 pt-3 border-t border-[#FAF8F5]">
-                <div>• Official MCA Corporate Filings & Statutory Records</div>
-                <div>• Registered address as per ROC Uttarakhand (ACP-3601)</div>
-                <div>• Central Procurement & Heavy Machinery Fleet Depot</div>
+              <div className="text-xs text-neutral-600 space-y-1.5 pt-3 border-t border-[#FAF8F5]">
+                <div>• Architecture &amp; 3D Elevation Consultations</div>
+                <div>• Material Samples &amp; Structural Specifications Library</div>
+                <div>• Transparent BOQ Pricing &amp; Agreement Execution</div>
+                <div>• Direct Meeting with Partners Sunil Kumar Gupta &amp; Vansh Gupta</div>
               </div>
             </div>
           </div>

@@ -135,18 +135,12 @@ export default function About({ onOpenConsultation }: AboutProps) {
               </div>
             </div>
 
-            {/* Strategic Addresses Bar */}
+            {/* Strategic Address Bar */}
             <div className="space-y-2 text-xs text-neutral-700 pt-2">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#5C3D2B] flex-shrink-0 mt-0.5" />
                 <span>
-                  <strong>Operating Corporate Office:</strong> 105 Rajpur Road, Near Parsvnath Eleganza, Hathibarkala Salwala, Dehradun – 248001
-                </span>
-              </div>
-              <div className="flex items-start gap-2.5">
-                <Building className="w-4 h-4 text-[#3D5337] flex-shrink-0 mt-0.5" />
-                <span>
-                  <strong>Registered Statutory Office:</strong> 83/266, Chander Nagar, Dehradun, Uttarakhand – 248001
+                  <strong>Office Address:</strong> 105 Rajpur Road, near Parsvnath Eleganza, Hathibarkala Salwala, Dehradun, Uttarakhand – 248001 (Opposite RTO Office)
                 </span>
               </div>
             </div>

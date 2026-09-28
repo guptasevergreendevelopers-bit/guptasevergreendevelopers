@@ -19,7 +19,7 @@ export function usePageSEO({ title, description, canonicalPath = '' }: PageSEOPr
 
     // Update Canonical URL
     const canonical = document.querySelector('link[rel="canonical"]');
-    const fullUrl = `https://www.guptasevergreendevelopers.com${canonicalPath}`;
+    const fullUrl = `https://guptasevergreendevelopers.com${canonicalPath}`;
     if (canonical) {
       canonical.setAttribute('href', fullUrl);
     }

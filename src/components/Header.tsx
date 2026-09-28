@@ -76,7 +76,7 @@ export default function Header({ onOpenConsultation }: HeaderProps) {
 
       {/* Main Sticky Navbar (Rich Forest Olive with Warm Walnut Accents) */}
       <header
-        className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#162114] text-white border-b ${
+        className={`premium-header sticky top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#162114] text-white border-b ${
           scrolled
             ? 'shadow-2xl shadow-black/50 border-[#405737]/50 backdrop-blur-md'
             : 'border-[#31432B]/50'

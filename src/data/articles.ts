@@ -175,7 +175,7 @@ export const articles: Article[] = [
         callout: {
           badge: 'Verified Entity Credentials',
           title: 'Gupta’s Evergreen Developers LLP Statutory Dossier',
-          text: 'Registered under LLPIN: ACP-3601 with the Registrar of Companies (ROC Uttarakhand). Operating headquarters established at 105 Rajpur Road, Dehradun with dual registered facilities at 83/266 Chander Nagar. Led by designated partners Sunil Kumar Gupta and Vansh Gupta.'
+          text: 'Registered under LLPIN: ACP-3601 with the Registrar of Companies (ROC Uttarakhand). Customer consultation and operating office established at 105 Rajpur Road, near Parsvnath Eleganza, Hathibarkala Salwala, Dehradun, Uttarakhand. Led by designated partners Sunil Kumar Gupta and Vansh Gupta.'
         }
       },
       {

@@ -218,6 +218,20 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
               </span>
             </a>
 
+            {/* Justdial Badge */}
+            <a
+              href="https://www.justdial.com/Dehradun/Guptas-Evergreen-Developers-LLP"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/[0.08] hover:bg-[#F15A24]/20 border border-[#537048]/50 hover:border-[#F15A24] transition-all group shadow-sm"
+              aria-label="View Gupta's Evergreen Developers LLP on Justdial"
+            >
+              <span className="font-extrabold text-[#F15A24] text-xs">JD</span>
+              <span className="font-bold text-white tracking-wide text-xs group-hover:text-[#F15A24] transition-colors">
+                Justdial 5.0 ★
+              </span>
+            </a>
+
             {/* Medium Badge */}
             <a
               href="https://medium.com/@aromalgiyer/the-ultimate-home-builders-blueprint-navigating-construction-costs-mdda-regulations-and-hill-962085b3e62b?sharedUserId=aromalgiyer"
@@ -435,6 +449,50 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* Centered Justdial Verified Local Listing Showcase */}
+      <section className="py-8 sm:py-10 bg-[#FAF8F5] border-b border-[#E6DFD5]">
+        <div className="container-custom max-w-4xl mx-auto">
+          <div className="p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#E6DFD5] hover:border-[#F15A24] transition-all shadow-md flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <div className="w-14 h-14 rounded-2xl bg-[#FFF3EE] border border-[#F15A24]/30 flex items-center justify-center flex-shrink-0 shadow-sm">
+                <span className="font-extrabold text-[#F15A24] text-xl tracking-tight">JD</span>
+              </div>
+              <div className="space-y-1">
+                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                  <span className="font-cinzel text-base sm:text-lg font-bold text-[#1C1917]">
+                    Justdial Verified Local Listing
+                  </span>
+                  <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#E8F5E9] text-[#1E7E34] border border-[#C8E6C9] flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" /> 5.0 ★ Rated (249+ Ratings)
+                  </span>
+                </div>
+                <p className="text-xs text-neutral-600 leading-relaxed">
+                  Gupta's Evergreen Developers LLP — Premier Verified Civil Contractors &amp; Turnkey Builders at 105 Rajpur Road, Dehradun.
+                </p>
+                <div className="text-[11px] text-neutral-500 flex flex-wrap items-center justify-center sm:justify-start gap-2 pt-0.5">
+                  <span>Category: Building Contractors &amp; Architects</span>
+                  <span>•</span>
+                  <span>Location: Rajpur Road, Dehradun</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex-shrink-0">
+              <a
+                href="https://www.justdial.com/Dehradun/Guptas-Evergreen-Developers-LLP"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="px-6 py-3 rounded-full bg-[#F15A24] hover:bg-[#D94B1B] text-white text-xs font-bold uppercase tracking-wider inline-flex items-center gap-2 shadow-md transition-all group"
+                aria-label="View Gupta's Evergreen Developers LLP on Justdial"
+              >
+                <span>Check Justdial Listing</span>
+                <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

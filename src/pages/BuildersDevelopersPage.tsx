@@ -22,8 +22,8 @@ interface BuildersDevelopersPageProps {
 
 export default function BuildersDevelopersPage({ onOpenConsultation }: BuildersDevelopersPageProps) {
   usePageSEO({
-    title: "Builders and Developers in Dehradun | Licensed Civil Contractors",
-    description: "Looking for reliable builders and developers in Dehradun? Gupta's Evergreen Developers provides licensed civil contracting, residential development, and MDDA compliance across Uttarakhand.",
+    title: "Builders and Developers in Dehradun | Gupta's Evergreen",
+    description: "Licensed builders and developers in Dehradun. Gupta's Evergreen delivers residential developments, commercial plazas and civil engineering across Uttarakhand.",
     canonicalPath: "/builders-developers-dehradun",
   });
 

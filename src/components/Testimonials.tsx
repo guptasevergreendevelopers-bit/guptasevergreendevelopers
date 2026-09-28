@@ -99,9 +99,9 @@ export default function Testimonials() {
             <Award className="w-3.5 h-3.5 text-[#5C3D2B]" />
             Client Reviews &amp; Reputation
           </div>
-          <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1C1917] mb-4">
-            VERIFIED VOICES OF <span className="text-olive-gradient">SATISFACTION</span>
-          </h2>
+          <h3 className="font-cinzel text-2xl sm:text-3xl font-extrabold text-[#1C1917] mb-3">
+            Verified Client Reviews &amp; Testimonials
+          </h3>
           <div className="olive-brown-divider" />
           <p className="text-sm sm:text-base text-neutral-600">
             Backed by a verified 5.0 Star Rating across Google and Justdial from homeowners, commercial developers, and civil infrastructure partners in Uttarakhand.

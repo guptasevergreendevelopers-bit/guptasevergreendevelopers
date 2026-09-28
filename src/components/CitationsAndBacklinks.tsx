@@ -117,9 +117,9 @@ export default function CitationsAndBacklinks() {
             <BadgeCheck className="w-3.5 h-3.5 text-[#5C3D2B]" />
             Authoritative Citations & Local E-E-A-T Verification
           </div>
-          <h2 className="font-cinzel text-2xl sm:text-3xl font-extrabold text-[#1C1917]">
-            STATUTORY CITATIONS & <span className="text-olive-gradient">AUTHORITY PROFILES</span>
-          </h2>
+          <h3 className="font-cinzel text-xl sm:text-2xl font-extrabold text-[#1C1917]">
+            Statutory Citations &amp; Authority Profiles
+          </h3>
           <div className="olive-brown-divider my-4" />
           <p className="text-xs sm:text-sm text-neutral-600">
             Gupta's Evergreen Developers LLP maintains verifiable corporate listings and compliance credentials across state and national registries.

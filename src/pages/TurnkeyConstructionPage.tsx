@@ -22,8 +22,8 @@ interface TurnkeyConstructionPageProps {
 
 export default function TurnkeyConstructionPage({ onOpenConsultation }: TurnkeyConstructionPageProps) {
   usePageSEO({
-    title: "Turnkey Construction in Dehradun | Design-Build Contractors",
-    description: "Looking for complete turnkey construction in Dehradun? Gupta's Evergreen Developers manages architectural planning, MDDA approvals, structural casting, and turnkey handover under one contract.",
+    title: "Turnkey Construction in Dehradun | Gupta's Evergreen",
+    description: "Looking for turnkey construction in Dehradun? Gupta's Evergreen manages architectural plans, MDDA sanctions, structural casting and finishing under one contract.",
     canonicalPath: "/turnkey-construction-dehradun",
   });
 

@@ -22,8 +22,8 @@ interface HomeConstructionPageProps {
 
 export default function HomeConstructionPage({ onOpenConsultation }: HomeConstructionPageProps) {
   usePageSEO({
-    title: "Home Construction Company in Dehradun | Custom House Builders",
-    description: "Planning to build a home in Dehradun? Gupta's Evergreen Developers provides comprehensive residential construction, anti-seismic RCC engineering, and transparent pricing across the Doon Valley.",
+    title: "Home Construction Company in Dehradun | Gupta's Evergreen",
+    description: "Planning to build an independent home in Dehradun? Gupta's Evergreen provides turnkey residential house construction with anti-seismic RCC and 5-year warranty.",
     canonicalPath: "/home-construction-dehradun",
   });
 

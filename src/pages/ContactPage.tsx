@@ -10,8 +10,8 @@ import { usePageSEO } from '../hooks/usePageSEO';
 
 export default function ContactPage() {
   usePageSEO({
-    title: "Contact Best Builders in Dehradun | Gupta's Evergreen",
-    description: "Contact Gupta's Evergreen Developers LLP at 105 Rajpur Road, Dehradun. Call +91 95483 93798 or book a complimentary on-site architectural evaluation for your plot.",
+    title: "Contact Gupta's Evergreen Developers | Dehradun Office",
+    description: "Contact Gupta's Evergreen Developers at 105 Rajpur Road, Dehradun. Call +91 95483 93798 or book a complimentary on-site plot evaluation for your project.",
     canonicalPath: "/contact",
   });
 

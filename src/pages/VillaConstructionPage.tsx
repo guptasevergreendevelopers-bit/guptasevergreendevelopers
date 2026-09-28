@@ -22,8 +22,8 @@ interface VillaConstructionPageProps {
 
 export default function VillaConstructionPage({ onOpenConsultation }: VillaConstructionPageProps) {
   usePageSEO({
-    title: "Luxury Villa Construction in Dehradun | Custom Builders",
-    description: "Bespoke luxury villa construction in Dehradun and the Mussoorie foothills. Featuring earthquake-resistant ductile frames, panoramic glass elevations, and premium hill-estate finishes.",
+    title: "Luxury Villa Construction in Dehradun | Gupta's Evergreen",
+    description: "Bespoke luxury villa construction in Dehradun and Mussoorie. Engineered for hill slopes with ductile RCC framing, stone cladding and panoramic view decks.",
     canonicalPath: "/villa-construction-dehradun",
   });
 

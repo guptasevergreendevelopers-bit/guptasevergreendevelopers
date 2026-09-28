@@ -23,8 +23,8 @@ interface HomeRenovationPageProps {
 
 export default function HomeRenovationPage({ onOpenConsultation }: HomeRenovationPageProps) {
   usePageSEO({
-    title: "Home Renovation in Dehradun | Remodeling & Structural Additions",
-    description: "Professional home renovation and remodeling services in Dehradun. Floor additions, structural strengthening, waterproof bathroom redesigns, and modular kitchen modernizations.",
+    title: "Home Renovation in Dehradun | Gupta's Evergreen",
+    description: "Professional home renovation in Dehradun. Structural upper-floor additions, waterproofing rehabilitation, modular kitchens and bathroom conversions.",
     canonicalPath: "/home-renovation-dehradun",
   });
 

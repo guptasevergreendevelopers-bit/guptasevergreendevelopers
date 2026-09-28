@@ -22,8 +22,8 @@ interface CommercialConstructionPageProps {
 
 export default function CommercialConstructionPage({ onOpenConsultation }: CommercialConstructionPageProps) {
   usePageSEO({
-    title: "Commercial Construction in Dehradun | Retail & Offices",
-    description: "Experienced commercial builders in Dehradun. Delivering multi-level commercial complexes, retail showrooms, and office frameworks with MDDA compliance and high-capacity RCC infrastructure.",
+    title: "Commercial Construction in Dehradun | Gupta's Evergreen",
+    description: "Commercial construction company in Dehradun building retail plazas, showrooms and office complexes with column-free spans, basement parking and MDDA approval.",
     canonicalPath: "/commercial-construction-dehradun",
   });
 

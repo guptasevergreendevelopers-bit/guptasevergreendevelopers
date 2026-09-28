@@ -36,7 +36,7 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
 
   usePageSEO({
     title: "Construction Company in Dehradun | Gupta's Evergreen",
-    description: "Planning a residential or commercial project in Dehradun? Explore Gupta's Evergreen Developers' construction services, completed projects and turnkey solutions, and request a project consultation.",
+    description: "Looking for a construction company in Dehradun? Gupta's Evergreen provides residential, commercial and turnkey construction services. Explore projects and request an estimate.",
     canonicalPath: "/",
   });
 
@@ -95,9 +95,13 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
               Construction Company in Dehradun
             </h1>
 
-            {/* Subheading */}
-            <p className="text-sm sm:text-base lg:text-lg text-neutral-300 font-normal leading-relaxed max-w-3xl mb-8 sm:mb-10">
-              Residential &amp; Commercial Turnkey Construction, Architectural Design &amp; Luxury Villas in Uttarakhand. We engineer durable, earthquake-resistant structures with transparent itemized pricing and single-contract accountability.
+            {/* Recommended H2: Residential & Commercial Construction in Dehradun */}
+            <h2 className="font-cinzel text-lg sm:text-xl md:text-2xl font-bold text-[#D5BAA6] mb-3 sm:mb-4">
+              Residential &amp; Commercial Construction in Dehradun
+            </h2>
+
+            <p className="text-sm sm:text-base text-neutral-300 font-normal leading-relaxed max-w-3xl mb-8 sm:mb-10">
+              Turnkey residential house construction, architectural design, and luxury villas across Uttarakhand. We engineer durable, earthquake-resistant structures with transparent itemized pricing, locked-in BOQ contracts, and single-contract accountability.
             </p>
 
             {/* Primary CTAs */}
@@ -445,7 +449,7 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
                 Verified On-Site Evidence
               </div>
               <h2 className="font-cinzel text-2xl sm:text-4xl font-extrabold text-[#1C1917]">
-                Completed Construction Projects
+                Construction Projects in Dehradun
               </h2>
             </div>
             <Link
@@ -528,6 +532,79 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
         </div>
       </section>
 
+      {/* SECTION 5: Turnkey Construction Services */}
+      <section className="py-16 sm:py-24 bg-[#FAF8F5] border-b border-[#E6DFD5]">
+        <div className="container-custom">
+          
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#31432B]/10 text-[#31432B] text-[11px] font-bold uppercase tracking-wider mb-3">
+              <ShieldCheck className="w-3.5 h-3.5 text-[#5C3D2B]" />
+              Single-Contract Design-Build
+            </div>
+            <h2 className="font-cinzel text-2xl sm:text-4xl font-extrabold text-[#1C1917] mb-3">
+              Turnkey Construction Services
+            </h2>
+            <div className="olive-brown-divider" />
+            <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+              Our turnkey construction model eliminates the complexity of coordinating separate architects, civil contractors, structural engineers, and interior subcontractors. Under one contract, we oversee every phase of your build in Dehradun.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 rounded-2xl bg-white border border-[#E6DFD5] space-y-2">
+              <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#D5BAA6] flex items-center justify-center text-[#5C3D2B] mb-3">
+                <Ruler className="w-5 h-5" />
+              </div>
+              <h3 className="font-cinzel text-sm font-bold text-[#1C1917]">Architectural &amp; Vastu Layouts</h3>
+              <p className="text-xs text-neutral-600 leading-relaxed">
+                Custom 2D working floor plans, 3D elevations, and Vastu orientation customized to your plot topography.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-white border border-[#E6DFD5] space-y-2">
+              <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#D5BAA6] flex items-center justify-center text-[#5C3D2B] mb-3">
+                <Building2 className="w-5 h-5" />
+              </div>
+              <h3 className="font-cinzel text-sm font-bold text-[#1C1917]">MDDA Map Sanctions</h3>
+              <p className="text-xs text-neutral-600 leading-relaxed">
+                Full municipal documentation, structural STAAD reports, and sanction facilitation with the development authority.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-white border border-[#E6DFD5] space-y-2">
+              <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#D5BAA6] flex items-center justify-center text-[#5C3D2B] mb-3">
+                <HardHat className="w-5 h-5" />
+              </div>
+              <h3 className="font-cinzel text-sm font-bold text-[#1C1917]">Anti-Seismic Civil Structure</h3>
+              <p className="text-xs text-neutral-600 leading-relaxed">
+                Machine-batched M25 concrete casting and Tata Tiscon Fe550D rebar grid compliant with Seismic Zone IV/V codes.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl bg-white border border-[#E6DFD5] space-y-2">
+              <div className="w-10 h-10 rounded-xl bg-[#FAF8F5] border border-[#D5BAA6] flex items-center justify-center text-[#5C3D2B] mb-3">
+                <Sparkles className="w-5 h-5" />
+              </div>
+              <h3 className="font-cinzel text-sm font-bold text-[#1C1917]">Interior Fitout &amp; Handover</h3>
+              <p className="text-xs text-neutral-600 leading-relaxed">
+                Premium vitrified/marble flooring, modular kitchens, Jaquar bath fittings, and written 10-year structural warranty.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              to="/turnkey-construction-dehradun"
+              className="btn-brown-sleek text-xs px-7 py-3.5 inline-flex items-center gap-2 shadow-lg"
+            >
+              <span>Explore Complete Turnkey Construction Process</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
       {/* SECTION 5: Our Construction Process */}
       <Process onOpenConsultation={() => onOpenConsultation('Process Consultation')} />
 
@@ -574,7 +651,7 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
               Regional Presence
             </div>
             <h2 className="font-cinzel text-2xl sm:text-3xl font-extrabold text-[#1C1917] mb-2">
-              Areas We Serve in Dehradun &amp; Uttarakhand
+              Areas We Serve
             </h2>
             <p className="text-xs sm:text-sm text-neutral-600">
               Active residential and commercial construction coverage across primary urban corridors and foothill districts:

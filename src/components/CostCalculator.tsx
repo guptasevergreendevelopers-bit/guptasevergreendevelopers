@@ -97,11 +97,11 @@ export default function CostCalculator({ onOpenConsultation }: CostCalculatorPro
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#31432B]/10 border border-[#31432B]/20 text-[#31432B] text-xs font-bold uppercase tracking-widest mb-4 shadow-sm">
             <Calculator className="w-3.5 h-3.5 text-[#5C3D2B]" />
-            Dehradun & Uttarakhand Cost Estimator
+            Dehradun &amp; Uttarakhand Cost Estimator
           </div>
-          <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1C1917] mb-4">
-            CALCULATE YOUR <span className="text-olive-gradient">CONSTRUCTION BUDGET</span>
-          </h2>
+          <h3 className="font-cinzel text-2xl sm:text-3xl font-extrabold text-[#1C1917] mb-3">
+            Interactive Plot Budget Estimator
+          </h3>
           <div className="olive-brown-divider" />
           <p className="text-sm sm:text-base text-neutral-600">
             Based on current market rates across Dehradun, Mussoorie, and Haridwar. Transparent milestone-based execution with zero hidden surcharges.

@@ -70,7 +70,7 @@ export default function Process({ onOpenConsultation }: ProcessProps) {
             The 6-Stage Precision Methodology
           </div>
           <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1C1917] mb-4">
-            HOW WE BUILD <span className="text-olive-gradient">WITHOUT COMPROMISE</span>
+            Our Construction Process
           </h2>
           <div className="olive-brown-divider" />
           <p className="text-sm sm:text-base text-neutral-600">

@@ -17,81 +17,81 @@ const baseHtml = fs.readFileSync(indexHtmlPath, 'utf8');
 const coreRoutes = [
   {
     path: 'about',
-    title: "About Gupta's Evergreen | Construction Company in Dehradun",
-    h1: "About Gupta's Evergreen Developers - Leading Construction Company in Dehradun",
-    description: "Corporate dossier for GUPTA'S EVERGREEN DEVELOPERS LLP (LLPIN: ACP-3601, Inc. 23 June 2025, operating trade from 2012). Founded by Sunil Kumar Gupta & Vansh Gupta in Dehradun."
+    title: "About Gupta's Evergreen Developers | Dehradun Builders",
+    h1: "About Gupta's Evergreen Developers LLP",
+    description: "Learn about Gupta's Evergreen Developers LLP (LLPIN: ACP-3601). Operating since 2012 in Dehradun under civil engineers Sunil Kumar Gupta and Vansh Gupta."
   },
   {
     path: 'services',
     title: "Construction Services in Dehradun | Gupta's Evergreen",
-    h1: "Turnkey Construction Services & Architectural Design in Dehradun",
-    description: "Specialized turnkey residential construction, architectural 3D elevations, MDDA map sanctions, commercial plazas, anti-seismic RCC structures, and modular interiors in Dehradun."
+    h1: "Turnkey Construction Services in Dehradun",
+    description: "Specialized turnkey residential construction, architectural 3D elevations, MDDA map sanctions, commercial plazas, and anti-seismic RCC structures."
   },
   {
     path: 'packages',
-    title: "Dehradun Home Build Rates & Packages | Gupta's Evergreen",
-    h1: "House Construction Packages & Per Sq.Ft Build Rates in Dehradun",
-    description: "Transparent ₹1,650 to ₹2,450/sq.ft turnkey house construction packages in Dehradun. Calculate your construction cost and milestone payments with zero price escalation."
+    title: "Construction Packages & Rates in Dehradun | Gupta's Evergreen",
+    h1: "House Construction Packages & Rates in Dehradun",
+    description: "Transparent ₹1,650 to ₹2,450/sq.ft turnkey house construction packages in Dehradun. Calculate your construction cost with zero price escalation."
   },
   {
     path: 'projects',
-    title: "Construction Projects Evidence Hub Dehradun | Gupta's Evergreen",
-    h1: "Verified Construction Landmarks & Active Sites in Dehradun & Mussoorie",
-    description: "Official construction evidence hub of Gupta's Evergreen Developers LLP. Verified photography of completed luxury villas, anti-seismic RCC slab castings, commercial frameworks, and modular interiors."
+    title: "Construction Projects in Dehradun | Gupta's Evergreen",
+    h1: "Construction Projects in Dehradun",
+    description: "Browse verified construction projects in Dehradun and Mussoorie by Gupta's Evergreen Developers, including luxury villas, commercial plazas and RCC slabs."
   },
   {
     path: 'contact',
-    title: "Contact Best Builders in Dehradun | Gupta's Evergreen",
-    h1: "Contact Gupta's Evergreen Developers LLP at 105 Rajpur Road, Dehradun",
-    description: "Contact Gupta's Evergreen Developers LLP at 105 Rajpur Road, Dehradun. Call +91 95483 93798 or book a complimentary on-site architectural evaluation for your plot."
+    title: "Contact Gupta's Evergreen Developers | Dehradun Office",
+    h1: "Contact Gupta's Evergreen Developers LLP",
+    description: "Contact Gupta's Evergreen Developers at 105 Rajpur Road, Dehradun. Call +91 95483 93798 or book a complimentary on-site plot evaluation for your project."
   },
   {
     path: 'articles',
-    title: "Construction Articles & Guides Dehradun | Gupta's",
-    h1: "Construction Articles & Architectural Guides in Dehradun",
-    description: "Expert guides on house construction, architects in Dehradun, MDDA approvals, anti-seismic RCC engineering, modular kitchens & luxury hill villas."
+    title: "Construction Guides & Articles | Dehradun Building Insights",
+    h1: "Construction Guides & Architectural Insights in Dehradun",
+    description: "Expert guides on house construction, MDDA building bye-laws, earthquake-resistant structural engineering, and building materials in Dehradun, Uttarakhand."
   },
   {
     path: 'home-construction-dehradun',
-    title: "Home Construction Company in Dehradun | Custom House Builders",
+    title: "Home Construction Company in Dehradun | Gupta's Evergreen",
     h1: "Home Construction Company in Dehradun",
-    description: "Planning to build a home in Dehradun? Gupta's Evergreen Developers provides comprehensive residential construction, anti-seismic RCC engineering, and transparent pricing across the Doon Valley."
+    description: "Planning to build an independent home in Dehradun? Gupta's Evergreen provides turnkey residential house construction with anti-seismic RCC and 5-year warranty."
   },
   {
     path: 'turnkey-construction-dehradun',
-    title: "Turnkey Construction in Dehradun | Design-Build Contractors",
+    title: "Turnkey Construction in Dehradun | Gupta's Evergreen",
     h1: "Turnkey Construction in Dehradun",
-    description: "Looking for complete turnkey construction in Dehradun? Gupta's Evergreen Developers manages architectural planning, MDDA approvals, structural casting, and turnkey handover under one contract."
+    description: "Looking for turnkey construction in Dehradun? Gupta's Evergreen manages architectural plans, MDDA sanctions, structural casting and finishing under one contract."
   },
   {
     path: 'builders-developers-dehradun',
-    title: "Builders and Developers in Dehradun | Licensed Civil Contractors",
+    title: "Builders and Developers in Dehradun | Gupta's Evergreen",
     h1: "Builders and Developers in Dehradun",
-    description: "Looking for reliable builders and developers in Dehradun? Gupta's Evergreen Developers provides licensed civil contracting, residential development, and MDDA compliance across Uttarakhand."
+    description: "Licensed builders and developers in Dehradun. Gupta's Evergreen delivers residential developments, commercial plazas and civil engineering across Uttarakhand."
   },
   {
     path: 'construction-cost-dehradun',
-    title: "House Construction Cost in Dehradun | 2026 Calculator",
+    title: "Construction Cost in Dehradun | 2026 Guide",
     h1: "House Construction Cost in Dehradun",
-    description: "Transparent 2026 house construction cost per sq ft in Dehradun. Explore packages from ₹1,650 to ₹2,450/sq ft with locked BOQ pricing, material specifications, and instant cost calculator."
+    description: "Explore transparent 2026 house construction costs in Dehradun from ₹1,650 to ₹2,450/sq.ft. Calculate your budget with our locked-price BOQ estimator."
   },
   {
     path: 'villa-construction-dehradun',
-    title: "Luxury Villa Construction in Dehradun | Custom Builders",
+    title: "Luxury Villa Construction in Dehradun | Gupta's Evergreen",
     h1: "Luxury Villa Construction in Dehradun",
-    description: "Bespoke luxury villa construction in Dehradun and the Mussoorie foothills. Featuring earthquake-resistant ductile frames, panoramic glass elevations, and premium hill-estate finishes."
+    description: "Bespoke luxury villa construction in Dehradun and Mussoorie. Engineered for hill slopes with ductile RCC framing, stone cladding and panoramic view decks."
   },
   {
     path: 'commercial-construction-dehradun',
-    title: "Commercial Construction in Dehradun | Retail & Offices",
+    title: "Commercial Construction in Dehradun | Gupta's Evergreen",
     h1: "Commercial Construction Company in Dehradun",
-    description: "Experienced commercial builders in Dehradun. Delivering multi-level commercial complexes, retail showrooms, and office frameworks with MDDA compliance and high-capacity RCC infrastructure."
+    description: "Commercial construction company in Dehradun building retail plazas, showrooms and office complexes with column-free spans, basement parking and MDDA approval."
   },
   {
     path: 'home-renovation-dehradun',
-    title: "Home Renovation in Dehradun | Remodeling & Structural Additions",
+    title: "Home Renovation in Dehradun | Gupta's Evergreen",
     h1: "Home Renovation in Dehradun",
-    description: "Professional home renovation and remodeling services in Dehradun. Floor additions, structural strengthening, waterproof bathroom redesigns, and modular kitchen modernizations."
+    description: "Professional home renovation in Dehradun. Structural upper-floor additions, waterproofing rehabilitation, modular kitchens and bathroom conversions."
   }
 ];
 

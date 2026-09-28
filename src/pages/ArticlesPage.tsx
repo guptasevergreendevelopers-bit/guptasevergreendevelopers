@@ -21,8 +21,8 @@ interface ArticlesPageProps {
 
 export default function ArticlesPage({ onOpenConsultation }: ArticlesPageProps) {
   usePageSEO({
-    title: "Construction Articles & Guides Dehradun | Gupta's",
-    description: "Expert guides on house construction, architects in Dehradun, MDDA approvals, anti-seismic RCC engineering, modular kitchens & luxury hill villas.",
+    title: "Construction Guides & Articles | Dehradun Building Insights",
+    description: "Expert guides on house construction, MDDA building bye-laws, earthquake-resistant structural engineering, and building materials in Dehradun, Uttarakhand.",
     canonicalPath: "/articles",
   });
 

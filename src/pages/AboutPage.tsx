@@ -21,8 +21,8 @@ interface AboutPageProps {
 
 export default function AboutPage({ onOpenConsultation }: AboutPageProps) {
   usePageSEO({
-    title: "About Gupta's Evergreen | Construction Company in Dehradun",
-    description: "Corporate dossier for GUPTA'S EVERGREEN DEVELOPERS LLP (LLPIN: ACP-3601, Inc. 23 June 2025, operating trade from 2012). Founded by Sunil Kumar Gupta & Vansh Gupta in Dehradun.",
+    title: "About Gupta's Evergreen Developers | Dehradun Builders",
+    description: "Learn about Gupta's Evergreen Developers LLP (LLPIN: ACP-3601). Operating since 2012 in Dehradun under civil engineers Sunil Kumar Gupta and Vansh Gupta.",
     canonicalPath: "/about",
   });
 

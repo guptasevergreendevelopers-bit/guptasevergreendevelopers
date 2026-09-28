@@ -67,10 +67,9 @@ export default function Comparison() {
             <Award className="w-3.5 h-3.5 text-[#5C3D2B]" />
             Why Choose Gupta's Evergreen Developers LLP
           </div>
-          <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1C1917] mb-4">
-            ORGANIZED CORPORATE RIGOR <br />
-            <span className="text-olive-gradient">VS UNORGANIZED CONTRACTORS</span>
-          </h2>
+          <h3 className="font-cinzel text-2xl sm:text-3xl font-extrabold text-[#1C1917] mb-4">
+            Corporate Standards vs Unorganized Contractors
+          </h3>
           <div className="olive-brown-divider" />
           <p className="text-sm sm:text-base text-neutral-600">
             Constructing a landmark in Dehradun is a life-defining investment. Here is how our corporate methodology protects your capital and peace of mind.

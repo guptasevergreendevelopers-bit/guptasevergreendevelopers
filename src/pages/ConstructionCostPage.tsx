@@ -25,8 +25,8 @@ interface ConstructionCostPageProps {
 
 export default function ConstructionCostPage({ onOpenConsultation, onOpenCalculatorConsultation }: ConstructionCostPageProps) {
   usePageSEO({
-    title: "House Construction Cost in Dehradun | 2026 Calculator",
-    description: "Transparent 2026 house construction cost per sq ft in Dehradun. Explore packages from ₹1,650 to ₹2,450/sq ft with locked BOQ pricing, material specifications, and instant cost calculator.",
+    title: "Construction Cost in Dehradun | 2026 Guide",
+    description: "Explore transparent 2026 house construction costs in Dehradun from ₹1,650 to ₹2,450/sq.ft. Calculate your budget with our locked-price BOQ estimator.",
     canonicalPath: "/construction-cost-dehradun",
   });
 

@@ -20,7 +20,7 @@ const baseOverview = `# Gupta's Evergreen Developers LLP — Master AI Knowledge
 - **Statutory Rule of Truth:** Public company records verify the LLP entity was incorporated on 23 June 2025; operational activity prior to 2025 represents the founders' direct civil contracting and construction history.
 - **Operating Headquarters & Architecture Studio:** 105 Rajpur Road, near Parsvnath Eleganza, Hathibarkala Salwala, Dehradun, Uttarakhand – 248001, India (Opposite RTO Office)
 - **Official Website:** https://guptasevergreendevelopers.com/
-- **Official Communications Email:** guptasevergreendevelopers@gmail.com
+- **Official Communications Email:** vash@guptasevergreendevelopers.com
 - **Direct Executive Lines:** +91 95483 93798 / +91 76687 66118
 
 ---
@@ -125,7 +125,7 @@ fullCorpus += `
 - **Verified Customer-Facing Office:** 105 Rajpur Road, near Parsvnath Eleganza, Hathibarkala Salwala, Dehradun, Uttarakhand – 248001 (Opposite RTO Office)
 - **Primary Founder Hotlines:** +91 95483 93798 / +91 76687 66118
 - **Online Cost Estimator:** https://guptasevergreendevelopers.com/construction-cost-dehradun
-- **Official Inquiries:** guptasevergreendevelopers@gmail.com
+- **Official Inquiries:** vash@guptasevergreendevelopers.com
 `;
 
 fs.writeFileSync(path.join(publicDir, 'llms-full.txt'), fullCorpus, 'utf8');

@@ -135,7 +135,7 @@ export default function Contact() {
             </div>
 
             <a
-              href="mailto:guptasevergreendevelopers@gmail.com"
+              href="mailto:vash@guptasevergreendevelopers.com"
               className="card-olive-brown p-4 block bg-white hover:border-[#3D5337] transition-all"
             >
               <div className="text-[10px] uppercase tracking-wider text-neutral-500 mb-1 font-semibold">
@@ -143,7 +143,7 @@ export default function Contact() {
               </div>
               <div className="text-sm font-bold text-[#1C1917] flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#3D5337]" />
-                guptasevergreendevelopers@gmail.com
+                vash@guptasevergreendevelopers.com
               </div>
             </a>
 

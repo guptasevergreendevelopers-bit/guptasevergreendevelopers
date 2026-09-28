@@ -164,8 +164,8 @@ export default function Footer() {
 
               <div>
                 <span className="text-[10px] uppercase font-bold text-neutral-400 block">Corporate Email</span>
-                <a href="mailto:guptasevergreendevelopers@gmail.com" className="text-xs text-[#D5BAA6] hover:underline break-all">
-                  guptasevergreendevelopers@gmail.com
+                <a href="mailto:vash@guptasevergreendevelopers.com" className="text-xs text-[#D5BAA6] hover:underline break-all">
+                  vash@guptasevergreendevelopers.com
                 </a>
               </div>
 

@@ -198,14 +198,16 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} <strong>GUPTA'S EVERGREEN DEVELOPERS LLP</strong> (LLPIN: ACP-3601, Inc. 2025). Founder operating history dating to 2012. All rights reserved.
           </div>
 
-          <div className="flex items-center gap-4 flex-wrap justify-center text-neutral-400">
+          <div className="flex items-center gap-3.5 flex-wrap justify-center text-neutral-400">
+            <a href="https://www.linkedin.com/company/gupta-s-evergreen-developers-llp" target="_blank" rel="noopener noreferrer nofollow" className="hover:text-white transition-colors">LinkedIn</a>
+            <span>•</span>
+            <a href="https://pin.it/gRJEAMxYw" target="_blank" rel="noopener noreferrer nofollow" className="hover:text-white transition-colors">Pinterest</a>
+            <span>•</span>
+            <a href="https://medium.com/@aromalgiyer/the-ultimate-home-builders-blueprint-navigating-construction-costs-mdda-regulations-and-hill-962085b3e62b" target="_blank" rel="noopener noreferrer nofollow" className="hover:text-white transition-colors">Medium</a>
+            <span>•</span>
+            <a href="https://www.google.com/maps?q=105+Rajpur+Road+Dehradun" target="_blank" rel="noopener noreferrer nofollow" className="hover:text-white transition-colors">Google Profile</a>
+            <span>•</span>
             <span>LLPIN: ACP-3601</span>
-            <span>•</span>
-            <span>ROC Uttarakhand</span>
-            <span>•</span>
-            <span>5 Years Project Warranty</span>
-            <span>•</span>
-            <span>guptasevergreendevelopers.com</span>
           </div>
         </div>
       </div>

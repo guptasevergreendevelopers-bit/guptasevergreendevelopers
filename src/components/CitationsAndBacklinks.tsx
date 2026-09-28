@@ -79,6 +79,15 @@ export default function CitationsAndBacklinks() {
       authority: 'Verified Editorial Feature'
     },
     {
+      organization: 'LinkedIn Corporate Organization',
+      registry: 'Official Corporate Directory',
+      identifier: 'Gupta\'s Evergreen Developers LLP',
+      description: 'Official verified LinkedIn company page detailing active project milestones, civil engineering standards, and corporate executive updates.',
+      linkText: 'Follow on LinkedIn',
+      url: 'https://www.linkedin.com/company/gupta-s-evergreen-developers-llp',
+      authority: 'Professional Corporate Network'
+    },
+    {
       organization: 'Pinterest Architectural Showcase',
       registry: 'Verified Design & Elevations Pinboard',
       identifier: '@guptasevergreen Official Pins',

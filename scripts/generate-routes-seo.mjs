@@ -252,6 +252,16 @@ for (const route of coreRoutes) {
     html = html.replace(/<link\s+rel="canonical"\s+href=".*?"\s*\/?>/, `<link rel="canonical" href="${canonicalUrl}" />\n    ${projectsScriptTag}`);
   }
 
+  if (route.path === 'construction-cost-dehradun') {
+    const costSemantic = `<article><h1>${route.h1}</h1><p>${route.description}</p><p>As analyzed in our published engineering whitepaper on <a href="https://medium.com/@aromalgiyer/the-ultimate-home-builders-blueprint-navigating-construction-costs-mdda-regulations-and-hill-962085b3e62b?sharedUserId=aromalgiyer" target="_blank" rel="noopener noreferrer nofollow">Medium</a>, residential construction rates in Dehradun range between ₹1,650 and ₹2,450/sq.ft.</p></article>`;
+    html = html.replace(/<div style="position: absolute; left: -9999px;.*?<\/div>/s, `<div style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">\n${costSemantic}\n    </div>`);
+  }
+
+  if (route.path === 'projects') {
+    const projectsSemantic = `<section><h2>Visual Portfolio & Updates</h2><p>View 3D elevations on <a href="https://pin.it/gRJEAMxYw" target="_blank" rel="noopener noreferrer nofollow">Pinterest</a> and follow on <a href="https://www.linkedin.com/company/gupta-s-evergreen-developers-llp" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a>.</p></section>`;
+    html = html.replace(/<div style="position: absolute; left: -9999px;.*?<\/div>/s, `<div style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">\n${projectsSemantic}\n    </div>`);
+  }
+
   fs.writeFileSync(path.join(routeDir, 'index.html'), html, 'utf8');
   console.log(`[generate-routes-seo] Generated dist/${route.path}/index.html`);
 }

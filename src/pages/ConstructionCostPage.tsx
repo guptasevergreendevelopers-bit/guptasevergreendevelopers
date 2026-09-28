@@ -149,7 +149,16 @@ export default function ConstructionCostPage({ onOpenConsultation, onOpenCalcula
             </h2>
             <div className="olive-brown-divider !mx-0" />
             <p className="text-sm sm:text-base text-neutral-700 leading-relaxed">
-              In 2026, building costs in Dehradun typically range from **₹1,650 to ₹2,450+ per square foot** of built-up area. The final expenditure depends directly on the structural steel grade (Fe500 vs. Fe550D), concrete batching methodology (site-mix vs. machine-batched M25), flooring materials (vitrified tiles vs. imported Italian marble), and whether the terrain requires hill slope retaining walls or specialized drainage.
+              In 2026, building costs in Dehradun typically range from **₹1,650 to ₹2,450+ per square foot** of built-up area. As analyzed in our published engineering whitepaper on{' '}
+              <a
+                href="https://medium.com/@aromalgiyer/the-ultimate-home-builders-blueprint-navigating-construction-costs-mdda-regulations-and-hill-962085b3e62b?sharedUserId=aromalgiyer"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="text-[#5C3D2B] font-bold underline hover:text-[#31432B]"
+              >
+                Medium ("The Ultimate Home Builder’s Blueprint")
+              </a>
+              , the final expenditure depends directly on the structural steel grade (Fe500 vs. Fe550D), concrete batching methodology (site-mix vs. machine-batched M25), flooring materials (vitrified tiles vs. imported Italian marble), and whether the terrain requires hill slope retaining walls or specialized drainage.
             </p>
           </div>
 

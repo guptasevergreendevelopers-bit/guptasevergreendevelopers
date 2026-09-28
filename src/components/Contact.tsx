@@ -182,6 +182,54 @@ export default function Contact() {
               />
             </div>
 
+            {/* Verified Public Profiles Card */}
+            <div className="p-4 rounded-xl bg-white border border-[#E6DFD5] text-xs space-y-2">
+              <span className="text-[10px] uppercase font-bold text-[#5C3D2B] tracking-wider block">
+                Verified Business Profiles &amp; Corporate Networks
+              </span>
+              <div className="flex flex-wrap items-center gap-3 text-neutral-600">
+                <a
+                  href="https://www.linkedin.com/company/gupta-s-evergreen-developers-llp"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="font-bold text-[#0A66C2] hover:underline inline-flex items-center gap-1"
+                >
+                  <span>LinkedIn</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+                <span>•</span>
+                <a
+                  href="https://www.crunchbase.com/organization/gupta-s-evergreen-developers-llp"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="font-bold text-[#0288D1] hover:underline inline-flex items-center gap-1"
+                >
+                  <span>Crunchbase</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+                <span>•</span>
+                <a
+                  href="https://pin.it/gRJEAMxYw"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="font-bold text-[#E60023] hover:underline inline-flex items-center gap-1"
+                >
+                  <span>Pinterest</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+                <span>•</span>
+                <a
+                  href="https://medium.com/@aromalgiyer/the-ultimate-home-builders-blueprint-navigating-construction-costs-mdda-regulations-and-hill-962085b3e62b"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="font-bold text-neutral-800 hover:underline inline-flex items-center gap-1"
+                >
+                  <span>Medium</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+
           </div>
 
           {/* Right Column: Inquiry Form (7 cols, White Card) */}

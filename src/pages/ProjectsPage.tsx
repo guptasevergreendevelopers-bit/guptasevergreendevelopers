@@ -3,7 +3,8 @@ import {
   HardHat, 
   ArrowRight,
   ShieldCheck,
-  Phone
+  Phone,
+  ExternalLink
 } from 'lucide-react';
 import Projects from '../components/Projects';
 import { usePageSEO } from '../hooks/usePageSEO';
@@ -68,13 +69,44 @@ export default function ProjectsPage({ onOpenConsultation }: ProjectsPageProps) 
       <section className="relative py-8 sm:py-14 lg:py-18 bg-[#141C12] text-white border-b border-[#31432B]/60">
         <div className="container-custom relative z-10 text-center max-w-4xl mx-auto space-y-3 sm:space-y-4">
           <h1 className="font-cinzel text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white">
-            COMPLETED & ONGOING <br />
+            COMPLETED &amp; ONGOING <br />
             <span className="text-[#D5BAA6] border-b-2 border-[#8E6144] pb-1">CONSTRUCTION LANDMARKS</span>
           </h1>
           <div className="olive-brown-divider" />
           <p className="text-sm sm:text-base text-neutral-300 max-w-2xl mx-auto leading-relaxed">
             Real photographic evidence of our projects: luxury contemporary villas, anti-seismic RCC slab castings, commercial retail frameworks, and luxury modular interiors.
           </p>
+        </div>
+      </section>
+
+      {/* Visual Design & Professional Updates Strip */}
+      <section className="bg-[#182316] border-b border-[#31432B]/60 py-3 text-xs">
+        <div className="container-custom flex flex-col sm:flex-row items-center justify-between gap-3 text-neutral-300">
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#D5BAA6] animate-pulse" />
+            <span>Follow live site progress photos &amp; 3D elevation renders:</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://pin.it/gRJEAMxYw"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="inline-flex items-center gap-1.5 font-bold text-[#E6ECE2] hover:text-[#D5BAA6] transition-colors"
+            >
+              <span>Pinterest Design Boards</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+            <span className="text-neutral-500">•</span>
+            <a
+              href="https://www.linkedin.com/company/gupta-s-evergreen-developers-llp"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="inline-flex items-center gap-1.5 font-bold text-[#E6ECE2] hover:text-[#D5BAA6] transition-colors"
+            >
+              <span>LinkedIn Project Updates</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
         </div>
       </section>
 

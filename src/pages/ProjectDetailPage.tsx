@@ -195,6 +195,32 @@ export default function ProjectDetailPage({ onOpenConsultation }: ProjectDetailP
             </div>
           </div>
 
+          {/* External Verification & Pinboard Links */}
+          <div className="flex flex-wrap items-center justify-between gap-3 text-xs pt-1">
+            <span className="text-neutral-500 font-medium">Verified Architectural Project Dossier</span>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://pin.it/gRJEAMxYw"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="inline-flex items-center gap-1 font-bold text-[#5C3D2B] hover:text-[#31432B] transition-colors"
+              >
+                <span>View Elevation Pins on Pinterest</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+              <span className="text-neutral-300">•</span>
+              <a
+                href="https://www.linkedin.com/company/gupta-s-evergreen-developers-llp"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="inline-flex items-center gap-1 font-bold text-[#0A66C2] hover:underline"
+              >
+                <span>Follow on LinkedIn</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
+
         </div>
       </header>
 

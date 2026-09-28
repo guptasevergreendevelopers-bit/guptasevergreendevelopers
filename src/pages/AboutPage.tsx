@@ -8,7 +8,8 @@ import {
   HardHat, 
   PhoneCall, 
   ArrowRight, 
-  BadgeCheck 
+  BadgeCheck,
+  ExternalLink 
 } from 'lucide-react';
 import Comparison from '../components/Comparison';
 import CitationsAndBacklinks from '../components/CitationsAndBacklinks';
@@ -187,10 +188,114 @@ export default function AboutPage({ onOpenConsultation }: AboutPageProps) {
                 </p>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-[#FAF8F5] text-xs text-neutral-500">
-                Direct Contact: <strong className="text-[#5C3D2B]">+91 76687 66118</strong>
+              <div className="pt-6 mt-6 border-t border-[#FAF8F5] text-xs text-neutral-500 flex flex-wrap items-center justify-between gap-2">
+                <span>Direct Contact: <strong className="text-[#5C3D2B]">+91 76687 66118</strong></span>
+                <a
+                  href="https://in.linkedin.com/in/vansh-gupta-490868359"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="inline-flex items-center gap-1 font-bold text-[#0A66C2] hover:underline"
+                >
+                  <span>LinkedIn Profile</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
               </div>
             </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Verified Corporate Profiles & Industry Directories */}
+      <section className="py-16 sm:py-20 bg-[#FAF8F5] border-b border-[#E6DFD5]">
+        <div className="container-custom">
+          
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#31432B]/10 text-[#31432B] text-[11px] font-bold uppercase tracking-widest mb-3 border border-[#31432B]/20">
+              <BadgeCheck className="w-3.5 h-3.5 text-[#5C3D2B]" />
+              Entity Verification
+            </div>
+            <h2 className="font-cinzel text-2xl sm:text-4xl font-extrabold text-[#1C1917] mb-3">
+              Corporate Registries &amp; Verified Profiles
+            </h2>
+            <div className="olive-brown-divider" />
+            <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+              In accordance with statutory transparency and corporate due diligence, our corporate entity, professional licensing, and architectural portfolio are independently verifiable across major industry networks:
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              {
+                title: 'LinkedIn Corporate Page',
+                badge: 'Verified Company',
+                url: 'https://www.linkedin.com/company/gupta-s-evergreen-developers-llp',
+                desc: 'Official company page indexing active site progress, civil milestones, and executive leadership updates.',
+                cta: 'View LinkedIn Profile'
+              },
+              {
+                title: 'Crunchbase Enterprise Database',
+                badge: 'Global Directory',
+                url: 'https://www.crunchbase.com/organization/gupta-s-evergreen-developers-llp',
+                desc: 'Verified enterprise dossier recording LLP status (ACP-3601), 2012 founding year, and contracting operations.',
+                cta: 'View on Crunchbase'
+              },
+              {
+                title: 'Google Business Profile',
+                badge: '5.0 Star Rating',
+                url: 'https://www.google.com/maps?q=105+Rajpur+Road+Dehradun',
+                desc: 'Customer-facing local listing at 105 Rajpur Road with verified client ratings and Google Maps directions.',
+                cta: 'View Google Profile'
+              },
+              {
+                title: 'Medium Technical Whitepaper',
+                badge: 'Editorial Feature',
+                url: 'https://medium.com/@aromalgiyer/the-ultimate-home-builders-blueprint-navigating-construction-costs-mdda-regulations-and-hill-962085b3e62b?sharedUserId=aromalgiyer',
+                desc: 'In-depth engineering whitepaper analyzing Dehradun construction costs, Seismic Zone IV codes, and MDDA bye-laws.',
+                cta: 'Read on Medium'
+              },
+              {
+                title: 'Pinterest Architectural Showcase',
+                badge: 'Portfolio Pinboard',
+                url: 'https://pin.it/gRJEAMxYw',
+                desc: 'Curated architectural boards featuring 3D elevation renders, luxury hill cottage blueprints, and interior joinery.',
+                cta: 'Explore on Pinterest'
+              },
+              {
+                title: 'Zauba Corp Corporate Registry',
+                badge: 'MCA Index',
+                url: 'https://www.zaubacorp.com/company/GUPTA-S-EVERGREEN-DEVELOPERS-LLP/ACP-3601',
+                desc: 'Public corporate master filing detailing statutory incorporation with the Registrar of Companies (ROC Uttarakhand).',
+                cta: 'Inspect MCA Record'
+              }
+            ].map((p, idx) => (
+              <a
+                key={idx}
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="card-olive-brown p-5 bg-white rounded-2xl border border-[#E6DFD5] hover:border-[#3D5337] transition-all flex flex-col justify-between group shadow-sm"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-[#FAF8F5] text-[#5C3D2B] border border-[#E6DFD5]">
+                      {p.badge}
+                    </span>
+                    <ExternalLink className="w-3.5 h-3.5 text-[#5C3D2B] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </div>
+                  <h3 className="font-cinzel text-sm sm:text-base font-bold text-[#1C1917] mb-2 group-hover:text-[#3D5337] transition-colors">
+                    {p.title}
+                  </h3>
+                  <p className="text-xs text-neutral-600 leading-relaxed mb-4">
+                    {p.desc}
+                  </p>
+                </div>
+                <div className="text-xs font-bold uppercase tracking-wider text-[#3D5337] group-hover:text-[#5C3D2B] pt-3 border-t border-[#FAF8F5] flex items-center justify-between transition-colors">
+                  <span>{p.cta}</span>
+                  <span>→</span>
+                </div>
+              </a>
+            ))}
           </div>
 
         </div>

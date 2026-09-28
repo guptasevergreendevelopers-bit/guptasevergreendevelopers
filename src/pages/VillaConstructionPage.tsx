@@ -22,7 +22,7 @@ interface VillaConstructionPageProps {
 
 export default function VillaConstructionPage({ onOpenConsultation }: VillaConstructionPageProps) {
   usePageSEO({
-    title: "Luxury Villa Construction in Dehradun & Mussoorie | Custom Builders",
+    title: "Luxury Villa Construction in Dehradun | Custom Builders",
     description: "Bespoke luxury villa construction in Dehradun and the Mussoorie foothills. Featuring earthquake-resistant ductile frames, panoramic glass elevations, and premium hill-estate finishes.",
     canonicalPath: "/villa-construction-dehradun",
   });

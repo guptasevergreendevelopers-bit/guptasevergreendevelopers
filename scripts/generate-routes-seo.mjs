@@ -71,19 +71,19 @@ const coreRoutes = [
   },
   {
     path: 'construction-cost-dehradun',
-    title: "House Construction Cost in Dehradun (2026 Rates) | Price Calculator",
+    title: "House Construction Cost in Dehradun | 2026 Calculator",
     h1: "House Construction Cost in Dehradun",
     description: "Transparent 2026 house construction cost per sq ft in Dehradun. Explore packages from ₹1,650 to ₹2,450/sq ft with locked BOQ pricing, material specifications, and instant cost calculator."
   },
   {
     path: 'villa-construction-dehradun',
-    title: "Luxury Villa Construction in Dehradun & Mussoorie | Custom Builders",
+    title: "Luxury Villa Construction in Dehradun | Custom Builders",
     h1: "Luxury Villa Construction in Dehradun",
     description: "Bespoke luxury villa construction in Dehradun and the Mussoorie foothills. Featuring earthquake-resistant ductile frames, panoramic glass elevations, and premium hill-estate finishes."
   },
   {
     path: 'commercial-construction-dehradun',
-    title: "Commercial Construction Company in Dehradun | Retail & Office Plazas",
+    title: "Commercial Construction in Dehradun | Retail & Offices",
     h1: "Commercial Construction Company in Dehradun",
     description: "Experienced commercial builders in Dehradun. Delivering multi-level commercial complexes, retail showrooms, and office frameworks with MDDA compliance and high-capacity RCC infrastructure."
   },

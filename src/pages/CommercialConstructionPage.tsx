@@ -22,7 +22,7 @@ interface CommercialConstructionPageProps {
 
 export default function CommercialConstructionPage({ onOpenConsultation }: CommercialConstructionPageProps) {
   usePageSEO({
-    title: "Commercial Construction Company in Dehradun | Retail & Office Plazas",
+    title: "Commercial Construction in Dehradun | Retail & Offices",
     description: "Experienced commercial builders in Dehradun. Delivering multi-level commercial complexes, retail showrooms, and office frameworks with MDDA compliance and high-capacity RCC infrastructure.",
     canonicalPath: "/commercial-construction-dehradun",
   });

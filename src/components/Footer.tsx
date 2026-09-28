@@ -201,6 +201,8 @@ export default function Footer() {
           <div className="flex items-center gap-3.5 flex-wrap justify-center text-neutral-400">
             <a href="https://www.linkedin.com/company/gupta-s-evergreen-developers-llp" target="_blank" rel="noopener noreferrer nofollow" className="hover:text-white transition-colors">LinkedIn</a>
             <span>•</span>
+            <a href="https://www.crunchbase.com/organization/gupta-s-evergreen-developers-llp" target="_blank" rel="noopener noreferrer nofollow" className="hover:text-white transition-colors">Crunchbase</a>
+            <span>•</span>
             <a href="https://pin.it/gRJEAMxYw" target="_blank" rel="noopener noreferrer nofollow" className="hover:text-white transition-colors">Pinterest</a>
             <span>•</span>
             <a href="https://medium.com/@aromalgiyer/the-ultimate-home-builders-blueprint-navigating-construction-costs-mdda-regulations-and-hill-962085b3e62b" target="_blank" rel="noopener noreferrer nofollow" className="hover:text-white transition-colors">Medium</a>

@@ -88,6 +88,15 @@ export default function CitationsAndBacklinks() {
       authority: 'Professional Corporate Network'
     },
     {
+      organization: 'Crunchbase Global Database',
+      registry: 'International Enterprise Directory',
+      identifier: 'Gupta\'s Evergreen Developers LLP',
+      description: 'Verified corporate entity record indexing executive leadership, operational founding year (2012), LLP registration (ACP-3601), and civil engineering specializations.',
+      linkText: 'View on Crunchbase',
+      url: 'https://www.crunchbase.com/organization/gupta-s-evergreen-developers-llp',
+      authority: 'Global Business Directory'
+    },
+    {
       organization: 'Pinterest Architectural Showcase',
       registry: 'Verified Design & Elevations Pinboard',
       identifier: '@guptasevergreen Official Pins',

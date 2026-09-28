@@ -198,6 +198,22 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
               </span>
             </a>
 
+            {/* Crunchbase Badge */}
+            <a
+              href="https://www.crunchbase.com/organization/gupta-s-evergreen-developers-llp"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/[0.08] hover:bg-[#0288D1]/20 border border-[#537048]/50 hover:border-[#0288D1] transition-all group shadow-sm"
+              aria-label="View Gupta's Evergreen Developers on Crunchbase"
+            >
+              <svg className="w-4 h-4 sm:w-5 sm:h-5 fill-[#0288D1] group-hover:scale-110 transition-transform flex-shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21.6 0H2.4A2.4 2.4 0 0 0 0 2.4v19.2A2.4 2.4 0 0 0 2.4 24h19.2a2.4 2.4 0 0 0 2.4-2.4V2.4A2.4 2.4 0 0 0 21.6 0zm-8.88 16.8a4.8 4.8 0 1 1 0-9.6c1.68 0 3.12.84 3.96 2.16l-2.04 1.2a2.4 2.4 0 1 0 0 2.64l2.04 1.2a4.73 4.73 0 0 1-3.96 2.4z"/>
+              </svg>
+              <span className="font-bold text-white tracking-wide text-xs group-hover:text-[#0288D1] transition-colors">
+                Crunchbase
+              </span>
+            </a>
+
             {/* Medium Badge */}
             <a
               href="https://medium.com/@aromalgiyer/the-ultimate-home-builders-blueprint-navigating-construction-costs-mdda-regulations-and-hill-962085b3e62b?sharedUserId=aromalgiyer"

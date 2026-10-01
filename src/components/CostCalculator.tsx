@@ -90,7 +90,7 @@ export default function CostCalculator({ onOpenConsultation }: CostCalculatorPro
   };
 
   return (
-    <section id="calculator" className="section-padding bg-[#FAF8F5] relative border-y border-[#E6DFD5]">
+    <section id="calculator" className="section-padding bg-[#FAF8F5] relative border-y border-[#E6DFD5] scroll-mt-24">
       <div className="container-custom relative z-10">
         
         {/* Section Title */}

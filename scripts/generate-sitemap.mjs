@@ -5,6 +5,7 @@ import { projects } from '../src/data/projects.ts';
 
 const publicDir = path.resolve('public');
 const distDir = path.resolve('dist');
+const SITE_ORIGIN = 'https://guptasevergreendevelopers.com';
 
 function escapeXml(str) {
   if (!str) return '';
@@ -16,92 +17,46 @@ function escapeXml(str) {
     .replace(/'/g, '&apos;');
 }
 
-// 7 Core Indexable Application Pages
-const corePages = [
-  {
-    loc: 'https://guptasevergreendevelopers.com/',
-    lastmod: '2026-09-25',
-    img: '/images/drive_logo_gold.png',
-    imgTitle: "Gupta's Evergreen Developers LLP Official Emblem"
-  },
-  {
-    loc: 'https://guptasevergreendevelopers.com/about',
-    lastmod: '2026-09-25',
-    img: '/images/image_04.jpeg',
-    imgTitle: "Gupta's Evergreen Developers Corporate Headquarters"
-  },
-  {
-    loc: 'https://guptasevergreendevelopers.com/services',
-    lastmod: '2026-09-25',
-    img: '/images/image_08.jpeg',
-    imgTitle: 'Civil Construction & Architectural Engineering Dehradun'
-  },
-  {
-    loc: 'https://guptasevergreendevelopers.com/packages',
-    lastmod: '2026-09-25',
-    img: '/images/image_07.jpeg',
-    imgTitle: 'House Construction Packages & Cost Calculator Dehradun'
-  },
-  {
-    loc: 'https://guptasevergreendevelopers.com/projects',
-    lastmod: '2026-09-25',
-    img: '/images/image_10.jpeg',
-    imgTitle: 'Completed Landmark Construction Projects in Dehradun'
-  },
-  {
-    loc: 'https://guptasevergreendevelopers.com/contact',
-    lastmod: '2026-09-25',
-    img: '/images/drive_logo_full.png',
-    imgTitle: '105 Rajpur Road Operating Executive Office'
-  },
-  {
-    loc: 'https://guptasevergreendevelopers.com/articles',
-    lastmod: '2026-09-25',
-    img: '/images/image_07.jpeg',
-    imgTitle: 'Construction & Architectural Knowledge Guides'
-  },
-  {
-    loc: 'https://guptasevergreendevelopers.com/home-construction-dehradun',
-    lastmod: '2026-09-28',
-    img: '/images/image_03.jpeg',
-    imgTitle: 'Residential Home Construction in Dehradun'
-  },
-  {
-    loc: 'https://guptasevergreendevelopers.com/turnkey-construction-dehradun',
-    lastmod: '2026-09-28',
-    img: '/images/image_07.jpeg',
-    imgTitle: 'Turnkey Design-Build Construction in Dehradun'
-  },
-  {
-    loc: 'https://guptasevergreendevelopers.com/builders-developers-dehradun',
-    lastmod: '2026-09-28',
-    img: '/images/image_08.jpeg',
-    imgTitle: 'Builders & Developers in Dehradun Uttarakhand'
-  },
-  {
-    loc: 'https://guptasevergreendevelopers.com/construction-cost-dehradun',
-    lastmod: '2026-09-28',
-    img: '/images/image_07.jpeg',
-    imgTitle: 'House Construction Cost Rates in Dehradun'
-  },
-  {
-    loc: 'https://guptasevergreendevelopers.com/villa-construction-dehradun',
-    lastmod: '2026-09-28',
-    img: '/images/image_03.jpeg',
-    imgTitle: 'Luxury Villa Construction in Dehradun & Mussoorie'
-  },
-  {
-    loc: 'https://guptasevergreendevelopers.com/commercial-construction-dehradun',
-    lastmod: '2026-09-28',
-    img: '/images/image_10.jpeg',
-    imgTitle: 'Commercial Construction & Plazas in Dehradun'
-  },
-  {
-    loc: 'https://guptasevergreendevelopers.com/home-renovation-dehradun',
-    lastmod: '2026-09-28',
-    img: '/images/image_11.jpeg',
-    imgTitle: 'Home Renovation & Remodeling in Dehradun'
+// lastmod is derived from the real modification time of the files that produce each
+// route. Hardcoded dates silently drift and under-report, which makes Google defer
+// recrawls of pages that actually just changed.
+const SHELL_SOURCES = ['index.html', 'src/App.tsx', 'src/index.css'];
+
+function toDateStamp(ms) {
+  const now = Date.now();
+  // Never emit a future date (clock skew between build machines produces those).
+  return new Date(Math.min(ms, now)).toISOString().slice(0, 10);
+}
+
+function lastmodFor(relPaths) {
+  let newest = 0;
+  for (const rel of relPaths) {
+    const abs = path.resolve(rel);
+    if (fs.existsSync(abs)) newest = Math.max(newest, fs.statSync(abs).mtimeMs);
   }
+  return toDateStamp(newest || Date.now());
+}
+
+function urlFor(routePath) {
+  return routePath === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${routePath}`;
+}
+
+// 14 Core Indexable Application Pages
+const corePages = [
+  { route: '/', sources: ['src/pages/HomePage.tsx'], img: '/images/drive_logo_gold.png', imgTitle: "Gupta's Evergreen Developers LLP Official Emblem" },
+  { route: '/about', sources: ['src/pages/AboutPage.tsx'], img: '/images/image_04.jpeg', imgTitle: "Gupta's Evergreen Developers Corporate Headquarters" },
+  { route: '/services', sources: ['src/pages/ServicesPage.tsx'], img: '/images/image_08.jpeg', imgTitle: 'Civil Construction & Architectural Engineering Dehradun' },
+  { route: '/packages', sources: ['src/pages/PackagesPage.tsx', 'src/components/CostCalculator.tsx'], img: '/images/image_07.jpeg', imgTitle: 'House Construction Packages & Cost Calculator Dehradun' },
+  { route: '/projects', sources: ['src/pages/ProjectsPage.tsx', 'src/data/projects.ts'], img: '/images/image_10.jpeg', imgTitle: 'Completed Landmark Construction Projects in Dehradun' },
+  { route: '/contact', sources: ['src/pages/ContactPage.tsx'], img: '/images/drive_logo_full.png', imgTitle: '105 Rajpur Road Operating Executive Office' },
+  { route: '/articles', sources: ['src/pages/ArticlesPage.tsx', 'src/data/articles.ts'], img: '/images/image_07.jpeg', imgTitle: 'Construction & Architectural Knowledge Guides' },
+  { route: '/home-construction-dehradun', sources: ['src/pages/HomeConstructionPage.tsx'], img: '/images/image_03.jpeg', imgTitle: 'Residential Home Construction in Dehradun' },
+  { route: '/turnkey-construction-dehradun', sources: ['src/pages/TurnkeyConstructionPage.tsx'], img: '/images/image_07.jpeg', imgTitle: 'Turnkey Design-Build Construction in Dehradun' },
+  { route: '/builders-developers-dehradun', sources: ['src/pages/BuildersDevelopersPage.tsx'], img: '/images/image_08.jpeg', imgTitle: 'Builders & Developers in Dehradun Uttarakhand' },
+  { route: '/construction-cost-dehradun', sources: ['src/pages/ConstructionCostPage.tsx', 'src/components/CostCalculator.tsx'], img: '/images/image_07.jpeg', imgTitle: 'House Construction Cost Rates in Dehradun' },
+  { route: '/villa-construction-dehradun', sources: ['src/pages/VillaConstructionPage.tsx'], img: '/images/image_03.jpeg', imgTitle: 'Luxury Villa Construction in Dehradun & Mussoorie' },
+  { route: '/commercial-construction-dehradun', sources: ['src/pages/CommercialConstructionPage.tsx'], img: '/images/image_10.jpeg', imgTitle: 'Commercial Construction & Plazas in Dehradun' },
+  { route: '/home-renovation-dehradun', sources: ['src/pages/HomeRenovationPage.tsx'], img: '/images/image_11.jpeg', imgTitle: 'Home Renovation & Remodeling in Dehradun' }
 ];
 
 let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
@@ -111,13 +66,13 @@ xml += `        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n
 // 1. Core Pages
 for (const p of corePages) {
   xml += `  <url>\n`;
-  xml += `    <loc>${p.loc}</loc>\n`;
-  xml += `    <lastmod>${p.lastmod}</lastmod>\n`;
+  xml += `    <loc>${urlFor(p.route)}</loc>\n`;
+  xml += `    <lastmod>${lastmodFor([...SHELL_SOURCES, ...p.sources])}</lastmod>\n`;
   if (p.img) {
     const localImagePath = path.join(publicDir, p.img);
     if (fs.existsSync(localImagePath)) {
       xml += `    <image:image>\n`;
-      xml += `      <image:loc>https://guptasevergreendevelopers.com${p.img}</image:loc>\n`;
+      xml += `      <image:loc>${SITE_ORIGIN}${p.img}</image:loc>\n`;
       xml += `      <image:title>${escapeXml(p.imgTitle)}</image:title>\n`;
       xml += `    </image:image>\n`;
     }
@@ -127,15 +82,14 @@ for (const p of corePages) {
 
 // 2. 14 Unique Canonical Articles under /articles/[slug]
 for (const a of articles) {
-  const loc = `https://guptasevergreendevelopers.com/articles/${a.slug}`;
   xml += `  <url>\n`;
-  xml += `    <loc>${loc}</loc>\n`;
-  xml += `    <lastmod>2026-09-25</lastmod>\n`;
+  xml += `    <loc>${urlFor(`/articles/${a.slug}`)}</loc>\n`;
+  xml += `    <lastmod>${lastmodFor([...SHELL_SOURCES, 'src/data/articles.ts'])}</lastmod>\n`;
   if (a.coverImage) {
     const localImagePath = path.join(publicDir, a.coverImage);
     if (fs.existsSync(localImagePath)) {
       xml += `    <image:image>\n`;
-      xml += `      <image:loc>https://guptasevergreendevelopers.com${a.coverImage}</image:loc>\n`;
+      xml += `      <image:loc>${SITE_ORIGIN}${a.coverImage}</image:loc>\n`;
       xml += `      <image:title>${escapeXml(a.title)}</image:title>\n`;
       xml += `    </image:image>\n`;
     }
@@ -145,16 +99,15 @@ for (const a of articles) {
 
 // 3. 10 Real Project Evidence Pages under /projects/[slug]
 for (const proj of projects) {
-  const loc = `https://guptasevergreendevelopers.com/projects/${proj.slug}`;
   xml += `  <url>\n`;
-  xml += `    <loc>${loc}</loc>\n`;
-  xml += `    <lastmod>2026-09-25</lastmod>\n`;
+  xml += `    <loc>${urlFor(`/projects/${proj.slug}`)}</loc>\n`;
+  xml += `    <lastmod>${lastmodFor([...SHELL_SOURCES, 'src/data/projects.ts'])}</lastmod>\n`;
   const imgUrl = proj.images[0]?.url;
   if (imgUrl) {
     const localImagePath = path.join(publicDir, imgUrl);
     if (fs.existsSync(localImagePath)) {
       xml += `    <image:image>\n`;
-      xml += `      <image:loc>https://guptasevergreendevelopers.com${imgUrl}</image:loc>\n`;
+      xml += `      <image:loc>${SITE_ORIGIN}${imgUrl}</image:loc>\n`;
       xml += `      <image:title>${escapeXml(proj.name)}</image:title>\n`;
       xml += `    </image:image>\n`;
     }

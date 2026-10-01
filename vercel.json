@@ -24,6 +24,11 @@
       "destination": "https://guptasevergreendevelopers.com/",
       "statusCode": 301
     },
+    {
+      "source": "/(.*)/$",
+      "destination": "/$1",
+      "statusCode": 301
+    },
     { "source": "/house-construction-cost-dehradun-2026", "destination": "/construction-cost-dehradun", "statusCode": 301 },
     { "source": "/best-construction-companies-dehradun", "destination": "/builders-developers-dehradun", "statusCode": 301 },
     { "source": "/house-construction-contractors-dehradun", "destination": "/home-construction-dehradun", "statusCode": 301 },

@@ -189,7 +189,8 @@
 .premium-header nav a { transition: color .2s, background .2s, box-shadow .2s; }
 .premium-header nav a[aria-current='page'] { box-shadow: inset 0 1px 0 #ddc4a525, 0 2px 8px #00000012; }
 .premium-header img { filter: drop-shadow(0 2px 5px #d5baa62b); }
-.premium-hero picture img { filter: brightness(.62); }
+/* Hero image darkening is handled by a plain overlay layer (see HomePage) instead of a
+   CSS filter on the LCP element, which forces an extra paint pass on mobile. */
 .premium-hero h1 { font-weight: 700; line-height: 1.18; text-shadow: 0 3px 30px #00000035; }
 .premium-hero h1 > span { color: #dec8ad; border-color: #b6926266; }
 .premium-hero > .container-custom::before,

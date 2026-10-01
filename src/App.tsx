@@ -3,10 +3,12 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import ConsultationModal from './components/ConsultationModal';
-import MobileActionDock from './components/MobileActionDock';
 
 import HomePage from './pages/HomePage';
+
+// Interaction-only chrome: kept out of the initial bundle so it never gates LCP
+const MobileActionDock = lazy(() => import('./components/MobileActionDock'));
+const ConsultationModal = lazy(() => import('./components/ConsultationModal'));
 
 // Lazy load non-homepage routes for mobile performance and faster TTI
 const AboutPage = lazy(() => import('./pages/AboutPage'));
@@ -172,14 +174,20 @@ export default function App() {
         </div>
 
         {/* Mobile Quick-Action Dock (Fixed Bottom Bar on Mobile) */}
-        <MobileActionDock onOpenConsultation={() => handleOpenConsultation()} />
+        <Suspense fallback={null}>
+          <MobileActionDock onOpenConsultation={() => handleOpenConsultation()} />
+        </Suspense>
 
         {/* Interactive Site Visit / Quotation Booking Modal */}
-        <ConsultationModal
-          isOpen={modalOpen}
-          onClose={() => setModalOpen(false)}
-          prefill={modalPrefill}
-        />
+        {modalOpen && (
+          <Suspense fallback={null}>
+            <ConsultationModal
+              isOpen={modalOpen}
+              onClose={() => setModalOpen(false)}
+              prefill={modalPrefill}
+            />
+          </Suspense>
+        )}
 
       </div>
     </BrowserRouter>

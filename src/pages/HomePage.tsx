@@ -1,14 +1,14 @@
-import { useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Building2, 
-  Home, 
-  Ruler, 
-  ShieldCheck, 
-  Award, 
-  ArrowRight, 
-  Calculator, 
-  CheckCircle2, 
+import {
+  Building2,
+  Home,
+  Ruler,
+  ShieldCheck,
+  Award,
+  ArrowRight,
+  Calculator,
+  CheckCircle2,
   PhoneCall,
   ExternalLink,
   MapPin,
@@ -19,12 +19,14 @@ import {
   RefreshCw,
   Sparkles
 } from 'lucide-react';
-import CostCalculator from '../components/CostCalculator';
-import Process from '../components/Process';
-import Comparison from '../components/Comparison';
-import Testimonials from '../components/Testimonials';
-import CitationsAndBacklinks from '../components/CitationsAndBacklinks';
 import { usePageSEO } from '../hooks/usePageSEO';
+
+// Below-the-fold sections are split out so they never block the LCP hero paint
+const CostCalculator = lazy(() => import('../components/CostCalculator'));
+const Process = lazy(() => import('../components/Process'));
+const Comparison = lazy(() => import('../components/Comparison'));
+const Testimonials = lazy(() => import('../components/Testimonials'));
+const CitationsAndBacklinks = lazy(() => import('../components/CitationsAndBacklinks'));
 
 interface HomePageProps {
   onOpenConsultation: (pkgOrProject?: string) => void;
@@ -75,7 +77,7 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
             <img
               src="/images/image_03.jpeg"
               alt="Luxury Architectural Villa in Dehradun by Gupta's Evergreen Developers LLP"
-              className="w-full h-full object-cover object-center filter brightness-[0.38] scale-105 transform transition-all duration-1000"
+              className="w-full h-full object-cover object-center"
               fetchPriority="high"
               loading="eager"
               decoding="async"
@@ -83,6 +85,7 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
               height="1080"
             />
           </picture>
+          <div className="absolute inset-0 bg-black/40" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#121A10] via-[#121A10]/75 to-[#121A10]/40" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#121A10] via-[#121A10]/70 to-transparent" />
         </div>
@@ -663,6 +666,9 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
         </div>
       </section>
 
+      {/* Everything below the hero is lazy-loaded so it never gates the LCP paint */}
+      <Suspense fallback={<div className="min-h-[40vh]" aria-hidden="true" />}>
+
       {/* SECTION 5: Our Construction Process */}
       <Process onOpenConsultation={() => onOpenConsultation('Process Consultation')} />
 
@@ -829,6 +835,8 @@ export default function HomePage({ onOpenConsultation, onOpenCalculatorConsultat
           </div>
         </div>
       </section>
+
+      </Suspense>
 
     </div>
   );

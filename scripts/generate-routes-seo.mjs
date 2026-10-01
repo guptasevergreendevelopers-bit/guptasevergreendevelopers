@@ -253,12 +253,38 @@ for (const route of coreRoutes) {
   }
 
   if (route.path === 'construction-cost-dehradun') {
-    const costSemantic = `<article><h1>${route.h1}</h1><p>${route.description}</p><p>As analyzed in our published engineering whitepaper on <a href="https://medium.com/@aromalgiyer/the-ultimate-home-builders-blueprint-navigating-construction-costs-mdda-regulations-and-hill-962085b3e62b?sharedUserId=aromalgiyer" target="_blank" rel="noopener noreferrer nofollow">Medium</a>, residential construction rates in Dehradun range between ₹1,650 and ₹2,450/sq.ft.</p></article>`;
+    const costSemantic = `<article><h1>${route.h1}</h1><p>${route.description}</p>
+<p>As analyzed in our published engineering whitepaper on <a href="https://medium.com/@aromalgiyer/the-ultimate-home-builders-blueprint-navigating-construction-costs-mdda-regulations-and-hill-962085b3e62b?sharedUserId=aromalgiyer" target="_blank" rel="noopener noreferrer nofollow">Medium</a>, residential construction rates in Dehradun range between ₹1,650 and ₹2,450/sq.ft.</p>
+<section><h2>House Construction Cost per Square Foot in Dehradun</h2>
+<p>Our turnkey packages are priced on a per-square-foot basis, with three standard tiers. The <strong>Basic Essential</strong> package starts at ₹1,650/sq.ft and covers structural RCC work with Fe500 TMT steel and standard finishes. The <strong>Premium Standard</strong> package at ₹1,950/sq.ft is our most selected tier, upgrading to Fe550D ductile-grade reinforcement and higher-spec flooring. <strong>Luxury Turnkey</strong> bespoke work begins at ₹2,450/sq.ft and includes premium joinery, specialist interiors and hill-site retaining structures.</p>
+<p>Every quotation is issued against a locked-price Bill of Quantities. Material escalation risk sits with us, not the homeowner, so an agreed rate holds for the full project duration regardless of commodity movement.</p></section>
+<section><h2>What Drives Cost Variation in Dehradun</h2>
+<p>Four factors separate a ₹1,650 quote from a ₹2,450 quote on an identical floor plan. First, <strong>steel specification</strong> — Fe500 versus Fe550D changes both material cost and ductile detailing requirements. Second, <strong>concrete batching</strong> — M20 site-mixed against M25 machine-batched with admixtures. Third, <strong>flooring and fixture tier</strong>, which varies most between packages. Fourth, <strong>site terrain</strong>: hillside plots in Mussoorie and Rajpur require retaining walls, slope stabilisation and additional access works that a flat Dehradun plot does not.</p></section>
+<section><h2>Seismic and Regulatory Cost Requirements</h2>
+<p>Dehradun sits in Seismic Zone IV, with adjoining ridges falling into Zone V. All structures are engineered to IS 1893 and IS 13920 with ductile detailing, which is a non-negotiable line item in every quote rather than an optional upgrade. Where applicable, MDDA sanction fees, building map approval costs and rainwater harvesting provisions are itemised separately so you can see exactly what is statutory and what is construction.</p></section>
+<section><h2>Milestone-Based Payment Structure</h2>
+<p>Payments follow a physical-verification escrow schedule tied to completed site milestones: excavation at 10%, plinth beam casting at 15%, ground floor slab at 20%, followed by brickwork, MEP rough-ins, plastering and final handover. You release funds against inspected work, not against a calendar.</p></section>
+<section><h2>Calculate Your Construction Budget</h2>
+<p>Use our interactive <a href="https://guptasevergreendevelopers.com/packages#calculator">construction cost calculator</a> to estimate your budget from plot area, number of buildable levels and package tier. To discuss a specific site, request a <a href="https://guptasevergreendevelopers.com/contact">complimentary on-site plot evaluation</a> at our 105 Rajpur Road office.</p></section></article>`;
     html = html.replace(/<div style="position: absolute; left: -9999px;.*?<\/div>/s, `<div style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">\n${costSemantic}\n    </div>`);
   }
 
   if (route.path === 'projects') {
-    const projectsSemantic = `<article><h1>${route.h1}</h1><p>${route.description}</p><section><h2>Visual Portfolio &amp; Updates</h2><p>View 3D elevations on <a href="https://pin.it/gRJEAMxYw" target="_blank" rel="noopener noreferrer nofollow">Pinterest</a> and follow on <a href="https://www.linkedin.com/company/gupta-s-evergreen-developers-llp" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a>.</p></section></article>`;
+    const projectListHtml = projects.map((p) => `<li><a href="https://guptasevergreendevelopers.com/projects/${p.slug}">${p.name}</a> — completed by Gupta's Evergreen Developers LLP in Dehradun and Mussoorie, Uttarakhand.</li>`).join('\n');
+    const projectsSemantic = `<article><h1>${route.h1}</h1><p>${route.description}</p>
+<section><h2>Completed Residential Projects in Dehradun</h2>
+<p>Our residential portfolio spans independent hill villas, duplex residences and high-spec interior fit-outs across Dehradun's Rajpur Road corridor and the Mussoorie hillside belt. Every project listed below was delivered under a single-contract turnkey agreement with our in-house civil and architectural team — no subcontracting, with direct partner supervision from Sunil Kumar Gupta and Vansh Gupta.</p>
+<ul>
+${projectListHtml}
+</ul></section>
+<section><h2>Commercial and Structural Engineering Work</h2>
+<p>Alongside residential work we deliver commercial retail plaza frameworks, multi-level RCC slab structures and specialised anti-seismic casting. Our Seismic Zone IV and Zone V ductile detailing to IS 1893 and IS 13920 is standard specification rather than an upgrade option, and every delivered structure carries a 5-year comprehensive workmanship and waterproofing warranty alongside a 10-year structural stability guarantee.</p></section>
+<section><h2>Interior Finishing and Specialist Fabrication</h2>
+<p>Our finishing capability spans bespoke marble and stone fabrication, bespoke carpentry, master bathroom and attic suites, and specialist culinary studio builds. These are executed in-house, which keeps material accountability and finish quality under a single warranty rather than split across separate vendors.</p></section>
+<section><h2>Visual Portfolio and Project Updates</h2>
+<p>View 3D elevations on <a href="https://pin.it/gRJEAMxYw" target="_blank" rel="noopener noreferrer nofollow">Pinterest</a> and follow current project activity on <a href="https://www.linkedin.com/company/gupta-s-evergreen-developers-llp" target="_blank" rel="noopener noreferrer nofollow">LinkedIn</a>.</p></section>
+<section><h2>Book an In-Person Site Inspection</h2>
+<p>To visit a completed project or discuss a site of your own, <a href="https://guptasevergreendevelopers.com/contact">contact our Dehradun office</a> or call +91 9548393798.</p></section></article>`;
     html = html.replace(/<div style="position: absolute; left: -9999px;.*?<\/div>/s, `<div style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden;" aria-hidden="true">\n${projectsSemantic}\n    </div>`);
   }
 

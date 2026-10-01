@@ -25,8 +25,8 @@
       "statusCode": 301
     },
     {
-      "source": "/:path*/",
-      "destination": "/:path*",
+      "source": "/:path+/",
+      "destination": "/:path+",
       "statusCode": 301
     },
     { "source": "/house-construction-cost-dehradun-2026", "destination": "/construction-cost-dehradun", "statusCode": 301 },
